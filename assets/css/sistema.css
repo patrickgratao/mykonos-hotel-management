@@ -1,0 +1,40 @@
+body {
+	padding-top: 50px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.principal {
+	padding: 40px 15px;
+}
+
+.nomeRecurso {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	border: 0.3rem dashed #cc2222;
+	padding: 0.5em;
+}
+
+.jumbotron {
+
+}
+
+@media (min-width: 1000px) { 
+	.nomeRecurso {
+		width: 50%;
+		margin: 0 auto;
+
+	}
+
+ }
+
+.categoriaInfo {
+	text-transform: capitalize;
+	margin-top: 0.5em;
+	margin-bottom: 0.4em;
+
+}
+
+.mais-acoes-link {
+	margin-right: 10px;
+}
