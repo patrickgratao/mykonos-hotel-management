@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 26/11/2018 às 17:40
+-- Tempo de geração: 26/11/2018 às 21:34
 -- Versão do servidor: 5.7.23
 -- Versão do PHP: 7.2.8
 
@@ -13,6 +13,24 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `sistemahospedes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nome`) VALUES
+(2, 'Motora');
 
 -- --------------------------------------------------------
 
@@ -38,17 +56,15 @@ CREATE TABLE `hospedes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `hospedes`
---
-
-INSERT INTO `hospedes` (`id`, `nome`, `cpf`, `data_nascimento`, `sexo`, `telefone`, `celular`, `email`, `estado_civil`, `cep`, `rua`, `bairro`, `cidade`, `estado`) VALUES
-(9, 'Patryck Peterson', '00250426102', '1994-03-23', 'm', '62996880462', '62996880462', '', '', '', '', '', '', ''),
-(10, 'Patryck Peterson', '00250426102', '1994-03-23', 'm', '62996880462', '62996880462', '', '', '', '', '', '', ''),
-(11, 'Patryck Peterson', '00250426102', '1994-03-23', 'm', '62996880462', '62996880462', '', '', '', '', '', '', '');
-
---
 -- Índices de tabelas apagadas
 --
+
+--
+-- Índices de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nome` (`nome`);
 
 --
 -- Índices de tabela `hospedes`
@@ -61,7 +77,13 @@ ALTER TABLE `hospedes`
 --
 
 --
+-- AUTO_INCREMENT de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de tabela `hospedes`
 --
 ALTER TABLE `hospedes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

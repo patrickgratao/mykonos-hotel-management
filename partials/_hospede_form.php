@@ -1,4 +1,4 @@
-<form class="needs-validation" novalidate action="adiciona-hospede.php">
+<form class="needs-validation" action="adiciona-hospede.php">
             <div class="row">
               <!-- inicio informações pessoais -->
               <div class="col-md-12">
@@ -7,7 +7,7 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="nomeHospede">Nome completo</label>
-                <input type="text" class="form-control" id="nomeHospede" name="nomeHospede" placeholder="Ex. Patryck Peterson Costa Gratão" value="" required>
+                <input type="text" class="form-control" id="nomeHospede" name="nomeHospede" placeholder="Ex. Patryck Peterson Costa Gratão" value="" required autofocus="true">
                 <div class="invalid-feedback">
                   Insira um nome para continuar.
                 </div>

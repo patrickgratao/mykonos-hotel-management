@@ -8,6 +8,21 @@
 
 ?>
 <h2>Todos os hóspedes</h2>
+
+<!-- mensagens de sucesso e erro REMOÇÃO E CADASTRO -->
+	<?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
+		<p class="alert alert-success">Hóspede removido com sucesso.</p>
+	<?php } ?>
+
+	<?php if(array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='true')  { ?>
+			<p class='alert alert-success'>O Hóspede foi cadastrado com sucesso!</p>
+	<?php } 
+
+		else if (array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='false')  { ?>
+			<p class='alert alert-danger'>O hóspede não foi cadastrado! Tente novamente.</p>
+		<?php } ?>
+<!-- fim das mensagens -->
+
 <table class="table table-striped table-bordered">
 	<thead class="thead-dark">
 	    <tr>

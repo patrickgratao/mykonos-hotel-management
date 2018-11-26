@@ -17,20 +17,15 @@
 	$cidade = $_GET["cidadeHospede"];
 	$estado = $_GET["estadoHospede"];
 
-?>
 
-<?php
-	
-	if (cadastraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado)) { ?>
+	if (cadastraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado)) { 
 		
-    <p class='alert alert-success'>O hóspede <strong><?= $nome ?></strong> foi cadastrado com sucesso!</p>
-	<?php }
+		echo "<script>location.href='listar-hospedes.php?cadastrado=true';</script>";
+		die();
+	}
 
 	else {
-    $msg = mysqli_error($conexao); ?>
-		<p class='alert alert-danger'>O hóspede não foi cadastrado! Erro: <?= $msg ?></p>
-	<?php } 
-
-  include("partials/_rodape.php") 
-
-  ?>
+		echo "<script>location.href='listar-hospedes.php?cadastrado=false';</script>";
+		die();
+	}
+ ?>

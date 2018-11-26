@@ -7,7 +7,18 @@
 	$id = $_GET['id'];
 
 	removeDado($conexao, $tabela, $id);
-?>
-	<p class="text-sucess">Removido com Sucesso!</p>
 
-	<?php include ("partials/_rodape.php"); ?>
+
+	if ($tabela == "hospedes") {
+		echo "<script>location.href='listar-hospedes.php?removido=true';</script>";
+	die();
+
+	}
+
+	else {
+		echo "<script>location.href='listar-categorias.php?removido=true';</script>";
+	die();
+	}
+
+	include("partials/_rodape.php");
+?>
