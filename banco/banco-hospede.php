@@ -18,10 +18,3 @@
 		}
 		return $hospedes; //retorna o array com todos os hóspedes
 	}
-
-
-	/*FUNÇÃO PESQUISAR*/
-
-	function pesquisaHospede ($conexao, $pequisa) {
-
-	}
