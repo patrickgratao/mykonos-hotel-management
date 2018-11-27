@@ -21,30 +21,32 @@
 			<p class='alert alert-danger'>A categoria não foi cadastrada! Tente novamente.</p>
 		<?php } ?>
 <!-- fim das mensagens -->
+<div class="table-responsive">
+	<table class="table table-striped table-bordered">
+		<thead class="thead-dark">
+	    <tr>
+	      <th scope="col" class="text-center">Id</th>
+	      <th scope="col" class="text-center">Nome da Categoria</th>
+	      <th scope="col right" class="text-center">Mais Ações</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		<?php  
+			foreach ($categorias as $categoria) : ?>
+				<tr>
+					<td><?= $categoria['id'] ?></td>
+					<td><?= $categoria['nome'] ?></td>
+					<td class="mais-acoes text-center">
+							<a href="" class="mais-acoes-link">Editar </a>
+							<a href="remover.php?id=<?=$categoria['id']?>&recurso=categorias" class="mais-acoes-link text-danger">Deletar </a>
+					</td>
+				</tr>
+		<?php endforeach ?>
+	   </tbody>
+	</table>
+	<br>
+</div>
 
-<table class="table table-striped table-bordered">
-	<thead class="thead-dark">
-    <tr>
-      <th scope="col" class="text-center">Id</th>
-      <th scope="col" class="text-center">Nome da Categoria</th>
-      <th scope="col right" class="text-center">Mais Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-	<?php  
-		foreach ($categorias as $categoria) : ?>
-			<tr>
-				<td><?= $categoria['id'] ?></td>
-				<td><?= $categoria['nome'] ?></td>
-				<td class="mais-acoes text-center">
-						<a href="" class="mais-acoes-link">Editar </a>
-						<a href="remover.php?id=<?=$categoria['id']?>&recurso=categorias" class="mais-acoes-link text-danger">Deletar </a>
-				</td>
-			</tr>
-	<?php endforeach ?>
-   </tbody>
-</table>
-<br>
 	<a class="maisopcoes btn btn-primary btn-md" href="cadastrar-categoria.php">Cadastrar Categoria</a>
 
 <?php include("partials/_rodape.php"); ?>

@@ -1,6 +1,7 @@
 body {
 	padding-top: 50px;
 	font-family: 'Ubuntu', sans-serif;
+	max-width: 100%;
 }
 
 .principal {
@@ -38,4 +39,9 @@ body {
 .menu-visual, .menu-visual:hover {
 	text-decoration: none;
 	color: #f3f3f3;
+}
+
+.rodape-sistema {
+	max-width: 100%;
+	height: auto;
 }
