@@ -7,20 +7,16 @@ body {
 	padding: 40px 15px;
 }
 
-.nomeRecurso {
+.nome-recurso {
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
-	border: 0.3rem dashed #cc2222;
+	border: 0.3rem outset #212529;
 	padding: 0.5em;
 }
 
-.jumbotron {
-
-}
-
 @media (min-width: 1000px) { 
-	.nomeRecurso {
+	.nome-recurso {
 		width: 50%;
 		margin: 0 auto;
 
@@ -37,4 +33,9 @@ body {
 
 .mais-acoes-link {
 	margin-right: 10px;
+}
+
+.menu-visual, .menu-visual:hover {
+	text-decoration: none;
+	color: #f3f3f3;
 }

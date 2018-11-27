@@ -7,7 +7,7 @@
 	$hospedes = listaHospedes($conexao);
 
 ?>
-<h2>Todos os hóspedes</h2>
+<h2>Todos os hóspedes</h2><br>
 
 <!-- mensagens de sucesso e erro REMOÇÃO E CADASTRO -->
 	<?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
@@ -26,12 +26,12 @@
 <table class="table table-striped table-bordered">
 	<thead class="thead-dark">
 	    <tr>
-	      <th scope="col">Nome</th>
-	      <th scope="col">CPF</th>
-	      <th scope="col">Celular com DDD</th>
-	      <th scope="col">E-mail</th>
-	      <th scope="col">UF</th>
-	      <th scope="col centered">Mais Ações</th>
+	      <th scope="col" class="text-center">Nome</th>
+	      <th scope="col" class="text-center">CPF</th>
+	      <th scope="col" class="text-center">Celular com DDD</th>
+	      <th scope="col" class="text-center">E-mail</th>
+	      <th scope="col" class="text-center">UF</th>
+	      <th scope="col centered" class="text-center">Mais Ações</th>
 	    </tr>
   	</thead>
   	<tbody>
@@ -43,7 +43,7 @@
 					<td><?= $hospede['celular'] ?></td>
 					<td><?= $hospede['email'] ?></td>
 					<td><?= $hospede['estado'] ?></td>
-					<td class="mais-acoes">
+					<td class="mais-acoes text-center" >
 						<a href="" class="mais-acoes-link">Ver Mais </a>
 						<a href="" class="mais-acoes-link">Editar </a>
 						<a href="remover.php?id=<?=$hospede['id']?>&recurso=hospedes" class="mais-acoes-link text-danger">Deletar </a>
@@ -51,8 +51,8 @@
 				</tr>		
 		<?php endforeach ?>
 	</tbody>
-</table>
-	
+</table><br>
+	<a class="maisopcoes btn btn-primary btn-md" href="cadastrar-hospede.php">Cadastrar Hóspede</a>
 <?php include("partials/_rodape.php"); ?>
 
 
