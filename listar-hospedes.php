@@ -44,7 +44,7 @@
 						<td><?= $hospede['email'] ?></td>
 						<td><?= $hospede['estado'] ?></td>
 						<td class="mais-acoes text-center" >
-							<a href="" class="mais-acoes-link">Ver Mais </a>
+							<a href="ver-mais.php?id=<?=$hospede['id']?>" class="mais-acoes-link">Ver Mais </a>
 							<a href="" class="mais-acoes-link">Editar </a>
 							<a href="remover.php?id=<?=$hospede['id']?>&recurso=hospedes" class="mais-acoes-link text-danger">Deletar </a>
 						 </td>
@@ -56,38 +56,3 @@
 
 	<a class="maisopcoes btn btn-primary btn-md" href="cadastrar-hospede.php">Cadastrar Hóspede</a>
 <?php include("partials/_rodape.php"); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

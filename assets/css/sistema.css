@@ -8,7 +8,7 @@ body {
 	padding: 40px 15px;
 }
 
-.nome-recurso {
+.nome-recurso, .informacoes-hospede-titulo {
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
@@ -25,6 +25,14 @@ body {
 
  }
 
+@media (min-width: 1000px) { 
+	.informacoes-hospede-titulo {
+		width: 70%;
+		margin: 0 auto;
+
+	}
+
+ } 
 .categoriaInfo {
 	text-transform: capitalize;
 	margin-top: 0.5em;
@@ -44,4 +52,20 @@ body {
 .rodape-sistema {
 	max-width: 100%;
 	height: auto;
+}
+
+.informacoes-hospede-nome {
+	text-align: center;
+	font-style: italic;
+}
+
+.informacoes-hospede p {
+	font-size: 1.2em;
+}
+
+.ver-dado-hospede {
+	padding: 7px;
+	background-color: #fff;
+	color: green;
+	margin-left: 10px;
 }

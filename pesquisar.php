@@ -33,7 +33,7 @@
 						<td><?= $encontrado['email'] ?></td>
 						<td><?= $encontrado['estado'] ?></td>
 						<td class="mais-acoes text-center">
-							<a href="" class="mais-acoes-link">Ver Mais </a>
+							<a href="ver-mais.php?id=<?=$encontrado['id']?>" class="mais-acoes-link">Ver Mais </a>
 							<a href="" class="mais-acoes-link">Editar </a>
 							<a href="remover.php?id=<?=$encontrado['id']?>&recurso=hospedes" class="mais-acoes-link text-danger disabled">Deletar </a>
 						 </td>

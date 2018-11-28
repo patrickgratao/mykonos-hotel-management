@@ -16,16 +16,29 @@
 	$bairro = $_GET["bairroHospede"];
 	$cidade = $_GET["cidadeHospede"];
 	$estado = $_GET["estadoHospede"];
+	//Informações de Reserva
+	$dataCheckin = $_GET["dataCheckinHospede"];
+	$dataCheckout = $_GET["dataCheckoutHospede"];
+	$qtdDiarias = $_GET["quantidadeDiariasHospede"];
+	$qtdAcompanhantes = $_GET["acompanhantesHospede"];
+	$precoDiaria = $_GET["precoDiariaHospede"];
+	// Informações de Pagamento
+	$valorPago = $_GET["valorPagoHospede"];
+	$precoTotal = $_GET["precoTotal"];
+	$totalPagar = $_GET["precoTotalPagar"];
+	$infoExtras = $_GET["informacoesAdicionais"];
 
 
-	if (cadastraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado)) { 
+
+	if (cadastraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras)) { 
 		
-		echo "<script>location.href='listar-hospedes.php?cadastrado=true';</script>";
+		echo "<script>location.href='listar-hospedes.php?cadastrado=true';</script>!";
 		die();
 	}
 
 	else {
-		echo "<script>location.href='listar-hospedes.php?cadastrado=false';</script>";
+		$msg = mysqli_error($conexao);
+		echo "<script>location.href='listar-hospedes.php?cadastrado=false';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}
  ?>

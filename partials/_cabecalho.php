@@ -14,6 +14,25 @@
 
   <script type="text/javascript"><?php include("assets/js/buscaCep.js") ?></script> 
   <!-- fim do código -->
+
+  <!-- Código para funcionamento do tinymce -->
+  <script src='assets/js/tinymce/tinymce.min.js'></script>
+
+    <script>
+      tinymce.init({
+        selector: '#informacoesAdicionais',
+        menubar: false,
+        language: 'pt_BR',
+        plugins: [
+          'advlist autolink lists link image charmap print preview anchor textcolor',
+          'searchreplace visualblocks code fullscreen',
+          'insertdatetime media table contextmenu paste code help wordcount'
+        ],
+        toolbar: 'insert | undo redo | sizeselect |  fontsizeselect | formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+      });
+  </script>
+  <!-- fim do código tinymce -->
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
