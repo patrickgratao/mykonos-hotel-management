@@ -1,0 +1,27 @@
+/*----------------------------------------*/
+/*  60. Mykonos custom 
+/*----------------------------------------*/
+
+.logo-text a {
+	color: #fff;
+	font-size: 1.2em;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.mykonos-search {
+	margin: 1em;
+	padding: 14px 0;
+}
+
+.cartao-destaque {
+	color: #f7f7f7;
+}
+
+.amor {
+	color: red;
+	background-color: #fff;
+	padding: 3px 5px;
+}

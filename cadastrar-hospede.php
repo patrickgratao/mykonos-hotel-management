@@ -1,6 +1,30 @@
-<?php include("partials/_cabecalho.php")?>
-         <div class="col-md-12 order-md-1 jumbotron">
-          <h2 class="mb-3 nome-recurso">Cadastrar novo hóspede</h2>
-<?php require("partials/_hospede_form.php") ?>
+<?php include("partials/_header.php")?>
+	<div class="breadcomb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcomb-list">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="breadcomb-wp">
+									<div class="breadcomb-icon">
+										<i class="notika-icon notika-windows"></i>
+									</div>
+									<div class="breadcomb-ctn">
+										<h2>Cadastrar novo Hóspede</h2>
+										<p>Fique atento as informações cadastradas.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcomb area End-->
 
-<?php include("partials/_rodape.php") ?>
+<?php require("partials/_form_cadastro_hospede.php") ?>
+
+
+<?php include("partials/_footer.php") ?>

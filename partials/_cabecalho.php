@@ -14,6 +14,8 @@
 
   <script type="text/javascript"><?php include("assets/js/buscaCep.js") ?></script> 
   <!-- fim do código -->
+  
+<script type="text/javascript" src="assets/js/info-reserva.js"> </script>
 
   <!-- Código para funcionamento do tinymce -->
   <script src='assets/js/tinymce/tinymce.min.js'></script>

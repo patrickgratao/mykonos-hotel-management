@@ -1,5 +1,5 @@
 <?php 
-	include("partials/_cabecalho.php"); 
+	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
 	include("banco/banco-hospede.php");
@@ -36,4 +36,4 @@
 
     	<a class="mais-opcoes btn btn-success btn-md" href="listar-hospedes.php">Ver todos os Hóspedes</a>
 
-<?php include("partials/_rodape.php"); ?>
+<?php include("partials/_footer.php"); ?>

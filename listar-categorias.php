@@ -1,52 +1,101 @@
 <?php 
-	include("partials/_cabecalho.php"); 
+	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
 	include("banco/banco-categoria.php");
 
 	$categorias = listaCategorias($conexao);
 ?>
-<h2>Todas as Categorias</h2><br>
-
 <!-- mensagens de sucesso e erro REMOÇÃO E CADASTRO -->
 	<?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
-		<p class="alert alert-success">Categoria removida com sucesso.</p>
+		<div class="alert-list">
+			<div class="alert alert-success alert-dismissible" role="alert">
+	         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Categoria removida com sucesso.
+	        </div>
+		</div>
 	<?php } ?>
 
 	<?php if(array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='true')  { ?>
-			<p class='alert alert-success'>A categoria foi cadastrada com sucesso!</p>
+		<div class="alert-list">
+			<div class="alert alert-success alert-dismissible" role="alert">
+	         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Categoria cadastrada com sucesso.
+	        </div>
+		</div>
 	<?php } 
 
 		else if (array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='false')  { ?>
-			<p class='alert alert-danger'>A categoria não foi cadastrada! Tente novamente.</p>
+			<div class="alert-list">
+				<div class="alert alert-success alert-dismissible" role="alert">
+		         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> A categoria não foi cadastrada! Tente novamente.
+		        </div>
+			</div>
 		<?php } ?>
 <!-- fim das mensagens -->
-<div class="table-responsive">
-	<table class="table table-striped table-bordered">
-		<thead class="thead-dark">
-	    <tr>
-	      <th scope="col" class="text-center">Id</th>
-	      <th scope="col" class="text-center">Nome da Categoria</th>
-	      <th scope="col right" class="text-center">Mais Ações</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-		<?php  
-			foreach ($categorias as $categoria) : ?>
-				<tr>
-					<td><?= $categoria['id'] ?></td>
-					<td><?= $categoria['nome'] ?></td>
-					<td class="mais-acoes text-center">
-							<a href="" class="mais-acoes-link">Editar </a>
-							<a href="remover.php?id=<?=$categoria['id']?>&recurso=categorias" class="mais-acoes-link text-danger">Deletar </a>
-					</td>
-				</tr>
-		<?php endforeach ?>
-	   </tbody>
-	</table>
-	<br>
-</div>
+<div class="breadcomb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcomb-list">
+						<div class="row">
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+								<div class="breadcomb-wp">
+									<div class="breadcomb-icon">
+										<i class="notika-icon notika-windows"></i>
+									</div>
+									<div class="breadcomb-ctn">
+										<h2>Todas as Categorias</h2>
+										<p>Estas categorias são utilizadas para selecionar os hóspedes e organizar informações.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
+								<div class="breadcomb-report">
+									<a href="cadastrar-categoria.php" data-toggle="tooltip" data-placement="left" title="Cadastrar nova categoria" class="btn"><i class="notika-icon notika-plus-symbol"></i></a>
+								</div>
+							</div>
+						</div>
 
-	<a class="maisopcoes btn btn-primary btn-md" href="cadastrar-categoria.php">Cadastrar Categoria</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcomb area End-->
 
-<?php include("partials/_rodape.php"); ?>
+<div class="data-table-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="data-table-list">
+						<div class="table-responsive">
+							<table id="data-table-basic" class="table table-striped">
+								<thead>
+							    <tr>
+							      <th>Nome da Categoria</th>
+							      <th class="text-center">Mais Ações</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+								<?php  
+									foreach ($categorias as $categoria) : ?>
+										<tr>
+											<td><?= $categoria['nome'] ?></td>
+											<td class="mais-acoes text-center">
+													<div class="btn-group notika-group-btn">
+					                                <a href="#" class="btn btn-primary notika-gp-primary">Editar</a>
+					                                <a href="remover.php?id=<?=$categoria['id']?>&recurso=categorias" class="btn btn-danger notika-gp-danger">Excluir</a>
+					                            </div>
+											</td>
+										</tr>
+								<?php endforeach ?>
+							   </tbody>
+							</table>
+						</div>
+					</div><br>
+				<a class="maisopcoes btn btn-primary btn-md" href="cadastrar-categoria.php">Cadastrar Categoria</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php include("partials/_footer.php"); ?>

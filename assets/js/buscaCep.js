@@ -1,4 +1,4 @@
-        $(document).ready(function() {
+$(document).ready(function() {
 
             function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
@@ -57,4 +57,4 @@
                     limpa_formulário_cep();
                 }
             });
-        });
+});

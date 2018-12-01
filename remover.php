@@ -1,5 +1,5 @@
 <?php 
-	include("partials/_cabecalho.php"); 
+	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
 
@@ -20,5 +20,5 @@
 	die();
 	}
 
-	include("partials/_rodape.php");
+	include("partials/_footer.php");
 ?>

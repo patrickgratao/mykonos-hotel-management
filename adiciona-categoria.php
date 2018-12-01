@@ -1,5 +1,5 @@
 <?php 
-	include("partials/_cabecalho.php"); 
+	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco-categoria.php");
 
