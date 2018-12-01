@@ -3,8 +3,8 @@
 	include("banco/conecta.php");
 	include("banco/banco.php");
 
-	$tabela = $_GET['recurso'];
-	$id = $_GET['id'];
+	$tabela = $_POST['recurso'];
+	$id = $_POST['id'];
 
 	removeDado($conexao, $tabela, $id);
 

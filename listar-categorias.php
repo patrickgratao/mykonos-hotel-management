@@ -84,7 +84,13 @@
 											<td class="mais-acoes text-center">
 													<div class="btn-group notika-group-btn">
 					                                <a href="#" class="btn btn-primary notika-gp-primary">Editar</a>
-					                                <a href="remover.php?id=<?=$categoria['id']?>&recurso=categorias" class="btn btn-danger notika-gp-danger">Excluir</a>
+					                                <form action="remover.php?id=<?=$categoria['id']?>" method="post">
+					                                	<input type="hidden" name="id" value="<?= $categoria['id'] ?>">
+					                                	<input type="hidden" name="recurso" value="categorias">
+
+					                                	<button class="btn btn-danger notika-gp-danger">Excluir</button>
+					                                </form>
+					                                
 					                            </div>
 											</td>
 										</tr>

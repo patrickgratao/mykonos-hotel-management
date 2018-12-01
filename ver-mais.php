@@ -4,7 +4,7 @@
 	include("banco/banco.php");
 	include("banco/banco-hospede.php");
 
-	$id = $_GET['id'];
+	$id = $_POST['id'];
 	$dadosHospede = visualizaHospede($conexao, $id);
 
 ?>
