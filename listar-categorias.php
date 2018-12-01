@@ -84,7 +84,7 @@
 											<td class="mais-acoes text-center">
 													<div class="btn-group notika-group-btn">
 					                                <a href="#" class="btn btn-primary notika-gp-primary">Editar</a>
-					                                <form action="remover.php" method="post">
+					                                <form class="mais-opcoes" action="remover.php" method="post">
 					                                	<input type="hidden" name="id" value="<?= $categoria['id'] ?>">
 					                                	<input type="hidden" name="recurso" value="categorias">
 

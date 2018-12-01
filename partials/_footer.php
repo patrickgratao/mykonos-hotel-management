@@ -43,26 +43,31 @@
     <!-- mCustomScrollbar JS
 		============================================ -->
     <script src="assets/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+   
+    <!-- sparkline JS
+        ============================================ -->
+    <script src="assets/js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="assets/js/sparkline/sparkline-active.js"></script>
+    <!-- flot JS
+        ============================================ -->
+    <script src="assets/js/flot/jquery.flot.js"></script>
+    <script src="assets/js/flot/jquery.flot.resize.js"></script>
+    <script src="assets/js/flot/flot-active.js"></script>
+    <!-- knob JS
+        ============================================ -->
+    <script src="assets/js/knob/jquery.knob.js"></script>
+    <script src="assets/js/knob/jquery.appear.js"></script>
+    <script src="assets/js/knob/knob-active.js"></script>
+    <!-- Input Mask JS
+        ============================================ -->
+    <script src="assets/js/jasny-bootstrap.min.js"></script>
+
     <!-- jvectormap JS
 		============================================ -->
     <script src="assets/js/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="assets/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <script src="assets/js/jvectormap/jvectormap-active.js"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="assets/js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="assets/js/sparkline/sparkline-active.js"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="assets/js/flot/jquery.flot.js"></script>
-    <script src="assets/js/flot/jquery.flot.resize.js"></script>
-    <script src="assets/js/flot/curvedLines.js"></script>
-    <script src="assets/js/flot/flot-active.js"></script>
-    <!-- knob JS
-		============================================ -->
-    <script src="assets/js/knob/jquery.knob.js"></script>
-    <script src="assets/js/knob/jquery.appear.js"></script>
-    <script src="assets/js/knob/knob-active.js"></script>
+
     <!--  wave JS
 		============================================ -->
     <script src="assets/js/wave/waves.min.js"></script>
@@ -74,6 +79,12 @@
         ============================================ -->
     <script src="assets/js/data-table/jquery.dataTables.min.js"></script>
     <script src="assets/js/data-table/data-table-act.js"></script>
+
+    <!-- datapicker JS
+        ============================================ -->
+    <script src="assets/js/datapicker/bootstrap-datepicker.js"></script>
+    <script src="assets/js/datapicker/datepicker-active.js"></script>
+    
 
     <!-- plugins JS
 		============================================ -->

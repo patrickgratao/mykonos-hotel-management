@@ -1,4 +1,13 @@
-<?php include("partials/_header.php")?>
+<?php 
+	include ("partials/_header.php");
+	include ("banco/conecta.php");
+	include ("banco/banco-hospede.php");
+	$id = $_POST['id'];
+	$hospede = visualizaHospede($conexao, $id);
+
+
+
+?>
 	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">

@@ -21,7 +21,16 @@ body {
 }
 
 .amor {
-	color: red;
+	color: #cc2222;
 	background-color: #fff;
 	padding: 3px 5px;
+}
+
+.mais-opcoes {
+
+	display: inline;
+}
+
+.btn {
+	border-radius: 0;
 }

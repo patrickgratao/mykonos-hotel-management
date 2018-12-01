@@ -30,6 +30,12 @@
     <!-- animate CSS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/animate.css">
+     <!-- summernote CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/summernote/summernote.css">
+    <!-- Range Slider CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/themesaller-forms.css">
     <!-- normalize CSS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -42,11 +48,30 @@
     <!-- notika icon CSS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/notika-custom-icon.css">
+    <!-- bootstrap select CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/bootstrap-select/bootstrap-select.css">
+    <!-- datapicker CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/datapicker/datepicker3.css">
+    <!-- Color Picker CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/color-picker/farbtastic.css">
+    <!-- Chosen CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/chosen/chosen.css">
+    <!-- notification CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/notification/notification.css">
+    <!-- dropzone CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/dropzone/dropzone.css">
+    <!-- wave CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/wave/waves.min.css">
     <!-- Data Table JS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
-    <!-- main CSS
-
     <!-- wave CSS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/wave/waves.min.css">

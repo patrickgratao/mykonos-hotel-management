@@ -67,14 +67,14 @@
 												<td><?= $encontrado['estado'] ?></td>
 												<td class="mais-acoes text-center">
 													<div class="btn-group notika-group-btn material-design-btn">
-														<form action="ver-mais.php" method="post">
+														<form class="mais-opcoes" action="ver-mais.php" method="post">
 															<input type="hidden" name="id" value="<?= $encontrado['id'] ?>">
 															<button class="btn btn-primary btn-sm notika-gp-primary">Ver Mais</button>
 														</form>
 
 						                                
 						                                <a href="#" class="btn btn-default btn-sm">Editar</a>
-						                                <form action="remover.php" method="post">
+						                                <form class="mais-opcoes" action="remover.php" method="post">
 						                                	<input type="hidden" name="id" value="<?=$encontrado['id']?>" >
 						                                	<input type="hidden" name="recurso" value="hospedes">
 						                                	<button class="btn btn-sm btn-danger notika-gp-danger">Excluir</button>

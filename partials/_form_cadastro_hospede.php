@@ -21,7 +21,7 @@
                                             <i class="notika-icon notika-star"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="text" class="form-control" placeholder="CPF - Apenas números *" id="cpfHospede" name="cpfHospede" required>
+                                            <input type="text" class="form-control" placeholder="CPF - Apenas números *" id="cpfHospede" name="cpfHospede" data-mask="999.999.999-99" required>
                                         </div>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                                             <i class="notika-icon notika-calendar"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="date" name="nascimentoHospede" id="nascimentoHospede" placeholder="" value="" required class="form-control">
+                                            <input type="text" name="nascimentoHospede" id="nascimentoHospede" value="" required class="form-control" data-mask="99/99/9999" placeholder="Data de Nascimento">
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                                             <i class="notika-icon notika-phone"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="tel"name="telefoneHospede" id="telefoneHospede" placeholder="Telefone com DDD" value="" required class="form-control">
+                                            <input type="tel"name="telefoneHospede" id="telefoneHospede" placeholder="Telefone com DDD" value="" required class="form-control" data-mask="(99) 9999-9999">
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                             <i class="notika-icon notika-phone"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="tel"name="celularHospede" id="celularHospede" placeholder="Whatsapp com DDD" value="" required class="form-control">
+                                            <input type="tel"name="celularHospede" id="celularHospede" placeholder="Whatsapp com DDD" value="" required class="form-control" data-mask="(99) 99999-9999">
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                             <i class="notika-icon notika-house"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="number" class="form-control" name="cepHospede" id="cepHospede" placeholder="CEP - Somente números" min="1" value="">
+                                            <input type="text" class="form-control" name="cepHospede" id="cepHospede" placeholder="CEP - Somente números" value="" data-mask="99999-999">
                                         </div>
                                     </div>
                                 </div>
@@ -119,9 +119,6 @@
                                         </div>
                                         <div class="nk-int-st">
                                             <input type="text" class="form-control" name="ruaHospede" id="ruaHospede" placeholder="Rua">
-                                        </div>
-                                        <div class="form-ic-cmp">
-                                            <i class="notika-icon notika-success"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +148,7 @@
                                             <i class="notika-icon notika-house"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="text" class="form-control" name="estadoHospede" id="estadoHospede" placeholder="Estado / UF">
+                                            <input type="text" class="form-control" name="estadoHospede" id="estadoHospede" placeholder="Estado / UF" maxlength="2">
                                         </div>
                                     </div>
                                 </div>
@@ -166,7 +163,7 @@
                                             <i class="notika-icon notika-calendar"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="date" class="form-control" name="dataCheckinHospede" id="dataCheckinHospede" placeholder="" value="2018-11-29">
+                                            <input type="text" class="form-control" name="dataCheckinHospede" id="dataCheckinHospede" placeholder="Data de Check-In" value="" data-mask="99/99/9999">
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +173,7 @@
                                             <i class="notika-icon notika-calendar"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="date" class="form-control" name="dataCheckoutHospede" id="dataCheckoutHospede" placeholder="" value="2018-12-02">
+                                            <input type="text" class="form-control" name="dataCheckoutHospede" id="dataCheckoutHospede" placeholder="Data de Check-Out" value="" data-mask="99/99/9999">
                                         </div>
                                     </div>
                                 </div>
@@ -236,7 +233,7 @@
                                             <i class="notika-icon notika-tax"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="number" class="form-control" readonly class="form-control text-danger" name="precoTotalPagar" id="precoTotalPagar" placeholder="" value="205.22" required min="0">
+                                            <input type="number" class="form-control" readonly class="form-control text-danger" name="precoTotalPagar" id="precoTotalPagar" placeholder="" value="205.22" required ">
                                         </div>
                                     </div>
                                 </div>
