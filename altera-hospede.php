@@ -3,7 +3,8 @@
   include("banco/conecta.php");
   include("banco/banco-hospede.php");
 
-	$nome = $_POST["nomeHospede"]; 	
+ 	 $id = $_POST['id'];
+  	$nome = $_POST["nomeHospede"]; 	
 	$cpf = $_POST["cpfHospede"];
 	$dataNascimento = $_POST["nascimentoHospede"];
 	$sexo = $_POST["sexoHospede"];
@@ -28,16 +29,14 @@
 	$totalPagar = $_POST["precoTotalPagar"];
 	$infoExtras = $_POST["informacoesAdicionais"];
 
-
-
-	if (cadastraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras)) { 
+  if (alteraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $id)) { 
 		
-		echo "<script>location.href='listar-hospedes.php?cadastrado=true';</script>";
+		echo "<script>location.href='listar-hospedes.php?alterado=true';</script>";
 		die();
 	}
 
 	else {
 		$msg = mysqli_error($conexao);
-		echo "<script>location.href='listar-hospedes.php?cadastrado=false';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
+		echo "<script>location.href='listar-hospedes.php?alterado=false';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}

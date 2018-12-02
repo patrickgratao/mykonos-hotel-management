@@ -8,6 +8,13 @@
         return $resultadoConexao;
   }
 
+  function alteraHospede ($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $id) {
+
+  		$query = "UPDATE hospedes SET nome = '{$nome}', cpf = '{$cpf}', data_nascimento = '{$dataNascimento}', sexo = '{$sexo}', telefone = '{$telefone}', celular = '{$celular}', email = '{$email}', estado_civil = '{$estadoCivil}', cep = '{$cep}', rua = '{$rua}', bairro = '{$bairro}', cidade = '{$cidade}', estado = '{$estado}', data_checkin = '{$dataCheckin}', data_checkout = '{$dataCheckout}', qtd_diarias = '{$qtdDiarias}', qtd_pagantes = '{$qtdAcompanhantes}', preco_diaria = {$precoDiaria}, valor_pago = {$valorPago}, preco_total = {$precoTotal}, total_pagar = {$totalPagar}, info_extras = '{$infoExtras}'  WHERE id = '{$id}' ";
+
+  		return mysqli_query($conexao, $query);
+  }
+
   function listaHospedes ($conexao){
 		$hospedes = array(); 
 		$query = "select * from hospedes ORDER BY nome";
