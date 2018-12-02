@@ -42,10 +42,10 @@
                                             <i class="notika-icon notika-calendar"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <select class="form-control" name="sexoHospede" id="sexoHospede" required>
-                                              <option value="">Sexo...</option>
-                                              <option value="f">Feminino</option>
-                                              <option value="m">Masculino</option>
+                                          <select class="form-control" name="sexoHospede" id="sexoHospede" required>
+                                              <option value="f"<?=$hospede['sexo'] == 'f' ? ' selected="selected"' : '';?>>Feminino</option>
+                                              <option value="m"<?=$hospede['sexo'] == 'm' ? ' selected="selected"' : '';?>>Masculino</option>
+                                            
                                             </select>
                                         </div>
                                     </div>
@@ -87,12 +87,11 @@
                                         </div>
                                         <div class="nk-int-st">
                                             <select class="form-control"  name="estadoCivilHospede" id="estadoCivilHospede" required>
-                                              <option value="">Estado Civil...</option>
-                                              <option value="solteiro">Solteiro (a)</option>
-                                              <option value="casado">Casado (a)</option>
-                                              <option value="viuvo">Viúvo (a)</option>
-                                              <option value="divorciado">Divorciado (a)</option>
-                                              <option value="outro">Outro</option>
+                                                <option value="solteiro"<?=$hospede['estado_civil'] == 'solteiro' ? ' selected="selected"' : '';?>>Solteiro (a)</option>
+                                                <option value="casado"<?=$hospede['estado_civil'] == 'casado' ? ' selected="selected"' : '';?>>Casado (a)</option>
+                                                <option value="viuvo" <?=$hospede['estado_civil'] == 'viuvo' ? ' selected="selected"' : '';?> >Viúvo (a)</option>
+                                                <option value="divorciado" <?=$hospede['estado_civil'] == 'divorciado' ? ' selected="selected"' : '';?> >Divorciado (a)</option>
+                                                <option value="outro"<?=$hospede['estado_civil'] == 'outro' ? ' selected="selected"' : '';?> >Outro</option>
                                             </select>
 
                                         </div>

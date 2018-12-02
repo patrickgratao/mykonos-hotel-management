@@ -72,8 +72,10 @@
 															<button class="btn btn-primary btn-sm notika-gp-primary">Ver Mais</button>
 														</form>
 
-						                                
-						                                <a href="#" class="btn btn-default btn-sm">Editar</a>
+						                                <form action="editar-hospede.php" class="mais-opcoes" method="post">
+						                                	<input type="hidden" name="id" value="<?=$encontrado['id']?>">
+						                                	<button class="btn btn-default btn-sm">Editar</button>
+						                                </form>
 						                                <form class="mais-opcoes" action="remover.php" method="post">
 						                                	<input type="hidden" name="id" value="<?=$encontrado['id']?>" >
 						                                	<input type="hidden" name="recurso" value="hospedes">
