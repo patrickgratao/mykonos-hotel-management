@@ -196,7 +196,7 @@
                                             <i class="notika-icon notika-support"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="number" class="form-control"name="acompanhantesHospede" id="acompanhantesHospede" placeholder="N° de Acompanhantes Pagantes" min="1" value="<?= $hospede['qtd_pagantes']?>">
+                                            <input type="number" class="form-control"name="acompanhantesHospede" id="acompanhantesHospede" placeholder="N° de Acompanhantes Pagantes" min="0" value="<?= $hospede['qtd_pagantes']?>">
                                         </div>
                                     </div>
                                 </div>
