@@ -23,13 +23,27 @@
 	//Warning Message
 	$('#sa-warning').on('click', function(){
 		swal({   
-			title: "Are you sure?",   
-			text: "You will not be able to recover this imaginary file!",   
+			title: "Tem certeza disso?",   
+			text: "Você não poderá recuperar os dados deste item após ser removido!",   
 			type: "warning",   
 			showCancelButton: true,   
-			confirmButtonText: "Yes, delete it!",
+			confirmButtonText: "Sim, quero apagar!",
 		}).then(function(){
-			swal("Deleted!", "Your imaginary file has been deleted.", "success"); 
+			swal("Excluído!", "Você pediu e nós excluimos!", "success"); 
+		});
+	});
+
+
+	//Excluir Hospede mensagem
+	$('#hos-delete').on('click', function(){
+		swal({   
+			title: "Tem certeza disso?",   
+			text: "Você não poderá recuperar os dados deste hóspede após a remoção!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonText: "Sim, quero apagar!",
+		}).then(function(){
+			swal("Excluído!", "Você pediu e nós excluimos!", "success"); 
 		});
 	});
 	

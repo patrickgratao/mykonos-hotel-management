@@ -56,7 +56,7 @@
                                             <i class="notika-icon notika-phone"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="tel"name="telefoneHospede" id="telefoneHospede" placeholder="Telefone com DDD" data-mask="(99) 9999-9999" value="<?= $hospede['telefone']?>"required class="form-control">
+                                            <input type="tel"name="telefoneHospede" id="telefoneHospede" placeholder="Telefone com DDD" data-mask="(99) 9999-9999" value="<?= $hospede['telefone']?>" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                                             <i class="notika-icon notika-phone"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="tel"name="celularHospede" id="celularHospede" placeholder="Whatsapp com DDD" value="<?= $hospede['celular']?>" required class="form-control">
+                                            <input type="tel"name="celularHospede" id="celularHospede" placeholder="Whatsapp com DDD" value="<?= $hospede['celular']?>" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +249,7 @@
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group ic-cmp-int float-lb form-elet-mg">
-                                        <div class="nk-int-st">
+                                        <div class="nk-int-st infos-extras">
                                             <textarea class="form-control" id="informacoesAdicionais" name="informacoesAdicionais" rows="9"><?= $hospede['info_extras']?></textarea>
                                         </div>
                                     </div>

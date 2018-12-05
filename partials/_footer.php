@@ -85,6 +85,10 @@
     <script src="assets/js/datapicker/bootstrap-datepicker.js"></script>
     <script src="assets/js/datapicker/datepicker-active.js"></script>
     
+    <!-- dialos -->
+    <script src="assets/js/dialog/sweetalert2.min.js"></script>
+    <script src="assets/js/dialog/dialog-active.js"></script>
+    
 
     <!-- plugins JS
 		============================================ -->

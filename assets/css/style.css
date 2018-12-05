@@ -2182,17 +2182,22 @@ ol, ul{
     margin: 25px 0px;
 }
 .contact-ctn h2{
-	font-size:16px;
+	font-size:1.3em;
 	color:#333;
 	margin-bottom:5px;
 }
 .contact-ctn .ctn-ads{
-	font-size:14px;
-	color:#888;
+	font-size:1em;
+	color:#3d73b9;
 	margin-bottom: 0px;
 }
 .contact-ad-hd{
 	margin: 15px 0px;
+}
+
+.contact-ad-hd p {
+    font-size: 1em;
+    color: #3d73b9;
 }
 .social-sn h2{
 	font-size:14px;

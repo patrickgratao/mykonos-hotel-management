@@ -54,6 +54,10 @@
     <!-- datapicker CSS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/datapicker/datepicker3.css">
+    <!-- dialog CSS
+        ============================================ -->
+    <link rel="stylesheet" href="assets/css/dialog/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/css/dialog/dialog.css">
     <!-- Color Picker CSS
         ============================================ -->
     <link rel="stylesheet" href="assets/css/color-picker/farbtastic.css">

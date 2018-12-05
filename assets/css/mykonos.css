@@ -1,5 +1,5 @@
 /*----------------------------------------*/
-/*  60. Mykonos custom 
+/*  60. Mykonos custom css
 /*----------------------------------------*/
 
 .logo-text a {
@@ -45,4 +45,8 @@ body {
 .hospede-titulo {
 	
 	border-bottom: 0.12em solid #3d73b9;
+}
+
+.dados-contato-titulo {
+	font-weight: bold;
 }

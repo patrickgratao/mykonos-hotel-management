@@ -41,36 +41,73 @@
   </div>
   <!-- Breadcomb area End-->
 
-	<div class="col-md-12 order-md-1 jumbotron">
-    	<h2 class="md-12 informacoes-hospede-titulo">Informações do Hóspede</h2>
-    	<br>
-    	<h3 class="informacoes-hospede-nome"><?=$dadosHospede['nome']?></h3>
-    	<div class="dropdown-divider"></div><br>
-    	<div class="informacoes-hospede">
-    		<p><strong>CPF: </strong><span class="ver-dado-hospede"><?=$dadosHospede['cpf']?></span></p>
-  			<p><strong>Data de Nascimento: </strong><span class="ver-dado-hospede"><?=$dadosHospede['data_nascimento']?></span></p>
-  			<p><strong>Sexo: </strong><span class="ver-dado-hospede"><?=$dadosHospede['sexo']?></span></p>
-  			<p><strong>Telefone com DDD: </strong><span class="ver-dado-hospede"><?=$dadosHospede['telefone']?></span></p>
-  			<p><strong>Celular com DDD: </strong><span class="ver-dado-hospede"><?=$dadosHospede['celular']?></span></p>
-  			<p><strong>E-mail: </strong><span class="ver-dado-hospede"><?=$dadosHospede['email']?></span></p>
-  			<p><strong>Estado Civil: </strong><span class="ver-dado-hospede"><?=$dadosHospede['estado_civil']?></span></p>
-  			<p><strong>Endereço: </strong><span class="ver-dado-hospede"><?=$dadosHospede['rua']?>, <?=$dadosHospede['bairro']?>, <?=$dadosHospede['cidade']?> - <?=$dadosHospede['estado']?>, <?=$dadosHospede['cep']?>  </span></p>
-  			<p><strong>Último Check-In: </strong><span class="ver-dado-hospede"><?=$dadosHospede['data_checkin']?></span></p>
-  			<p><strong>Quantidade de Dias hospedado </strong><span class="ver-dado-hospede"><?=$dadosHospede['qtd_diarias']?></span></p>
-  			<p><strong>Preço da Diária </strong><span class="ver-dado-hospede">R$ <?=$dadosHospede['preco_diaria']?></span></p>
-  			<br>
-  			<h3>Informações Adicionais</h3>
-  			<br>
-  			<p><span class="informacoes-extras-hospede"><?=$dadosHospede['info_extras']?></span></p>
+      <!-- Contact area Start-->
+    <div class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-list">
+                        <div class="contact-ctn">
+                            <div class="contact-ad-hd">
+                              <h2>Dados Pessoais</h2><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">CPF: </span><?=$dadosHospede['cpf']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Sexo: </span><?=$dadosHospede['sexo']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Data Nascimento: </span><?=$dadosHospede['data_nascimento']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><?=$dadosHospede['estado_civil']?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-list">
+                        <div class="contact-ctn">
+                            <div class="contact-ad-hd">
+                              <h2>Dados de Contato</h2><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Telefone:</span> <?=$dadosHospede['telefone']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Celular / Whatsapp:</span> <?=$dadosHospede['celular']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">E-mail:</span> <?=$dadosHospede['email']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Endereço: </span><?=$dadosHospede['rua']?> <?=$dadosHospede['bairro']?> <?=$dadosHospede['cidade']?> - <?=$dadosHospede['estado']?> <?=$dadosHospede['cep']?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
 
-		</div>
-	</div>
-  <form method="POST" action="editar-hospede.php">
-    <input type="hidden" name="id" value="<?=$dadosHospede['id']?>">
-    <button title="Editar Hóspede" class="btn btn-danger notika-btn-danger btn-lg waves-effect">Editar Hóspede</button>
-    <a class="btn btn-success notika-btn-primary btn-lg waves-effect" href="listar-hospedes.php">Ver todos os Hóspedes</a>
-  </form>
-
-    	
+            <div class="row">
+              
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-list">
+                        <div class="contact-ctn">
+                            <div class="contact-ad-hd">
+                              <h2>Dados de Hospedagem</h2><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Último Check-In:</span> <?=$dadosHospede['data_checkin']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Dias Hospedados:</span> <?=$dadosHospede['qtd_diarias']?> dias</p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Preço da Diária:</span> R$ <?=$dadosHospede['preco_diaria']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Acompanhantes: </span><?=$dadosHospede['qtd_pagantes']?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="contact-list">
+                        <div class="contact-ctn">
+                            <div class="contact-ad-hd">
+                              <h2>Informações Adicionais</h2><br>
+                              <p class="ctn-ads"><?=$dadosHospede['info_extras']?></p><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <br>
+          <form method="POST" action="editar-hospede.php">
+            <input type="hidden" name="id" value="<?=$dadosHospede['id']?>">
+            <button title="Editar Hóspede" class="btn btn-danger notika-btn-danger btn-lg waves-effect">Editar Hóspede</button>
+            <a class="btn btn-success notika-btn-primary btn-lg waves-effect" href="listar-hospedes.php">Ver todos os Hóspedes</a>
+          </form>  
+                
+     </div>
+   </div>
+ </div>   	
 
 <?php include("partials/_footer.php"); ?>

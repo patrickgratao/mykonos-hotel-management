@@ -55,7 +55,7 @@
                                             <i class="notika-icon notika-phone"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="tel"name="telefoneHospede" id="telefoneHospede" placeholder="Telefone com DDD" value="" required class="form-control" data-mask="(99) 9999-9999">
+                                            <input type="tel"name="telefoneHospede" id="telefoneHospede" placeholder="Telefone com DDD" value="" class="form-control" data-mask="(99) 9999-9999">
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                             <i class="notika-icon notika-phone"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="tel"name="celularHospede" id="celularHospede" placeholder="Whatsapp com DDD" value="" required class="form-control" data-mask="(99) 99999-9999">
+                                            <input type="tel"name="celularHospede" id="celularHospede" placeholder="Whatsapp com DDD" value="" class="form-control" data-mask="(99) 99999-9999">
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +246,7 @@
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group ic-cmp-int float-lb form-elet-mg">
-                                        <div class="nk-int-st">
+                                        <div class="nk-int-st infos-extras">
                                             <textarea class="form-control" id="informacoesAdicionais" name="informacoesAdicionais" rows="9"></textarea>
                                         </div>
                                     </div>
