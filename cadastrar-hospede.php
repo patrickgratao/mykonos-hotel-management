@@ -1,4 +1,9 @@
-<?php include("partials/_header.php")?>
+<?php include("partials/_header.php");
+		include("banco/conecta.php");
+		include("banco/banco-categoria.php");
+
+		$categorias = listaCategorias($conexao);
+?>
 	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">

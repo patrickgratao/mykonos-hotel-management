@@ -91,9 +91,9 @@
 								      <th scope="col" class="text-center">Nome</th>
 								      <th scope="col" class="text-center">CPF</th>
 								      <th scope="col" class="text-center">Celular com DDD</th>
+								      <th scope="col" class="text-center">Categoria</th>
 								      <th scope="col" class="text-center">E-mail</th>
-								      <th scope="col" class="text-center">UF</th>
-								      <th scope="col centered" class="text-center">Mais Ações</th>
+								      <th scope="col" class="text-center">Mais Ações</th>
 								    </tr>
 							  	</thead>
 							  	<tbody>
@@ -103,8 +103,8 @@
 												<td><?= $hospede['nome'] ?></td>
 												<td><?= $hospede['cpf'] ?></td>
 												<td><?= $hospede['celular'] ?></td>
+												<td class="text-center"><?= $hospede['categoria_nome'] ?></td>
 												<td><?= $hospede['email'] ?></td>
-												<td><?= $hospede['estado'] ?></td>
 												<td class="mais-acoes text-center" >
 													<div class="btn-group notika-group-btn material-design-btn">
 														<form class="mais-opcoes" action="ver-mais.php" method="post">

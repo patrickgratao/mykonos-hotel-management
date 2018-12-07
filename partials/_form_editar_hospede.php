@@ -97,7 +97,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="form-group ic-cmp-int float-lb floating-lb">
+                                        <div class="form-ic-cmp">
+                                            <i class="notika-icon notika-paperclip"></i>
+                                        </div>
+                                        <div class="nk-int-st">
+                                            <select class="form-control"  name="categoria_id" id="categoria_id" required>
+                                                <option value="">Categoria...</option>
+                                            <?php foreach ($categorias as $categoria) : 
+                                                $essaEhACategoria = $hospede['categoria_id'] == $categoria['id'];
+                                                $selecao = $essaEhACategoria ? "selected='selected'" : "";
+                                            ?>
+                                                <option value="<?=$categoria['id']?>" <?=$selecao?> ><?=$categoria['nome']?></option>
+                                            <?php endforeach ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div><br>
+
                             <div class="cmp-tb-hd">
                                 <h2>Informações de Localidade</h2>
                             </div>

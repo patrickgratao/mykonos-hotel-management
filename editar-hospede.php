@@ -2,11 +2,11 @@
 	include ("partials/_header.php");
 	include ("banco/conecta.php");
 	include ("banco/banco-hospede.php");
+	include ("banco/banco-categoria.php");
+
 	$id = $_POST['id'];
 	$hospede = visualizaHospede($conexao, $id);
-
-
-
+	$categorias = listaCategorias($conexao);
 ?>
 	<div class="breadcomb-area">
 		<div class="container">

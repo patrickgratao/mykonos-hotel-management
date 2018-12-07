@@ -2,7 +2,7 @@
 	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
-	include("banco/banco-hospede.php");
+  include("banco/banco-hospede.php");
 
 	$id = $_POST['id'];
 	$dadosHospede = visualizaHospede($conexao, $id);
@@ -53,7 +53,8 @@
                               <p class="ctn-ads"><span class="dados-contato-titulo">CPF: </span><?=$dadosHospede['cpf']?></p><br>
                               <p class="ctn-ads"><span class="dados-contato-titulo">Sexo: </span><?=$dadosHospede['sexo']?></p><br>
                               <p class="ctn-ads"><span class="dados-contato-titulo">Data Nascimento: </span><?=$dadosHospede['data_nascimento']?></p><br>
-                              <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><?=$dadosHospede['estado_civil']?></p>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><?=$dadosHospede['estado_civil']?></p><br>
+                              <p class="ctn-ads"><span class="dados-contato-titulo">Tipo de Hóspede: </span><?=$dadosHospede['categoria_nome']?></p>
                             </div>
                         </div>
                     </div>

@@ -17,6 +17,7 @@
 	$bairro = $_POST["bairroHospede"];
 	$cidade = $_POST["cidadeHospede"];
 	$estado = $_POST["estadoHospede"];
+	$categoriaHospede = $_POST["categoria_id"];
 	//Informações de Reserva
 	$dataCheckin = $_POST["dataCheckinHospede"];
 	$dataCheckout = $_POST["dataCheckoutHospede"];
@@ -29,7 +30,7 @@
 	$totalPagar = $_POST["precoTotalPagar"];
 	$infoExtras = $_POST["informacoesAdicionais"];
 
-  if (alteraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $id)) { 
+  if (alteraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $categoriaHospede, $id)) { 
 		
 		echo "<script>location.href='listar-hospedes.php?alterado=true';</script>";
 		die();

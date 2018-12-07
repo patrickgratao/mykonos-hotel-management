@@ -50,3 +50,7 @@ body {
 .dados-contato-titulo {
 	font-weight: bold;
 }
+
+.contact-list {
+	margin-top: 15px;
+}

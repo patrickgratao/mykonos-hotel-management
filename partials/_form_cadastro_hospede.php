@@ -1,4 +1,4 @@
-<form class="needs-validation" method="POST" action="adiciona-hospede.php">
+<form class="needs-validation" novalidate method="POST" action="adiciona-hospede.php">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-element-list mg-t-30">
                             <div class="cmp-tb-hd">
@@ -94,6 +94,21 @@
                                               <option value="outro">Outro</option>
                                             </select>
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="form-group ic-cmp-int float-lb floating-lb">
+                                        <div class="form-ic-cmp">
+                                            <i class="notika-icon notika-paperclip"></i>
+                                        </div>
+                                        <div class="nk-int-st">
+                                            <select class="form-control"  name="categoria_id" id="categoria_id" required>
+                                                <option value="">Categoria...</option>
+                                            <?php foreach ($categorias as $categoria) : ?>
+                                                <option value="<?=$categoria['id']?>"><?=$categoria['nome']?></option>
+                                            <?php endforeach ?>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

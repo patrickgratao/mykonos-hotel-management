@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Dez-2018 às 21:55
+-- Generation Time: 02-Dez-2018 às 02:46
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.2.12
 
@@ -38,7 +38,9 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `nome`) VALUES
-(2, 'Lima');
+(4, 'Airbnb'),
+(2, 'Motorista'),
+(3, 'Particular');
 
 -- --------------------------------------------------------
 
@@ -77,11 +79,13 @@ CREATE TABLE `hospedes` (
 --
 
 INSERT INTO `hospedes` (`id`, `nome`, `cpf`, `data_nascimento`, `sexo`, `telefone`, `celular`, `email`, `estado_civil`, `cep`, `rua`, `bairro`, `cidade`, `estado`, `data_checkin`, `data_checkout`, `qtd_diarias`, `qtd_pagantes`, `preco_diaria`, `valor_pago`, `preco_total`, `total_pagar`, `info_extras`) VALUES
-(24, 'Roselaine dos Santos Alves', '11495749681', '1986-05-21', 'f', '35997448672', '35997448672', 'rosymeesantos.alves@gmail.com', 'casado', '', '', '', 'Itamagi', 'MG', '2018-11-30', '2018-12-02', 2, 9, '0', '0', '0', '205', '<p>Roselaine fez uma excurs&atilde;o com familiares no total de 9 pagantes e algumas crian&ccedil;as.&nbsp;</p>\r\n<p><br />Ficaram hospedadas nos quartos 10, 18, 32 e 41</p>'),
+(24, 'Rose', '11495749681', '1986-05-21', '', '35997448672', '35997448672', 'rosymeesantos.alves@gmail.com', '', '', '', '', 'Itamagi', 'MG', '2018-11-30', '2018-12-02', 2, 9, '0', '0', '0', '205', '<p>Roselaine fez uma excurs&atilde;o com familiares no total de 9 pagantes e algumas crian&ccedil;as.&nbsp;</p>\r\n<p><br />Ficaram hospedadas nos quartos 10, 18, 32 e 41</p>'),
 (25, 'Patryck Peterson Costa GratÃ£o', '00250426102', '1994-03-23', 'm', '62996880462', ' 62996880462', 'ppgratao@gmail.com', 'solteiro', '75389125', 'Rua LÃ¡zaro Carvelo Borges', 'Setor Cristina II', 'Trindade', 'GO', '2018-11-29', '2018-12-04', 1, 1, '1', '1', '1', '205', '<p>infos massas</p>'),
 (26, 'Patryck Peterson', '002.504.261-02', '0000-00-00', 'm', '(62) 3505-2413', '(62) 99688-0462', 'patryck@gmail.com', 'solteiro', '75389125', '...', '...', '...', 'GO', '2018-11-29', '2018-12-02', 1, 1, '1', '1', '1', '205', '<p>teste</p>'),
 (27, 'Magda GratÃ£o HonÃ³rio', '508.435.241-20', '0000-00-00', 'f', '(62) 3505-2413', '(62) 99688-0462', 'contato@pousadaagape.com.br', 'casado', '75389-125', 'Rua LÃ¡zaro Carvelo Borges', 'Setor Cristina II', 'Trindade', 'GO', '0000-00-00', '0000-00-00', 3, 3, '3', '3', '3', '205', '<p>Magda ficou no quarto 43</p>'),
-(28, 'Luiza Lima', '002.504.261-02', '23/03/1994', 'f', '(62) 3505-2413', '(62) 99688-0462', 'patryck@gmail.com', 'casado', '75389-125', 'Rua LÃ¡zaro Carvelo Borges', 'Setor Cristina II', 'Trindade', 'GO', '01/12/2018', '03/12/2018', 1, 1, '1', '1', '1', '205', '<p>Luizia ficou no quarto 32</p>');
+(28, 'Luiza Lima', '002.504.261-02', '23/03/1994', 'f', '(62) 3505-2413', '(62) 99688-0462', 'patryck@gmail.com', 'casado', '75389-125', 'Rua LÃ¡zaro Carvelo Borges', 'Setor Cristina II', 'Trindade', 'GO', '01/12/2018', '03/12/2018', 1, 1, '1', '1', '1', '205', '<p>Luizia ficou no quarto 32</p>'),
+(29, 'Wilson Guia', '269.546.961-61', '01/12/2013', 'f', '(62) 3505-4470', '(62) 99687-9900', 'jluiz@pousadaagape.com.br', 'divorciado', '75389-125', 'Rua LÃ¡zaro Carvelo Borges', 'Setor Cristina II', 'Trindade', 'GO', '01/12/2018', '02/12/2018', 1, 1, '60', '0', '1200', '205', '<p>Jos&eacute; luiz conheceu a pousada atrav&eacute;s do Aribnb</p>\r\n<p>Ficou no quarto 34</p>\r\n<p>Possui uma ecosport 2017 placa KEH-2020 lika</p>'),
+(30, 'Luma', '002.504.261-02', '23/03/1994', 'f', '(62) 9968-8046', '(62) 99688-0462', 'ppgratao@gmail.com', 'solteiro', '75389-125', 'Rua LÃ¡zaro Carvelo Borges', 'Setor Cristina II', 'Trindade', 'GO', '23/03/1994', '24/03/1994', 2, 2, '3', '3', '3', '205', '<p>oi</p>\r\n<p>&nbsp;</p>');
 
 --
 -- Indexes for dumped tables
@@ -108,13 +112,13 @@ ALTER TABLE `hospedes`
 -- AUTO_INCREMENT for table `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hospedes`
 --
 ALTER TABLE `hospedes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
