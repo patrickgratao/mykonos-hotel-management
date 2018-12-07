@@ -51,8 +51,8 @@
 									   	<th scope="col" class="text-center">Nome</th>
 									    <th scope="col" class="text-center">CPF</th>
 									    <th scope="col" class="text-center">Celular com DDD</th>
+									    <th scope="col" class="text-center">Categoria</th>
 									    <th scope="col" class="text-center">E-mail</th>
-									    <th scope="col" class="text-center">UF</th>
 									    <th scope="col" class="text-center">Mais Ações</th>
 								    </tr>
 								  </thead>
@@ -63,8 +63,8 @@
 												<td><?= $encontrado['nome'] ?></td>
 												<td><?= $encontrado['cpf'] ?></td>
 												<td><?= $encontrado['celular'] ?></td>
+												<td class="text-center"><?= $encontrado['categoria_nome'] ?></td>
 												<td><?= $encontrado['email'] ?></td>
-												<td><?= $encontrado['estado'] ?></td>
 												<td class="mais-acoes text-center">
 													<div class="btn-group notika-group-btn material-design-btn">
 														<form class="mais-opcoes" action="ver-mais.php" method="post">

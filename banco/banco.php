@@ -17,7 +17,7 @@
 	//Função responsável pela pesquisa de hóspedes
 	function pesquisaHospede ($conexao, $busca) {
 		$encontrados = array();
-		$query = "SELECT * FROM hospedes WHERE nome LIKE '%{$busca}%' OR cpf LIKE '%{$busca}%' ORDER BY nome";
+		$query = "select p.*, c.nome as categoria_nome from hospedes as p join categorias as c on p.categoria_id = c.id WHERE p.nome LIKE '%{$busca}%' OR p.cpf LIKE '%{$busca}%' ORDER BY p.nome";
 		$resultado = mysqli_query($conexao, $query);
 
 		while ($encontrado = mysqli_fetch_assoc($resultado)) {
