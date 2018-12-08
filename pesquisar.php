@@ -3,6 +3,9 @@
 	include("banco/conecta.php");
 	include("banco/banco.php");
 	include("banco/banco-hospede.php");
+	include("logica-usuario.php");
+
+	verificaUsuario(); //verifica se o usuário está logado
 
 	$busca = $_GET['pesquisaHospede'];
 

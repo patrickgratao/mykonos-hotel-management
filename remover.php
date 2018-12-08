@@ -2,6 +2,9 @@
 	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
+	include("logica-usuario.php");
+
+	verificaUsuario(); //verifica se o usuário está logado
 
 	$tabela = $_POST['recurso'];
 	$id = $_POST['id'];

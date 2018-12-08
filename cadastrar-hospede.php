@@ -1,8 +1,11 @@
-<?php include("partials/_header.php");
-		include("banco/conecta.php");
-		include("banco/banco-categoria.php");
+<?php 
+	include("partials/_header.php");
+	include("banco/conecta.php");
+	include("banco/banco-categoria.php");
+	include("logica-usuario.php");
 
-		$categorias = listaCategorias($conexao);
+	$categorias = listaCategorias($conexao);
+	verificaUsuario(); //verifica se o usuario esta logado
 ?>
 	<div class="breadcomb-area">
 		<div class="container">

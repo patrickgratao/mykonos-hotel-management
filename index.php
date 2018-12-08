@@ -1,4 +1,20 @@
-<?php include("partials/_header.php")?>
+<?php 
+	include("partials/_header.php");
+	include("logica-usuario.php");
+
+	verificaUsuario(); //verifica se o usuário está logado
+?>
+		 
+	<?php  
+		if (usuarioEstaLogado()) { ?>
+		<div class="alert-list">
+			<div class="alert alert-success alert-dismissible" role="alert">
+         		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Você está logado como <?=usuarioLogado()?>
+        	</div>
+		</div>
+	 <?php  } ?>
+
+	
 	<div class="jumbotron">
 		<h2 class="text-center">Mykonos - Sistema de Cadastro de Hóspedes</h2>
 		<hr>
