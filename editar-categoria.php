@@ -1,8 +1,8 @@
 <?php 
+	include("logica-usuario.php");
 	include ("partials/_header.php");
 	include ("banco/conecta.php");
 	include ("banco/banco-categoria.php");
-	include("logica-usuario.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
 

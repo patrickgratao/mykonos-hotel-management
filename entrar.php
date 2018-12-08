@@ -80,13 +80,13 @@
                 <div class="input-group">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
                     <div class="nk-int-st">
-                        <input type="email" class="form-control" placeholder="email@email.com" id="emailUsuario" name="emailUsuario" autofocus required> 
+                        <input type="email" class="form-control" placeholder="email@email.com" id="emailUsuario" name="email" autofocus required> 
                     </div>
                 </div>
                 <div class="input-group mg-t-15">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
                     <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Senha" id="senhaUsuario" name="senhaUsuario">
+                        <input type="password" class="form-control" placeholder="Senha" id="senhaUsuario" name="senha">
                     </div>
                 </div>
                 <button class="btn btn-login btn-float"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></button>

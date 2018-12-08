@@ -1,6 +1,7 @@
 <?php 
-	include("partials/_header.php");
 	include("logica-usuario.php");
+	include("partials/_header.php");
+	
 
 	verificaUsuario(); //verifica se o usuário está logado
 ?>
@@ -10,6 +11,7 @@
 		<div class="alert-list">
 			<div class="alert alert-success alert-dismissible" role="alert">
          		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Você está logado como <?=usuarioLogado()?>
+         		<a href="logout.php">Deslogar </a>
         	</div>
 		</div>
 	 <?php  } ?>
