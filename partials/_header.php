@@ -98,12 +98,12 @@
 
 
 <!-- Código que verifica e preenche o CEP automaticamente -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-  <script type="text/javascript"><?php include("assets/js/buscaCep.js") ?></script> 
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+ 
+    <script type="text/javascript"><?php include("assets/js/buscaCep.js") ?></script> 
   <!-- fim do código -->
   
-<script type="text/javascript" src="assets/js/info-reserva.js"> </script>
+    <script type="text/javascript" src="assets/js/info-reserva.js"> </script>
 
   <!-- Código para funcionamento do tinymce -->
   <script src='assets/js/tinymce/tinymce.min.js'></script>
@@ -141,17 +141,37 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
                     <div class="header-top-menu">
                         <!-- area para search bar no topo -->
                         <ul class="nav navbar-nav notika-top-nav mykonos-search">
-                            <form class="form-inline my-2 my-lg-0 pesquisaHospede" action="pesquisar.php">
-                              <input class="form-control mr-sm-2" type="text" placeholder="Pesquisar hóspede..." aria-label="Pesquisar" name="pesquisaHospede">
-                              <button class="btn nk-amber" type="submit"><img src="assets/img/search.png"></button>
-                            </form>
+                            <li class="nav-item dropdown">
+                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
+                                <div role="menu" class="dropdown-menu search-dd animated fadeIn" id="pesquisar">
+                                    <form class="search-input" action="pesquisar.php">
+                                        <i class="notika-icon notika-left-arrow"></i>
+                                        <input class="form-control" type="text" placeholder="Pesquisar hóspede..." aria-label="Pesquisar" name="pesquisaHospede" autofocus>
+                                    </form>
+                                </div>
+                            </li>
+
+                            <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-menus"></i></span></a>
+                                <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
+                                    <div class="hd-mg-tt">
+                                        <h2>Painel de Controle</h2>
+                                    </div>
+                                    <div class="hd-message-info hd-task-info">
+                                        
+                                    </div>
+                                    <div class="hd-mg-va">
+                                        <a href="#">View All</a>
+                                    </div>
+                                </div>
+                            </li> 
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <!-- End Header Top Area -->

@@ -7,16 +7,13 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2018 - Criado por <a href="http://p23.com.br" target="_blank">Patryck Gratão</a> com <span class="amor"> &hearts;</span></p>
-                    </div>
+                        <p>Copyright © 2018 - Criado por <a href="http://p23.com.br" target="_blank">Patryck Gratão</a> com <span class="amor"> &hearts;</span></p> </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Footer area-->
-    <!-- jquery
-		============================================ -->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="assets/js/bootstrap.min.js"></script>
@@ -85,7 +82,7 @@
     <script src="assets/js/datapicker/bootstrap-datepicker.js"></script>
     <script src="assets/js/datapicker/datepicker-active.js"></script>
     
-    <!-- dialos -->
+    <!-- dialogos -->
     <script src="assets/js/dialog/sweetalert2.min.js"></script>
     <script src="assets/js/dialog/dialog-active.js"></script>
     
