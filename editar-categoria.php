@@ -33,7 +33,15 @@
 	</div>
 	<!-- Breadcomb area End-->
 
-<?php require("partials/_form_editar_categoria.php") ?>
+<form method="POST" action="altera-categoria.php">
+	<input type="hidden" name="id" value="<?= $categoria['id'] ?>">
+    <?php include('partials/_form_categoria.php'); ?>
+		    <button class="btn btn-primary notika-btn-primary" type="submit">Alterar Categoria</button>
+
+			</div>
+		</div>
+	</div>
+</form>
 
 
 <?php include("partials/_footer.php") ?>

@@ -35,7 +35,12 @@
 	</div>
 	<!-- Breadcomb area End-->
 
-<?php require("partials/_form_editar_hospede.php") ?>
+<form class="needs-validation" method="POST" action="altera-hospede.php">
+          <input type="hidden" name="id" value="<?=$hospede['id']?>" />
+          <?php include('partials/_form_hospede.php'); ?>
+           <button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Alterar Dados</button>
+       </div>
+</form>
 
 
 <?php include("partials/_footer.php") ?>

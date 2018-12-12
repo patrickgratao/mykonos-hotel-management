@@ -7,6 +7,8 @@
 	include("partials/_header.php");
 
 	$categorias = listaCategorias($conexao);
+	$hospede = array("nome" => "", "cpf" => "", "data_nascimento" => "", "sexo" => " ", "telefone" => "", "celular" => "", "email" => "", "estado_civil" => "", "categoria_id" => "", "cep" => "", "rua" => "", "bairro" => "", "cidade" => "", "estado" => "", "data_checkin" => "", "data_checkout" => "", "qtd_diarias" => "", "qtd_pagantes" => "", "preco_diaria" => "", "valor_pago" => "", "preco_total" => "", "total_pagar" => "1", "info_extras" => " ");
+
 ?>
 	<div class="breadcomb-area">
 		<div class="container">
@@ -33,7 +35,10 @@
 	</div>
 	<!-- Breadcomb area End-->
 
-<?php require("partials/_form_cadastro_hospede.php") ?>
-
+<form class="needs-validation" method="POST" action="adiciona-hospede.php">
+    <?php include('partials/_form_hospede.php'); ?>
+    	<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Cadastrar Hóspede</button>
+    </div>
+</form>
 
 <?php include("partials/_footer.php") ?>

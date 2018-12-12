@@ -52,6 +52,7 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mykonos.css">
     <!-- modernizr JS
 		============================================ -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -65,6 +66,7 @@
     <div class="login-content">
         <!-- Login -->
         <div class="nk-block toggled" id="l-login">
+            <h1 class="nome-software">Mykonos Hotel</h1>
             <!-- MENSAGENS DE ERRO OU SUCESSO -->
             <?php
                 mostraAlerta('success');
@@ -93,7 +95,8 @@
 
         <!-- Forgot Password -->
         <div class="nk-block" id="l-forget-password">
-            <form class="nk-form" method="POST" action="index2.php">
+            <h1 class="nome-software">Recuperar Senha</h1>
+            <form class="nk-form" method="POST" action="#">
                 <p class="text-left">Insira o endereço de e-mail cadastrado para recuperar a senha.</p>
 
                 <div class="input-group">
