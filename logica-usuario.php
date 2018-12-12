@@ -1,5 +1,6 @@
 <?php 
-	session_start ();
+
+	include("inicia-sessao.php");
 
 	function usuarioEstaLogado () {
 		return isset($_SESSION["usuario_logado"]);
@@ -8,7 +9,8 @@
 
 	function verificaUsuario () {
 		if (!usuarioEstaLogado()) {
-			echo "<script>location.href='entrar.php?falhaDeSeguranca=true';</script>";
+			$_SESSION["danger"] = "Você não possui acesso à esta funcionalidade!";
+			echo "<script>location.href='entrar.php';</script>";
      		die();
 		}
 	}
@@ -19,4 +21,8 @@
 
 	function logaUsuario ($email) {
 		$_SESSION["usuario_logado"] = $email;	
+	}
+
+	function logout () {
+		session_destroy();
 	}

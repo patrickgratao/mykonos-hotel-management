@@ -4,8 +4,9 @@
 	include("banco/conecta.php");
 	include("banco/banco-categoria.php");
 	
-	$categorias = listaCategorias($conexao);
 	verificaUsuario(); //verifica se o usuario esta logado
+
+	$categorias = listaCategorias($conexao);
 ?>
 	<div class="breadcomb-area">
 		<div class="container">

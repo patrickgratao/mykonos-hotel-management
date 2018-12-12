@@ -11,13 +11,14 @@
 	
 
   if (alteraCategoria($conexao, $nome, $id)) { 
-		
-		echo "<script>location.href='listar-categorias.php?alterado=true';</script>";
+		$_SESSION["success"] = "Categoria alterada com sucesso!";
+		echo "<script>location.href='listar-categorias.php';</script>";
 		die();
 	}
 
 	else {
 		$msg = mysqli_error($conexao);
-		echo "<script>location.href='listar-categorias.php?alterado=false';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
+		$_SESSION["danger"] = "A categoria não foi alterada!";	
+		echo "<script>location.href='listar-categorias.php';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}

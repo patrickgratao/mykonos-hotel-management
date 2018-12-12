@@ -161,10 +161,7 @@
                                         <h2>Painel de Controle</h2>
                                     </div>
                                     <div class="hd-message-info hd-task-info">
-                                        
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
+                                        <a href="logout.php">Sair do Sistema</a>
                                     </div>
                                 </div>
                             </li> 

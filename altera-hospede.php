@@ -34,13 +34,15 @@
 	$infoExtras = $_POST["informacoesAdicionais"];
 
   if (alteraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $categoriaHospede, $id)) { 
-		
-		echo "<script>location.href='listar-hospedes.php?alterado=true';</script>";
+
+        $_SESSION["success"] = "Hóspede alterado com sucesso!";
+		echo "<script>location.href='listar-hospedes.php';</script>";
 		die();
 	}
 
 	else {
 		$msg = mysqli_error($conexao);
-		echo "<script>location.href='listar-hospedes.php?alterado=false';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
+        $_SESSION["danger"] = "O hóspede não pôde ser alterado, tente novamente!";
+		echo "<script>location.href='listar-hospedes.php';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}

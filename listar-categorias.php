@@ -8,49 +8,10 @@
 	verificaUsuario(); //verifica se o usuário está logado
 
 	$categorias = listaCategorias($conexao);
+
+	include("partials/mensagens.php");
 ?>
-<!-- mensagens de sucesso e erro REMOÇÃO E CADASTRO -->
-	<?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
-		<div class="alert-list">
-			<div class="alert alert-success alert-dismissible" role="alert">
-	         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Categoria removida com sucesso.
-	        </div>
-		</div>
-	<?php } ?>
 
-	<?php if(array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='true')  { ?>
-		<div class="alert-list">
-			<div class="alert alert-success alert-dismissible" role="alert">
-	         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Categoria cadastrada com sucesso.
-	        </div>
-		</div>
-	<?php } 
-
-		else if (array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='false')  { ?>
-			<div class="alert-list">
-				<div class="alert alert-danger alert-dismissible" role="alert">
-		         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> A categoria não foi cadastrada! Tente novamente.
-		        </div>
-			</div>
-		<?php } ?>
-
-		<!-- mensagem de alteração de categorias -->
-		<?php if(array_key_exists("alterado", $_GET) && $_GET['alterado']=='true')  { ?>
-		<div class="alert-list">
-			<div class="alert alert-success alert-dismissible" role="alert">
-	         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> O nome da categoria foi alterado com sucesso.
-	        </div>
-		</div>
-	<?php } 
-
-		else if (array_key_exists("alterado", $_GET) && $_GET['alterado']=='false')  { ?>
-			<div class="alert-list">
-				<div class="alert alert-danger alert-dismissible" role="alert">
-		         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> A categoria não foi alterada! Tente novamente.
-		        </div>
-			</div>
-		<?php } ?> <!-- fim da mensagem de edição de categoria -->
-<!-- fim das mensagens -->
 <div class="breadcomb-area">
 		<div class="container">
 			<div class="row">

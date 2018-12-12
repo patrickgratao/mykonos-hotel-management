@@ -2,17 +2,18 @@
     include("logica-usuario.php");
     include("banco/conecta.php"); 
     include("banco/banco-usuario.php"); 
-    
 
     $usuario =  buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
 
     if ($usuario == null) {
-    	header("Location: entrar.php?login=0");
+        $_SESSION["danger"] = "Usuário ou senha inválidos!";
+    	header("Location: entrar.php");
     	
     }
     else {
+        $_SESSION["success"] = "Usuário logado com sucesso!";
         logaUsuario($usuario['email']);
-    	header("Location: index.php?login=1");
+    	header("Location: index.php");
     }
 
     die();

@@ -9,49 +9,8 @@
 
 	$hospedes = listaHospedes($conexao);
 
+	include("partials/mensagens.php"); //Inclusão das Mensagens de erro
 ?>
-<!-- mensagens de sucesso e erro REMOÇÃO E CADASTRO -->
-	<?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
-		<div class="alert-list">
-			<div class="alert alert-success alert-dismissible" role="alert">
-	         	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Hóspede removido com sucesso.
-	        </div>
-		</div>
-	<?php } ?>
-
-	<?php if(array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='true')  { ?>
-		<div class="alert-list">
-			<div class="alert alert-success alert-dismissible" role="alert">
-         		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> O Hóspede foi cadastrado com sucesso!
-        	</div>
-		</div>
-	<?php } 
-
-		else if (array_key_exists("cadastrado", $_GET) && $_GET['cadastrado']=='false')  { ?>
-			<div class="alert-list">
-				<div class="alert alert-danger alert-dismissible" role="alert">
-         			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> O Hóspede não foi cadastrado! Tente novamente.
-        		</div>
-			</div>
-		<?php } ?>
-
-		<!-- Mensagem de alteração de hóspede -->
-		<?php if(array_key_exists("alterado", $_GET) && $_GET['alterado']=='true')  { ?>
-		<div class="alert-list">
-			<div class="alert alert-success alert-dismissible" role="alert">
-         		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> As informações do hóspede foram alteradas com sucesso!
-        	</div>
-		</div>
-	<?php } 
-
-		else if (array_key_exists("alterado", $_GET) && $_GET['alterado']=='false')  { ?>
-			<div class="alert-list">
-				<div class="alert alert-danger alert-dismissible" role="alert">
-         			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> As informações do hóspede não puderam ser salvas! Tente novamente.
-        		</div>
-			</div>
-		<?php } ?>
-<!-- fim das mensagens -->
 <div class="breadcomb-area">
 		<div class="container">
 			<div class="row">

@@ -209,7 +209,7 @@ body {}
 .rtl-layout .navbar-nav>li>a{
 	padding: 20px 30px 20px 0px;
 }
-.nav.navbar-nav.notika-top-nav li a{
+.nav.navbar-nav.notika-top-nav li .nav-link{
 	font-size:20px;
 	position:relative;
 }

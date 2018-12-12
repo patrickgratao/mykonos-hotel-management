@@ -13,13 +13,15 @@
 
 
 	if ($tabela == "hospedes") {
-		echo "<script>location.href='listar-hospedes.php?removido=true';</script>";
+		$_SESSION["success"] = "Hóspede removido com sucesso!";
+		echo "<script>location.href='listar-hospedes.php';</script>";
 	die();
 
 	}
 
 	else {
-		echo "<script>location.href='listar-categorias.php?removido=true';</script>";
+		$_SESSION["success"] = "Categoria removida com sucesso!";
+		echo "<script>location.href='listar-categorias.php';</script>";
 	die();
 	}
 

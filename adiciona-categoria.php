@@ -10,12 +10,15 @@
 	$nome = $_POST["nomeCategoria"];
 
 	if (cadastraCategoria($conexao, $nome)) { 
-		echo "<script>location.href='listar-categorias.php?cadastrado=true';</script>";
+		$_SESSION["success"] = "Categoria cadastrada com sucesso!";
+
+		echo "<script>location.href='listar-categorias.php';</script>";
 		die();
 	}
 
 	else {
-		echo "<script>location.href='listar-categorias.php?cadastrado=false';</script>";
+		$_SESSION["danger"] = "A categoria não foi cadastrada. Tente novamente!";
+		echo "<script>location.href='listar-categorias.php';</script>";
 		die();
 	}
 

@@ -1,3 +1,4 @@
+<?php include("inicia-sessao.php"); ?>
 <!doctype html>
 
 <head>
@@ -59,22 +60,9 @@
     <!-- Login Register area Start-->
     <div class="login-content">
         <!-- Login -->
+        <!-- MENSAGENS DE ERRO OU SUCESSO -->
         <div class="nk-block toggled" id="l-login">
-            <?php  
-                if (isset($_GET['login']) &&  $_GET['login'] == false) {  ?>
-                    <div class="alert-list">
-                        <div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Usuário ou senha inválidos!
-                        </div>
-                    </div>
-            <?php    } 
-                if (isset($_GET["falhaDeSeguranca"])) { ?>
-                    <div class="alert-list">
-                        <div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Você não tem permissão para acessar esta página!
-                        </div>
-                    </div>
-               <?php  } ?>
+            <?php include("partials/mensagens.php"); ?> <!-- Mensagens de erro ou sucesso -->
 
             <form class="nk-form" action="login.php" method="POST">
                 <div class="input-group">

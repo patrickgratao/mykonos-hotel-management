@@ -37,13 +37,15 @@
 
 	if (cadastraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $categoriaHospede)) { 
 		
-		echo "<script>location.href='listar-hospedes.php?cadastrado=true';</script>";
+		$_SESSION["success"] = "Hóspede cadastrado com sucesso!";
+		echo "<script>location.href='listar-hospedes.php';</script>";
 		die();
 	}
 
 	else {
 		$msg = mysqli_error($conexao);
 		echo $msg;
-		//echo "<script>location.href='listar-hospedes.php?cadastrado=false';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
+		$_SESSION["danger"] = "Ocorreram erros ao cadastrar o hóspede. Tente novamente!";
+		echo "<script>location.href='listar-hospedes.php';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}
