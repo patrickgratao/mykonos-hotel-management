@@ -1,16 +1,17 @@
 <?php 
-	include("logica-usuario.php");
-	include("banco/conecta.php");
-	include("banco/banco.php");
-	include("banco/banco-hospede.php");
+
+include("logica-usuario.php");
+include("banco/conecta.php");
+include("banco/banco.php");
+include("banco/banco-hospede.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php"); 
 
 	$busca = $_GET['pesquisaHospede'];
 
 	$encontrados = pesquisaHospede($conexao, $busca);
-?>
-<div class="breadcomb-area">
+	?>
+	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -40,28 +41,28 @@
 	</div>
 	<!-- Breadcomb area End-->
 
-<?php if (sizeof($encontrados) > 0) { ?>
-	<div class="data-table-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="data-table-list">
-						<div class="table-responsive">
-							<table id="data-table-basic" class="table table-striped">
-								<thead>
-								    <tr>
-									   	<th scope="col" class="text-center">Nome</th>
-									    <th scope="col" class="text-center">CPF</th>
-									    <th scope="col" class="text-center">Celular com DDD</th>
-									    <th scope="col" class="text-center">Categoria</th>
-									    <th scope="col" class="text-center">E-mail</th>
-									    <th scope="col" class="text-center">Mais Ações</th>
-								    </tr>
-								  </thead>
-								  <tbody>
-								  	<?php 
-								  		foreach ($encontrados as $encontrado) : ?>
-								  			<tr>
+	<?php if (sizeof($encontrados) > 0) { ?>
+		<div class="data-table-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="data-table-list">
+							<div class="table-responsive">
+								<table id="data-table-basic" class="table table-striped">
+									<thead>
+										<tr>
+											<th scope="col" class="text-center">Nome</th>
+											<th scope="col" class="text-center">CPF</th>
+											<th scope="col" class="text-center">Celular com DDD</th>
+											<th scope="col" class="text-center">Categoria</th>
+											<th scope="col" class="text-center">E-mail</th>
+											<th scope="col" class="text-center">Mais Ações</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php 
+										foreach ($encontrados as $encontrado) : ?>
+											<tr>
 												<td><?= $encontrado['nome'] ?></td>
 												<td><?= $encontrado['cpf'] ?></td>
 												<td><?= $encontrado['celular'] ?></td>
@@ -74,38 +75,38 @@
 															<button class="btn btn-primary btn-sm notika-gp-primary">Ver Mais</button>
 														</form>
 
-						                                <form action="editar-hospede.php" class="mais-opcoes" method="post">
-						                                	<input type="hidden" name="id" value="<?=$encontrado['id']?>">
-						                                	<button class="btn btn-default btn-sm">Editar</button>
-						                                </form>
-						                                <form class="mais-opcoes" action="remover.php" method="post">
-						                                	<input type="hidden" name="id" value="<?=$encontrado['id']?>" >
-						                                	<input type="hidden" name="recurso" value="hospedes">
-						                                	<button class="btn btn-sm btn-danger notika-gp-danger">Excluir</button>
-						                                </form>
-						                                
-					                          		</div>
+														<form action="editar-hospede.php" class="mais-opcoes" method="post">
+															<input type="hidden" name="id" value="<?=$encontrado['id']?>">
+															<button class="btn btn-default btn-sm">Editar</button>
+														</form>
+														<form class="mais-opcoes" action="remover.php" method="post">
+															<input type="hidden" name="id" value="<?=$encontrado['id']?>" >
+															<input type="hidden" name="recurso" value="hospedes">
+															<button class="btn btn-sm btn-danger notika-gp-danger">Excluir</button>
+														</form>
+
+													</div>
 
 
-												 </td>
+												</td>
 											</tr>
 										<?php endforeach ?>
 									</tbody>
-							</table>
+								</table>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div><br><br>
-			<a class="btn btn-success notika-btn-primary btn" href="listar-hospedes.php">Ver todos os Hóspedes</a>
+				</div><br><br>
+				<a class="btn btn-success notika-btn-primary btn" href="listar-hospedes.php">Ver todos os Hóspedes</a>
+			</div>
 		</div>
-	</div>
-	
- <?php } 
+
+	<?php } 
 	else { ?>
 		<div class="alert-list">
 			<div class="alert alert-danger alert-dismissible" role="alert">
-         		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Nenhum resultado foi encontrado!
-        	</div>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="notika-icon notika-close"></i></span></button> Nenhum resultado foi encontrado!
+			</div>
 		</div>
 		<h3 class="text-danger"></h3>
 		<br>
@@ -113,4 +114,4 @@
 	<?php } 	
 
 	include ("partials/_footer.php"); 
-?>		
+	?>		

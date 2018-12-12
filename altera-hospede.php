@@ -5,8 +5,8 @@
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php"); 
 
- 	 $id = $_POST['id'];
-  	$nome = $_POST["nomeHospede"]; 	
+	$id = $_POST['id'];
+	$nome = $_POST["nomeHospede"]; 	
 	$cpf = $_POST["cpfHospede"];
 	$dataNascimento = $_POST["nascimentoHospede"];
 	$sexo = $_POST["sexoHospede"];
@@ -32,16 +32,16 @@
 	$totalPagar = $_POST["precoTotalPagar"];
 	$infoExtras = $_POST["informacoesAdicionais"];
 
-  if (alteraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $categoriaHospede, $id)) { 
+	if (alteraHospede($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $categoriaHospede, $id)) { 
 
-        $_SESSION["success"] = "Hóspede alterado com sucesso!";
+		$_SESSION["success"] = "Hóspede alterado com sucesso!";
 		echo "<script>location.href='listar-hospedes.php';</script>";
 		die();
 	}
 
 	else {
 		$msg = mysqli_error($conexao);
-        $_SESSION["danger"] = "O hóspede não pôde ser alterado, tente novamente!";
+		$_SESSION["danger"] = "O hóspede não pôde ser alterado, tente novamente!";
 		echo "<script>location.href='listar-hospedes.php';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}

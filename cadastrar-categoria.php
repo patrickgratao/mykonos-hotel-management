@@ -1,11 +1,11 @@
 <?php 
-	include("logica-usuario.php");
+include("logica-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php");
 
 	$categoria = array("nome" => "");
 	
-?>
+	?>
 	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">
@@ -33,12 +33,12 @@
 
 	<form method="POST" action="adiciona-categoria.php">
 		<?php include('partials/_form_categoria.php'); ?>
-			    <button class="btn btn-primary notika-btn-primary" type="submit">Cadastrar</button>
+		<button class="btn btn-primary notika-btn-primary" type="submit">Cadastrar</button>
 
-				</div>
-			</div>
-		</div>
-	</form>
+	</div>
+</div>
+</div>
+</form>
 
 
 <?php include("partials/_footer.php") ?>

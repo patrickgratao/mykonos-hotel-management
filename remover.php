@@ -1,7 +1,7 @@
 <?php 
-	include("logica-usuario.php");
-	include("banco/conecta.php");
-	include("banco/banco.php");
+include("logica-usuario.php");
+include("banco/conecta.php");
+include("banco/banco.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
 
@@ -14,15 +14,15 @@
 	if ($tabela == "hospedes") {
 		$_SESSION["success"] = "Hóspede removido com sucesso!";
 		echo "<script>location.href='listar-hospedes.php';</script>";
-	die();
+		die();
 
 	}
 
 	else {
 		$_SESSION["success"] = "Categoria removida com sucesso!";
 		echo "<script>location.href='listar-categorias.php';</script>";
-	die();
+		die();
 	}
 
 	include("partials/_footer.php");
-?>
+	?>

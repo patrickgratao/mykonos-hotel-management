@@ -1,28 +1,28 @@
 <?php 
 
-	include("inicia-sessao.php");
+include("inicia-sessao.php");
 
-	function usuarioEstaLogado () {
-		return isset($_SESSION["usuario_logado"]);
+function usuarioEstaLogado () {
+	return isset($_SESSION["usuario_logado"]);
 
+}
+
+function verificaUsuario () {
+	if (!usuarioEstaLogado()) {
+		$_SESSION["danger"] = "Você não possui acesso à esta funcionalidade!";
+		echo "<script>location.href='entrar.php';</script>";
+		die();
 	}
+}
 
-	function verificaUsuario () {
-		if (!usuarioEstaLogado()) {
-			$_SESSION["danger"] = "Você não possui acesso à esta funcionalidade!";
-			echo "<script>location.href='entrar.php';</script>";
-     		die();
-		}
-	}
+function usuarioLogado () {
+	return $_SESSION["usuario_logado"];
+}
 
-	function usuarioLogado () {
-		return $_SESSION["usuario_logado"];
-	}
+function logaUsuario ($email) {
+	$_SESSION["usuario_logado"] = $email;	
+}
 
-	function logaUsuario ($email) {
-		$_SESSION["usuario_logado"] = $email;	
-	}
-
-	function logout () {
-		session_destroy();
-	}
+function logout () {
+	session_destroy();
+}

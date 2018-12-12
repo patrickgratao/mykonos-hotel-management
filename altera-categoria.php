@@ -1,16 +1,16 @@
 <?php 
 	include("logica-usuario.php"); //a sessão tem que ser a primeira a inicializar, antes de qualquer html 
-  	include("banco/conecta.php");
-  	include("banco/banco-categoria.php");
+	include("banco/conecta.php");
+	include("banco/banco-categoria.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php");
 
- 	$id = $_POST['id'];
-  	$nome = $_POST["nomeCategoria"]; 	
+	$id = $_POST['id'];
+	$nome = $_POST["nomeCategoria"]; 	
 	
 
-  if (alteraCategoria($conexao, $nome, $id)) { 
+	if (alteraCategoria($conexao, $nome, $id)) { 
 		$_SESSION["success"] = "Categoria alterada com sucesso!";
 		echo "<script>location.href='listar-categorias.php';</script>";
 		die();

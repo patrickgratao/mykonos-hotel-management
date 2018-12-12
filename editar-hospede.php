@@ -1,15 +1,15 @@
 <?php 
-	include("logica-usuario.php");
-	include ("banco/conecta.php");
-	include ("banco/banco-hospede.php");
-	include ("banco/banco-categoria.php");
+include("logica-usuario.php");
+include ("banco/conecta.php");
+include ("banco/banco-hospede.php");
+include ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	include ("partials/_header.php");
 	
 	$id = $_POST['id'];
 	$hospede = visualizaHospede($conexao, $id);
 	$categorias = listaCategorias($conexao);
-?>
+	?>
 	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">
@@ -35,11 +35,11 @@
 	</div>
 	<!-- Breadcomb area End-->
 
-<form class="needs-validation" method="POST" action="altera-hospede.php">
-          <input type="hidden" name="id" value="<?=$hospede['id']?>" />
-          <?php include('partials/_form_hospede.php'); ?>
-           <button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Alterar Dados</button>
-       </div>
+	<form class="needs-validation" method="POST" action="altera-hospede.php">
+		<input type="hidden" name="id" value="<?=$hospede['id']?>" />
+		<?php include('partials/_form_hospede.php'); ?>
+		<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Alterar Dados</button>
+	</div>
 </form>
 
 
