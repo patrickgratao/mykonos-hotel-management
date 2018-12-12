@@ -1,10 +1,9 @@
 <?php
 	include("logica-usuario.php"); //a sessão tem que ser a primeira a inicializar, antes de qualquer html 
-	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco-hospede.php");
-
 	verificaUsuario(); //verifica se o usuário está logado
+	include("partials/_header.php"); 
 
  	 $id = $_POST['id'];
   	$nome = $_POST["nomeHospede"]; 	

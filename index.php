@@ -1,9 +1,7 @@
 <?php 
 	include("logica-usuario.php");
-	include("partials/_header.php");
-	
-
 	verificaUsuario(); //verifica se o usuário está logado
+	include("partials/_header.php");
 	include("partials/mensagens.php"); //Inclui as mensagens de erro ou sucesso
 ?>
 

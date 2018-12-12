@@ -1,8 +1,8 @@
 <?php 
 	include("logica-usuario.php");
+	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php");
 	
-	verificaUsuario(); //verifica se o usuário está logado
 ?>
 	<div class="breadcomb-area">
 		<div class="container">

@@ -1,10 +1,9 @@
 <?php 
 	include("logica-usuario.php");
-	include ("partials/_header.php");
 	include ("banco/conecta.php");
 	include ("banco/banco-categoria.php");
-
 	verificaUsuario(); //verifica se o usuário está logado
+	include ("partials/_header.php");
 
 	$id = $_POST['id'];
 	$categoria = buscaCategoria($conexao, $id);

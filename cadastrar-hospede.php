@@ -1,10 +1,10 @@
 <?php 
 	include("logica-usuario.php");
-	include("partials/_header.php");
 	include("banco/conecta.php");
 	include("banco/banco-categoria.php");
-	
 	verificaUsuario(); //verifica se o usuario esta logado
+	
+	include("partials/_header.php");
 
 	$categorias = listaCategorias($conexao);
 ?>

@@ -1,6 +1,5 @@
 <?php 
 	include("logica-usuario.php");
-	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
 

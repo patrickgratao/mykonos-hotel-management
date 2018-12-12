@@ -1,15 +1,13 @@
 <?php 
 	include("logica-usuario.php");
-	include("partials/_header.php"); 
 	include("banco/conecta.php");
 	include("banco/banco.php");
 	include("banco/banco-hospede.php");
-
 	verificaUsuario(); //verifica se o usuário está logado
+	include("partials/_header.php"); 
+	include("partials/mensagens.php"); //Inclusão das Mensagens de erro
 
 	$hospedes = listaHospedes($conexao);
-
-	include("partials/mensagens.php"); //Inclusão das Mensagens de erro
 ?>
 <div class="breadcomb-area">
 		<div class="container">
