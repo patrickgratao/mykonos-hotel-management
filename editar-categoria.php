@@ -7,9 +7,6 @@
 
 	$id = $_POST['id'];
 	$categoria = buscaCategoria($conexao, $id);
-
-
-
 ?>
 	<div class="breadcomb-area">
 		<div class="container">

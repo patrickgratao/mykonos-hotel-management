@@ -2,9 +2,7 @@
 	include("logica-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php");
-	include("partials/mensagens.php"); //Inclui as mensagens de erro ou sucesso
 ?>
-
 	<div class="jumbotron">
 		<h2 class="text-center">Mykonos - Sistema de Cadastro de Hóspedes</h2>
 		<hr>

@@ -5,7 +5,6 @@
 	include("banco/banco-hospede.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php"); 
-	include("partials/mensagens.php"); //Inclusão das Mensagens de erro
 
 	$hospedes = listaHospedes($conexao);
 ?>

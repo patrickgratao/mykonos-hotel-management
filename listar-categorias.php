@@ -7,8 +7,6 @@
 	include("partials/_header.php"); 
 
 	$categorias = listaCategorias($conexao);
-
-	include("partials/mensagens.php");
 ?>
 
 <div class="breadcomb-area">

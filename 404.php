@@ -63,7 +63,7 @@
             <i class="notika-icon notika-close"></i>
             <h2>Erro <span class="counter">404</span></h2>
             <p>Desculpe, mas a página que você está procurando não foi encontrada.</p>
-            <a href="index.php" class="btn">Início</a>
+            <a href="entrar.php" class="btn">Início</a>
         </div>
     </div>
         </div>

@@ -1,4 +1,8 @@
-<?php include("inicia-sessao.php"); ?>
+<?php 
+    error_reporting(E_ALL ^ E_NOTICE); //Ignora os erros do tipo notice
+    include("inicia-sessao.php");
+    include("helpers/mensagens.php"); 
+?>
 <!doctype html>
 
 <head>
@@ -60,10 +64,12 @@
     <!-- Login Register area Start-->
     <div class="login-content">
         <!-- Login -->
-        <!-- MENSAGENS DE ERRO OU SUCESSO -->
         <div class="nk-block toggled" id="l-login">
-            <?php include("partials/mensagens.php"); ?> <!-- Mensagens de erro ou sucesso -->
-
+            <!-- MENSAGENS DE ERRO OU SUCESSO -->
+            <?php
+                mostraAlerta('success');
+                mostraAlerta('danger');
+            ?>
             <form class="nk-form" action="login.php" method="POST">
                 <div class="input-group">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
