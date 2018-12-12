@@ -150,7 +150,7 @@
                                 <div role="menu" class="dropdown-menu search-dd animated fadeIn" id="pesquisar">
                                     <form class="search-input" action="pesquisar.php">
                                         <i class="notika-icon notika-left-arrow"></i>
-                                        <input class="form-control" type="text" placeholder="Pesquisar hóspede..." aria-label="Pesquisar" name="pesquisaHospede" autofocus>
+                                        <input class="form-control" type="text" placeholder="Pesquisar hóspede..." aria-label="Pesquisar" name="pesquisaHospede" autofocus="true">
                                     </form>
                                 </div>
                             </li>

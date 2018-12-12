@@ -11,7 +11,7 @@
     	
     }
     else {
-        $_SESSION["success"] = "Usuário logado com sucesso!";
+        $_SESSION["success"] = "Bem vindo de volta!";
         logaUsuario($usuario['email']);
     	header("Location: index.php");
     }
