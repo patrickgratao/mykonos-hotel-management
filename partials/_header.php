@@ -102,6 +102,8 @@
                             </li>
                             <li><a data-toggle="tab" href="#menuCategorias"><i class="notika-icon notika-edit"></i> Categorias</a>
                             </li>
+                            <li><a href="contato.php"><i class="notika-icon notika-mail"></i> Contato</a>
+                            </li>
                         </ul>
                         <div class="tab-content custom-menu-content">
                             <div id="menuHospedes" class="tab-pane notika-tab-menu-bg animated flipInX">
