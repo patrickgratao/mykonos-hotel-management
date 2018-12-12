@@ -1,7 +1,7 @@
 <?php 
-include("logica-usuario.php");
+require_once("logica-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	include("partials/_header.php");
+	require_once("partials/_header.php");
 
 	$categoria = array("nome" => "");
 	
@@ -32,7 +32,7 @@ include("logica-usuario.php");
 	<!-- Breadcomb area End-->
 
 	<form method="POST" action="adiciona-categoria.php">
-		<?php include('partials/_form_categoria.php'); ?>
+		<?php require_once('partials/_form_categoria.php'); ?>
 		<button class="btn btn-primary notika-btn-primary" type="submit">Cadastrar</button>
 
 	</div>
@@ -41,4 +41,4 @@ include("logica-usuario.php");
 </form>
 
 
-<?php include("partials/_footer.php") ?>
+<?php require_once("partials/_footer.php") ?>

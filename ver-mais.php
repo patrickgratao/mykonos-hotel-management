@@ -1,11 +1,10 @@
 <?php 
-include("logica-usuario.php");
-include("banco/conecta.php");
-include("banco/banco.php");
-include("banco/banco-hospede.php");
+require_once("logica-usuario.php");
+require_once("banco/banco.php");
+require_once("banco/banco-hospede.php");
 
   verificaUsuario(); //verifica se o usuário está logado
-  include("partials/_header.php"); 
+  require_once("partials/_header.php"); 
 
   $id = $_POST['id'];
   $dadosHospede = visualizaHospede($conexao, $id);
@@ -114,4 +113,4 @@ include("banco/banco-hospede.php");
   </div>
 </div>   	
 
-<?php include("partials/_footer.php"); ?>
+<?php require_once("partials/_footer.php"); ?>

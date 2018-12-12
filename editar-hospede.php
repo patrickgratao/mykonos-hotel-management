@@ -1,10 +1,9 @@
 <?php 
-include("logica-usuario.php");
-include ("banco/conecta.php");
-include ("banco/banco-hospede.php");
-include ("banco/banco-categoria.php");
+require_once("logica-usuario.php");
+require_once ("banco/banco-hospede.php");
+require_once ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	include ("partials/_header.php");
+	require_once ("partials/_header.php");
 	
 	$id = $_POST['id'];
 	$hospede = visualizaHospede($conexao, $id);
@@ -37,10 +36,10 @@ include ("banco/banco-categoria.php");
 
 	<form class="needs-validation" method="POST" action="altera-hospede.php">
 		<input type="hidden" name="id" value="<?=$hospede['id']?>" />
-		<?php include('partials/_form_hospede.php'); ?>
+		<?php require_once('partials/_form_hospede.php'); ?>
 		<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Alterar Dados</button>
 	</div>
 </form>
 
 
-<?php include("partials/_footer.php") ?>
+<?php require_once("partials/_footer.php") ?>

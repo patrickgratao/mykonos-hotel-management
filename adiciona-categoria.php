@@ -1,7 +1,6 @@
 <?php 
-include("logica-usuario.php");
-include("banco/conecta.php");
-include("banco/banco-categoria.php");
+require_once("logica-usuario.php");
+require_once("banco/banco-categoria.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
 	include("partials/_header.php"); 

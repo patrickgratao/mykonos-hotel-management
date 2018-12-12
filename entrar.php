@@ -1,7 +1,7 @@
 <?php 
     error_reporting(E_ALL ^ E_NOTICE); //Ignora os erros do tipo notice
-    include("inicia-sessao.php");
-    include("helpers/mensagens.php"); 
+    require_once("inicia-sessao.php");
+    require_once("helpers/mensagens.php"); 
     ?>
 <!doctype html>
 

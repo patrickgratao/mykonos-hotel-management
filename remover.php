@@ -1,7 +1,6 @@
 <?php 
-include("logica-usuario.php");
-include("banco/conecta.php");
-include("banco/banco.php");
+require_once("logica-usuario.php");
+require_once("banco/banco.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
 
@@ -24,5 +23,5 @@ include("banco/banco.php");
 		die();
 	}
 
-	include("partials/_footer.php");
+	require_once("partials/_footer.php");
 	?>

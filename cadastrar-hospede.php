@@ -1,10 +1,9 @@
 <?php 
-include("logica-usuario.php");
-include("banco/conecta.php");
-include("banco/banco-categoria.php");
+require_once("logica-usuario.php");
+require_once("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuario esta logado
 	
-	include("partials/_header.php");
+	require_once("partials/_header.php");
 
 	$categorias = listaCategorias($conexao);
 	$hospede = array("nome" => "", "cpf" => "", "data_nascimento" => "", "sexo" => " ", "telefone" => "", "celular" => "", "email" => "", "estado_civil" => "", "categoria_id" => "", "cep" => "", "rua" => "", "bairro" => "", "cidade" => "", "estado" => "", "data_checkin" => "", "data_checkout" => "", "qtd_diarias" => "", "qtd_pagantes" => "", "preco_diaria" => "", "valor_pago" => "", "preco_total" => "", "total_pagar" => "1", "info_extras" => " ");
@@ -36,9 +35,9 @@ include("banco/banco-categoria.php");
 	<!-- Breadcomb area End-->
 
 	<form class="needs-validation" method="POST" action="adiciona-hospede.php">
-		<?php include('partials/_form_hospede.php'); ?>
+		<?php require_once('partials/_form_hospede.php'); ?>
 		<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Cadastrar Hóspede</button>
 	</div>
 </form>
 
-<?php include("partials/_footer.php") ?>
+<?php require_once("partials/_footer.php") ?>

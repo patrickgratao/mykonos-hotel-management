@@ -1,5 +1,6 @@
 <?php 
 	//Aqui ficam todas as funções relacionadas ao banco hóspedes
+require_once("conecta.php");
 
 function cadastraHospede ($conexao, $nome, $cpf, $dataNascimento, $sexo, $telefone, $celular, $email, $estadoCivil, $cep, $rua, $bairro, $cidade, $estado, $dataCheckin, $dataCheckout, $qtdDiarias, $qtdAcompanhantes, $precoDiaria, $valorPago, $precoTotal, $totalPagar, $infoExtras, $categoriaHospede) {
 	$nome = mysqli_real_escape_string($conexao, $nome);

@@ -1,5 +1,7 @@
 <?php
 
+require_once("conecta.php");
+
 	//Aqui ficam todas as funções relacionadas ao programa
 function bancoConectado ($conexao) {
 	if (!$conexao) {

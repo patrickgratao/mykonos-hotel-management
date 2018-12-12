@@ -1,10 +1,9 @@
 <?php 
-include("logica-usuario.php");
-include("banco/conecta.php");
-include("banco/banco.php");
-include("banco/banco-categoria.php");
+require_once("logica-usuario.php");
+require_once("banco/banco.php");
+require_once("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	include("partials/_header.php"); 
+	require_once("partials/_header.php"); 
 
 	$categorias = listaCategorias($conexao);
 	?>
@@ -86,4 +85,4 @@ include("banco/banco-categoria.php");
 		</div>
 	</div>
 </div>
-<?php include("partials/_footer.php"); ?>
+<?php require_once("partials/_footer.php"); ?>

@@ -1,4 +1,6 @@
 <?php 
+
+require_once("conecta.php");
 function cadastraCategoria ($conexao, $nome) {
 	$nome = mysqli_real_escape_string($conexao, $nome);
 	$query = "insert into categorias (nome) values ('{$nome}')";

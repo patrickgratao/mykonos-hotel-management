@@ -1,7 +1,7 @@
 <?php 
-	include("logica-usuario.php");
+	require_once("logica-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	include("partials/_header.php");
+	require_once("partials/_header.php");
 ?>
 	<div class="jumbotron">
 		<h2 class="text-center">Mykonos - Sistema de Cadastro de Hóspedes</h2>
@@ -46,4 +46,4 @@
 			</a>
 		</div>
 	</div>
-	<?php include("partials/_footer.php") ?>
+	<?php require_once("partials/_footer.php") ?>

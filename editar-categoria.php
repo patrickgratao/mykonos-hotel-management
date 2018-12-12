@@ -1,9 +1,8 @@
 <?php 
-include("logica-usuario.php");
-include ("banco/conecta.php");
-include ("banco/banco-categoria.php");
+require_once("logica-usuario.php");
+require_once ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	include ("partials/_header.php");
+	require_once ("partials/_header.php");
 
 	$id = $_POST['id'];
 	$categoria = buscaCategoria($conexao, $id);
@@ -35,7 +34,7 @@ include ("banco/banco-categoria.php");
 
 	<form method="POST" action="altera-categoria.php">
 		<input type="hidden" name="id" value="<?= $categoria['id'] ?>">
-		<?php include('partials/_form_categoria.php'); ?>
+		<?php require_once('partials/_form_categoria.php'); ?>
 		<button class="btn btn-primary notika-btn-primary" type="submit">Alterar Categoria</button>
 
 	</div>
@@ -44,4 +43,4 @@ include ("banco/banco-categoria.php");
 </form>
 
 
-<?php include("partials/_footer.php") ?>
+<?php require_once("partials/_footer.php") ?>
