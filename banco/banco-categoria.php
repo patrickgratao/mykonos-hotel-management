@@ -1,26 +1,29 @@
 <?php 
-
 require_once("conecta.php");
-function cadastraCategoria ($conexao, $nome) {
-	$nome = mysqli_real_escape_string($conexao, $nome);
-	$query = "insert into categorias (nome) values ('{$nome}')";
+
+function cadastraCategoria ($conexao, Categoria $categoria) {
+	$categoria->nome = mysqli_real_escape_string($conexao, $categoria->nome);
+	$query = "insert into categorias (nome) values ('{$categoria->nome}')";
 	$resultadoConexao = mysqli_query($conexao, $query);
 	return $resultadoConexao;
 
 }
 
-function alteraCategoria ($conexao, $nome, $id) {
-	$nome = mysqli_real_escape_string($conexao, $nome);
-	$query = "UPDATE categorias SET nome = '{$nome}' WHERE id={$id} ";
+function alteraCategoria ($conexao, Categoria $categoria) {
+	$categoria->nome = mysqli_real_escape_string($conexao, $categoria->nome);
+	$query = "UPDATE categorias SET nome = '{$categoria->nome}' WHERE id={$categoria->id} ";
 	return mysqli_query($conexao, $query);
 }
 
-function buscaCategoria ($conexao, $id) {
-	$nome = mysqli_real_escape_string($conexao, $nome);
+function buscaCategoria ($conexao, Categoria $categoria) {
+	$categoria->nome = mysqli_real_escape_string($conexao, $categoria->nome);
 	$categorias = array();
-	$query = "SELECT * FROM categorias WHERE id = {$id}";
+	$query = "SELECT * FROM categorias WHERE id = {$categoria->id}";
+	
 	$resultado = mysqli_query($conexao, $query);
+	
 	array_push($categorias, $resultado);
+	
 	$categorias = mysqli_fetch_assoc($resultado);
 	
 	return $categorias;

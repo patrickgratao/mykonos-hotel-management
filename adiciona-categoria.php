@@ -1,16 +1,17 @@
 <?php 
 require_once("logica-usuario.php");
 require_once("banco/banco-categoria.php");
+require_once("class/Categoria.php");
 
-	verificaUsuario(); //verifica se o usuário está logado
-	include("partials/_header.php"); 
+verificaUsuario(); //verifica se o usuário está logado
+require_once("partials/_header.php"); 
 
+	$categoria = new Categoria(); //instanciação de um objeto categoria
 
-	$nome = $_POST["nomeCategoria"];
+	$categoria->nome = $_POST["nomeCategoria"];
 
-	if (cadastraCategoria($conexao, $nome)) { 
+	if (cadastraCategoria($conexao, $categoria)) { 
 		$_SESSION["success"] = "Categoria cadastrada com sucesso!";
-
 		echo "<script>location.href='listar-categorias.php';</script>";
 		die();
 	}
