@@ -3,7 +3,8 @@ require_once("logica-usuario.php");
 require_once("banco/banco.php");
 require_once("banco/banco-hospede.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	require_once("partials/_header.php"); 
+	require_once("partials/_header.php");
+	require_once("class/Hospede.php"); 
 
 	$hospedes = listaHospedes($conexao);
 	?>
@@ -58,24 +59,24 @@ require_once("banco/banco-hospede.php");
 									<?php 
 									foreach ($hospedes as $hospede) : ?>
 										<tr>
-											<td><?= $hospede['nome'] ?></td>
-											<td><?= $hospede['cpf'] ?></td>
-											<td><?= $hospede['celular'] ?></td>
-											<td class="text-center"><?= $hospede['categoria_nome'] ?></td>
-											<td><?= $hospede['email'] ?></td>
+											<td><?= $hospede->nome ?></td>
+											<td><?= $hospede->cpf ?></td>
+											<td><?= $hospede->celular ?></td>
+											<td class="text-center"><?= $hospede->categoria->nome ?></td>
+											<td><?= $hospede->email ?></td>
 											<td class="mais-acoes text-center" >
 												<div class="btn-group notika-group-btn material-design-btn">
 													<form class="mais-opcoes" action="ver-mais.php" method="post">
-														<input type="hidden" name="id" value="<?= $hospede['id'] ?>">
+														<input type="hidden" name="id" value="<?= $hospede->id ?>">
 														<button class="btn btn-primary btn-sm notika-gp-primary">Ver Mais</button>
 													</form>
 
 													<form action="editar-hospede.php" class="mais-opcoes" method="post">
-														<input type="hidden" name="id" value="<?=$hospede['id']?>">
+														<input type="hidden" name="id" value="<?=$hospede->id ?>">
 														<button class="btn btn-default btn-sm">Editar</button>
 													</form>
 													<form class="mais-opcoes" action="remover.php" method="post">
-														<input type="hidden" name="id" value="<?=$hospede['id']?>" >
+														<input type="hidden" name="id" value="<?=$hospede->id ?>" >
 														<input type="hidden" name="recurso" value="hospedes">
 														<button class="btn btn-sm btn-danger notika-gp-danger">Excluir</button>
 													</form>

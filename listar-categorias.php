@@ -3,7 +3,8 @@ require_once("logica-usuario.php");
 require_once("banco/banco.php");
 require_once("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	require_once("partials/_header.php"); 
+	require_once("partials/_header.php");
+	require_once("class/Categoria.php"); 
 
 	$categorias = listaCategorias($conexao);
 	?>
@@ -57,16 +58,16 @@ require_once("banco/banco-categoria.php");
 								<?php  
 								foreach ($categorias as $categoria) : ?>
 									<tr>
-										<td><?= $categoria['nome'] ?></td>
+										<td><?= $categoria->nome ?></td>
 										<td class="mais-acoes text-center">
 											<div class="btn-group notika-group-btn">
 												<form class="mais-opcoes" action="editar-categoria.php" method="post">
-													<input type="hidden" name="id" value="<?=$categoria['id'] ?>">
+													<input type="hidden" name="id" value="<?=$categoria->id ?>">
 													<button class="btn btn-primary notika-gp-primary">Editar</button>
 												</form>
 												
 												<form class="mais-opcoes" action="remover.php" method="post">
-													<input type="hidden" name="id" value="<?= $categoria['id'] ?>">
+													<input type="hidden" name="id" value="<?= $categoria->id ?>">
 													<input type="hidden" name="recurso" value="categorias">
 
 													<button class="btn btn-danger notika-gp-danger">Excluir</button>

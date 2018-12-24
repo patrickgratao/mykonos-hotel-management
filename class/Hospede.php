@@ -24,5 +24,5 @@
 		public $precoTotal;
 		public $totalPagar;
 		public $infoExtras;
-		public $categoriaHospede;
+		public $categoria;
 	}

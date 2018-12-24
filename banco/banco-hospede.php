@@ -1,6 +1,8 @@
 <?php 
 	//Aqui ficam todas as funções relacionadas ao banco hóspedes
 require_once("conecta.php");
+require_once("class/Hospede.php");
+require_once("class/Categoria.php");
 
 function cadastraHospede ($conexao, Hospede $hospede) {
 	//Evita ataque de sql injection -> aceita a aspa simples Ex. Joana D'arc
@@ -37,8 +39,38 @@ function listaHospedes ($conexao){
 	$query = "select p.*, c.nome as categoria_nome from hospedes as p join categorias as c on p.categoria_id = c.id";
 	$resultado = mysqli_query($conexao, $query);
 
-	while($hospede = mysqli_fetch_assoc($resultado)) {
-			array_push($hospedes, $hospede); // insere no array hóspedes o hospede da vez
+	while($hospede_array = mysqli_fetch_assoc($resultado)) {
+		
+		$hospede = new Hospede();
+		$categoria = new Categoria();
+		$categoria->nome = $hospede_array['categoria_nome'];
+		
+		$hospede->id = $hospede_array['id'];
+		$hospede->nome = $hospede_array['nome'];
+		$hospede->cpf = $hospede_array['cpf'];
+		$hospede->dataNascimento = $hospede_array['data_nascimento'];
+		$hospede->sexo = $hospede_array['sexo'];
+		$hospede->telefone = $hospede_array['telefone'];
+		$hospede->celular = $hospede_array['celular'];
+		$hospede->email = $hospede_array['email'];
+		$hospede->estadoCivil = $hospede_array['estado_civil'];
+		$hospede->cep = $hospede_array['cep'];
+		$hospede->rua = $hospede_array['rua'];
+		$hospede->bairro = $hospede_array['bairro'];
+		$hospede->cidade = $hospede_array['cidade']; 
+		$hospede->estado = $hospede_array['estado'];
+		$hospede->dataCheckin = $hospede_array['data_checkin'];
+		$hospede->dataCheckout = $hospede_array['data_checkout'];
+		$hospede->qtdDiarias = $hospede_array['qtd_diarias'];
+		$hospede->qtdAcompanhantes = $hospede_array['qtd_pagantes'];
+		$hospede->precoDiaria = $hospede_array['preco_diaria'];
+		$hospede->valorPago = $hospede_array['valor_pago']; 
+		$hospede->precoTotal = $hospede_array['preco_total'];
+		$hospede->totalPagar = $hospede_array['total_pagar'];
+		$hospede->infoExtras = $hospede_array['info_extras'];
+		$hospede->categoria = $categoria; //devolve o objeto Categoria
+		
+		array_push($hospedes, $hospede); // insere no array hóspedes o hospede da vez
 		}
 		return $hospedes; //retorna o array com todos os hóspedes
 	}
