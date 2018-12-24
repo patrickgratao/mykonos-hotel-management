@@ -6,7 +6,7 @@ require_once("banco/banco-categoria.php");
 	require_once("partials/_header.php");
 
 	$categorias = listaCategorias($conexao);
-	$hospede = array("nome" => "", "cpf" => "", "data_nascimento" => "", "sexo" => " ", "telefone" => "", "celular" => "", "email" => "", "estado_civil" => "", "categoria_id" => "", "cep" => "", "rua" => "", "bairro" => "", "cidade" => "", "estado" => "", "data_checkin" => "", "data_checkout" => "", "qtd_diarias" => "", "qtd_pagantes" => "", "preco_diaria" => "", "valor_pago" => "", "preco_total" => "", "total_pagar" => "1", "info_extras" => " ");
+	$hospede = array("nome" => "", "cpf" => "", "data_nascimento" => "", "sexo" => " ", "telefone" => "", "celular" => "", "email" => "", "estado_civil" => "", "categoria_nome" => "", "cep" => "", "rua" => "", "bairro" => "", "cidade" => "", "estado" => "", "data_checkin" => "", "data_checkout" => "", "qtd_diarias" => "", "qtd_pagantes" => "", "preco_diaria" => "", "valor_pago" => "", "preco_total" => "", "total_pagar" => "1", "info_extras" => " ");
 
 	?>
 	<div class="breadcomb-area">

@@ -48,6 +48,7 @@
                                             <h2>Painel de Controle</h2>
                                         </div>
                                         <div class="hd-message-info hd-task-info">
+                                            <a href="cadastrar-usuario.php">Cadastrar Usuário</a><br>
                                             <a href="logout.php">Sair do Sistema</a>
                                         </div>
                                     </div>
@@ -101,8 +102,6 @@
                             <li><a data-toggle="tab" href="#menuHospedes"><i class="notika-icon notika-support"></i> Hóspedes</a>
                             </li>
                             <li><a data-toggle="tab" href="#menuCategorias"><i class="notika-icon notika-edit"></i> Categorias</a>
-                            </li>
-                            <li><a href="contato.php"><i class="notika-icon notika-mail"></i> Contato</a>
                             </li>
                         </ul>
                         <div class="tab-content custom-menu-content">

@@ -67,7 +67,7 @@ require_once("banco/banco-hospede.php");
               <div class="contact-ad-hd">
                 <h2>Dados de Contato</h2><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Telefone:</span> <?=$dadosHospede['telefone']?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Celular / Whatsapp:</span> <?=$dadosHospede['celular']?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Celular / Whatsapp:</span> <a href="https://api.whatsapp.com/send?phone=55<?=$dadosHospede['celular']?>&text=Oii <?=$dadosHospede['nome'] ?>, tudo bem? Aqui é o Patryck da Pousada Ágape, foi um prazer receber você no dia <?=$dadosHospede['data_checkin']?>. Obrigada por nos escolher e volte sempre. Grande abraço!" target="_blank"><?=$dadosHospede['celular']?></a></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">E-mail:</span> <?=$dadosHospede['email']?></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Endereço: </span><?=$dadosHospede['rua']?> <?=$dadosHospede['bairro']?> <?=$dadosHospede['cidade']?> - <?=$dadosHospede['estado']?> <?=$dadosHospede['cep']?></p>
               </div>

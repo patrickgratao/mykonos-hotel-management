@@ -1,15 +1,10 @@
 <?php 
 require_once("logica-usuario.php");
-require_once ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
-	require_once ("partials/_header.php");
-	require_once("class/Categoria.php");
+	require_once("partials/_header.php");
 
-	$categoria = new Categoria();
+	$categoria = array("nome" => ""); //inicializa o campo nome com valor vazio
 	
-	$categoria->id = $_POST['id'];
-	
-	$categoria = buscaCategoria($conexao, $categoria);
 	?>
 	<div class="breadcomb-area">
 		<div class="container">
@@ -23,8 +18,8 @@ require_once ("banco/banco-categoria.php");
 										<i class="notika-icon notika-windows"></i>
 									</div>
 									<div class="breadcomb-ctn">
-										<h2>Editar Categoria</h2>
-										<p>Fique atento durante a edição de informações.</p>
+										<h2>Cadastrar novo Usuário do Sistema</h2>
+										<p>Fique atento as informações cadastradas.</p>
 									</div>
 								</div>
 							</div>
@@ -36,13 +31,14 @@ require_once ("banco/banco-categoria.php");
 	</div>
 	<!-- Breadcomb area End-->
 
-	<form method="POST" action="altera-categoria.php">
-		<?php require_once('partials/_form_categoria.php'); ?>
-		<button class="btn btn-primary notika-btn-primary" type="submit">Alterar Categoria</button>
+	<form method="POST" action="adiciona-usuario.php">
+		<?php require_once('partials/_form_usuario.php'); ?>
+		</div>
+		</div>
+		<br>	
+		<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Cadastrar Usuário</button>
 
 	</div>
-</div>
-</div>
 </form>
 
 

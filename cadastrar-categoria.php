@@ -3,7 +3,7 @@ require_once("logica-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once("partials/_header.php");
 
-	$categoria = array("nome" => "");
+	$categoria = array("nome" => ""); //inicializa o campo nome com valor vazio
 	
 	?>
 	<div class="breadcomb-area">

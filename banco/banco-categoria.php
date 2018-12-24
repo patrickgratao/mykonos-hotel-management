@@ -2,6 +2,7 @@
 require_once("conecta.php");
 
 function cadastraCategoria ($conexao, Categoria $categoria) {
+	//evita sqlinjection e aceita a aspa simples Ex. Joana D'arc
 	$categoria->nome = mysqli_real_escape_string($conexao, $categoria->nome);
 	$query = "insert into categorias (nome) values ('{$categoria->nome}')";
 	$resultadoConexao = mysqli_query($conexao, $query);
@@ -16,14 +17,14 @@ function alteraCategoria ($conexao, Categoria $categoria) {
 }
 
 function buscaCategoria ($conexao, Categoria $categoria) {
+	//impossibilita ataque sqlinjection
 	$categoria->nome = mysqli_real_escape_string($conexao, $categoria->nome);
+	
 	$categorias = array();
 	$query = "SELECT * FROM categorias WHERE id = {$categoria->id}";
-	
 	$resultado = mysqli_query($conexao, $query);
 	
 	array_push($categorias, $resultado);
-	
 	$categorias = mysqli_fetch_assoc($resultado);
 	
 	return $categorias;

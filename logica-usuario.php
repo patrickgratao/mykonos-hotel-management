@@ -21,6 +21,7 @@ function usuarioLogado () {
 
 function logaUsuario ($email) {
 	$_SESSION["usuario_logado"] = $email;	
+	$_SESSION["permissao_usuario"] = $permissao;
 }
 
 function logout () {

@@ -1,0 +1,26 @@
+<?php 
+require_once("logica-usuario.php");
+require_once("banco/banco-usuario.php");
+require_once("class/Usuario.php");
+
+verificaUsuario(); //verifica se o usuário está logado
+require_once("partials/_header.php"); 
+
+	$usuario = new Usuario(); //instanciação de um objeto usuário
+
+	$usuario->nome = $_POST['nomeUsuario'];
+	$usuario->email = $_POST['emailUsuario'];
+	$usuario->senha = $_POST['senhaUsuario'];
+	$usuario->permissao = $_POST['permissaoUsuario'];
+
+	if (cadastraUsuario($conexao, $usuario)) { 
+		$_SESSION["success"] = "O usuário foi cadastrado com sucesso!";
+		echo "<script>location.href='listar-usuarios.php';</script>";
+		die();
+	}
+
+	else {
+		$_SESSION["danger"] = "O usuário não foi cadastrado. Tente novamente!";
+		echo "<script>location.href='listar-usuarios.php';</script>";
+		die();
+	}

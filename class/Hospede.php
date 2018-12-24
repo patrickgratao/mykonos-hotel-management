@@ -26,5 +26,3 @@
 		public $infoExtras;
 		public $categoriaHospede;
 	}
-
- ?>

@@ -3,6 +3,7 @@
 require_once("conecta.php");
 
 function cadastraHospede ($conexao, Hospede $hospede) {
+	//Evita ataque de sql injection -> aceita a aspa simples Ex. Joana D'arc
 	$hospede->nome = mysqli_real_escape_string($conexao, $hospede->nome);
 	$hospede->email = mysqli_real_escape_string($conexao, $hospede->email);
 	$hospede->rua = mysqli_real_escape_string($conexao, $hospede->rua);
@@ -17,7 +18,7 @@ function cadastraHospede ($conexao, Hospede $hospede) {
 }
 
 function alteraHospede ($conexao, Hospede $hospede) {
-
+	//Evita ataque de sql injection -> aceita a aspa simples Ex. Joana D'arc
 	$hospede->nome = mysqli_real_escape_string($conexao, $hospede->nome);
 	$hospede->email = mysqli_real_escape_string($conexao, $hospede->email);
 	$hospede->rua = mysqli_real_escape_string($conexao, $hospede->rua);

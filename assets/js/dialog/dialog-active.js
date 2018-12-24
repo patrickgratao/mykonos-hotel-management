@@ -35,7 +35,7 @@
 
 
 	//Excluir Hospede mensagem
-	$('#hos-delete').on('click', function(){
+	$('#hospede-delete').on('click', function(){
 		swal({   
 			title: "Tem certeza disso?",   
 			text: "Você não poderá recuperar os dados deste hóspede após a remoção!",   
@@ -46,6 +46,26 @@
 			swal("Excluído!", "Você pediu e nós excluimos!", "success"); 
 		});
 	});
+
+$('.deletar-categoria').on('click', function(){
+		event.preventDefault();
+		swal({   
+			title: "Are you sure?",   
+			text: "You will not be able to recover this imaginary file!",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonText: "Yes, delete it!",
+			cancelButtonText: "No, cancel plx!",   
+		}).then(function(isConfirm){
+			if (isConfirm) {     
+				swal("Deleted!", "Your imaginary file has been deleted.", "success");   
+				window.location.href = "remover.php?id=<?=$categoria['id']?>&recurso=categorias";
+			} else {     
+				swal("Cancelled", "Your imaginary file is safe :)", "error");   
+			} 
+		});
+	});
+
 	
 	//Parameter
 	$('#sa-params').on('click', function(){
