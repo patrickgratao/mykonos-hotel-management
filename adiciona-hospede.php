@@ -3,13 +3,20 @@
 	require_once("banco/banco-hospede.php");
 	require_once("banco/banco-categoria.php");
 	require_once("class/Hospede.php");
+	require_once("class/Categoria.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once("partials/_header.php"); 
 
-	$hospede = new Hospede(); //instanciação do objeto hospede
+	//Instanciação dos Objetos Necessários
+	$hospede = new Hospede(); 
+	$categoria = new Categoria();
 
+	//Atribuição dos atributos
+	//Categoria
+	$categoria->id = $_POST["categoria_id"];
 
+	//Atributos de Hospede
 	$hospede->nome = $_POST["nomeHospede"]; 	
 	$hospede->cpf = $_POST["cpfHospede"];
 	$hospede->dataNascimento = $_POST["nascimentoHospede"];
@@ -23,20 +30,18 @@
 	$hospede->bairro = $_POST["bairroHospede"];
 	$hospede->cidade = $_POST["cidadeHospede"];
 	$hospede->estado = $_POST["estadoHospede"];
-	$hospede->categoriaHospede = $_POST["categoria_id"];
-	//Informações de Reserva
+	$hospede->categoria = $categoria; //referencia um objeto categoria
+	
 	$hospede->dataCheckin = $_POST["dataCheckinHospede"];
 	$hospede->dataCheckout = $_POST["dataCheckoutHospede"];
 	$hospede->qtdDiarias = $_POST["quantidadeDiariasHospede"];
 	$hospede->qtdAcompanhantes = $_POST["acompanhantesHospede"];
 	$hospede->precoDiaria = $_POST["precoDiariaHospede"];
-	// Informações de Pagamento
+	
 	$hospede->valorPago = $_POST["valorPagoHospede"];
 	$hospede->precoTotal = $_POST["precoTotal"];
 	$hospede->totalPagar = $_POST["precoTotalPagar"];
 	$hospede->infoExtras = $_POST["informacoesAdicionais"];
-
-
 
 	if (cadastraHospede($conexao, $hospede)) { 
 		

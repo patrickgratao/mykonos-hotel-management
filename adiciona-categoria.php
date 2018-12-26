@@ -6,7 +6,8 @@ require_once("class/Categoria.php");
 verificaUsuario(); //verifica se o usuário está logado
 require_once("partials/_header.php"); 
 
-	$categoria = new Categoria(); //instanciação de um objeto categoria
+	//instanciação de um objeto categoria
+	$categoria = new Categoria(); 
 
 	$categoria->nome = $_POST["nomeCategoria"];
 

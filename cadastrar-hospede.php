@@ -2,12 +2,40 @@
 require_once("logica-usuario.php");
 require_once("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuario esta logado
-	
+	require_once("class/Hospede.php");	
 	require_once("partials/_header.php");
 
 	$categorias = listaCategorias($conexao);
-	$hospede = array("nome" => "", "cpf" => "", "data_nascimento" => "", "sexo" => " ", "telefone" => "", "celular" => "", "email" => "", "estado_civil" => "", "categoria_nome" => "", "cep" => "", "rua" => "", "bairro" => "", "cidade" => "", "estado" => "", "data_checkin" => "", "data_checkout" => "", "qtd_diarias" => "", "qtd_pagantes" => "", "preco_diaria" => "", "valor_pago" => "", "preco_total" => "", "total_pagar" => "1", "info_extras" => " ");
 
+	$hospede = new Hospede();
+
+	$hospede->nome = "";
+	$hospede->cpf = "";
+	$hospede->dataNascimento = "";
+	$hospede->sexo = "";
+	$hospede->telefone = "";
+	$hospede->celular = "";
+	$hospede->email = "";
+	$hospede->estadoCivil = "";
+	$hospede->cep = "";
+	$hospede->rua = "";
+	$hospede->bairro = "";
+	$hospede->cidade = "";
+	$hospede->estado = "";
+	$hospede->dataCheckin = "";
+	$hospede->dataCheckout = "";
+	$hospede->qtdDiarias = "";
+	$hospede->qtdAcompanhantes = "";
+	$hospede->precoDiaria = "";
+	$hospede->valorPago = ""; 
+	$hospede->precoTotal = "";
+	$hospede->totalPagar = "1";
+	$hospede->infoExtras = "";
+	$hospede->categoria = "";
+
+/*
+	$hospede = array("nome" => "", "cpf" => "", "data_nascimento" => "", "sexo" => " ", "telefone" => "", "celular" => "", "email" => "", "estado_civil" => "", "cep" => "", "rua" => "", "bairro" => "", "cidade" => "", "estado" => "", "data_checkin" => "", "data_checkout" => "", "qtd_diarias" => "", "qtd_pagantes" => "", "preco_diaria" => "", "valor_pago" => "", "preco_total" => "", "total_pagar" => "1", "info_extras" => " ");
+*/
 	?>
 	<div class="breadcomb-area">
 		<div class="container">

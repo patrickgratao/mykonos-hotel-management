@@ -1,16 +1,13 @@
 <?php 
-require_once("logica-usuario.php");
-require_once ("banco/banco-categoria.php");
+	require_once("logica-usuario.php");
+	require_once ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once ("partials/_header.php");
-	require_once("class/Categoria.php");
 
-	$categoria = new Categoria();
+	$id = $_POST['id'];
 	
-	$categoria->id = $_POST['id'];
-	
-	$categoria = buscaCategoria($conexao, $categoria);
-	?>
+	$categoria = buscaCategoria($conexao, $id);
+?>
 	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">

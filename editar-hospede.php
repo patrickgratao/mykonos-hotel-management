@@ -1,14 +1,17 @@
 <?php 
-require_once("logica-usuario.php");
-require_once ("banco/banco-hospede.php");
-require_once ("banco/banco-categoria.php");
+	require_once("logica-usuario.php");
+	require_once ("banco/banco-hospede.php");
+	require_once ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once ("partials/_header.php");
 	
-	$id = $_POST['id'];
-	$hospede = visualizaHospede($conexao, $id);
+	$id = $_POST['id'];	
+
+	$hospede = buscaHospede($conexao, $id);
+
 	$categorias = listaCategorias($conexao);
-	?>
+?>
+
 	<div class="breadcomb-area">
 		<div class="container">
 			<div class="row">
@@ -35,7 +38,7 @@ require_once ("banco/banco-categoria.php");
 	<!-- Breadcomb area End-->
 
 	<form class="needs-validation" method="POST" action="altera-hospede.php">
-		<input type="hidden" name="id" value="<?=$hospede['id']?>" />
+		<input type="hidden" name="id" value="<?=$hospede->id?>" />
 		<?php require_once('partials/_form_hospede.php'); ?>
 		<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Alterar Dados</button>
 	</div>

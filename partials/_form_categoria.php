@@ -10,8 +10,8 @@
                         <i class="notika-icon notika-support"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input type="hidden" name="id" value="<?= $categoria['id'] ?>">
-                        <input type="text" class="form-control" placeholder="Nome da Categoria" name="nomeCategoria"  value="<?= $categoria['nome'] ?>" autofocus required>
+                        <input type="hidden" name="id" value="<?= $categoria->id ?>">
+                        <input type="text" class="form-control" placeholder="Nome da Categoria" name="nomeCategoria"  value="<?= $categoria->nome ?>" autofocus required>
                     </div>
                 </div>
             </div>

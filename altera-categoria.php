@@ -2,12 +2,13 @@
 	require_once("logica-usuario.php"); //a sessão tem que ser a primeira a inicializar, antes de qualquer html 
 	require_once("banco/banco-categoria.php");
 	require_once("class/Categoria.php");
-
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once("partials/_header.php");
 
+	//Instanciação do Objeto
 	$categoria = new Categoria();
 
+	//Atribuições
 	$categoria->id = $_POST['id'];
 	$categoria->nome = $_POST["nomeCategoria"]; 	
 	

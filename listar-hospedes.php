@@ -66,7 +66,7 @@ require_once("banco/banco-hospede.php");
 											<td><?= $hospede->email ?></td>
 											<td class="mais-acoes text-center" >
 												<div class="btn-group notika-group-btn material-design-btn">
-													<form class="mais-opcoes" action="ver-mais.php" method="post">
+													<form class="mais-opcoes" action="ver-mais.php" >
 														<input type="hidden" name="id" value="<?= $hospede->id ?>">
 														<button class="btn btn-primary btn-sm notika-gp-primary">Ver Mais</button>
 													</form>

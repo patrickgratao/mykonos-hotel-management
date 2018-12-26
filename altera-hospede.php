@@ -4,8 +4,14 @@
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once("partials/_header.php");
 	require_once("class/Hospede.php"); 
+	require_once("class/Categoria.php"); 
 
+	//Instanciação de objetos
 	$hospede = new Hospede();
+	$categoria = new Categoria();
+
+	//Atribuições
+	$categoria->id = $_POST["categoria_id"];
 
 	$hospede->id = $_POST["id"];
 	$hospede->nome = $_POST["nomeHospede"]; 	
@@ -21,14 +27,14 @@
 	$hospede->bairro = $_POST["bairroHospede"];
 	$hospede->cidade = $_POST["cidadeHospede"];
 	$hospede->estado = $_POST["estadoHospede"];
-	$hospede->categoriaHospede = $_POST["categoria_id"];
-	//Informações de Reserva
+	$hospede->categoria = $categoria;
+	
 	$hospede->dataCheckin = $_POST["dataCheckinHospede"];
 	$hospede->dataCheckout = $_POST["dataCheckoutHospede"];
 	$hospede->qtdDiarias = $_POST["quantidadeDiariasHospede"];
 	$hospede->qtdAcompanhantes = $_POST["acompanhantesHospede"];
 	$hospede->precoDiaria = $_POST["precoDiariaHospede"];
-	// Informações de Pagamento
+	
 	$hospede->valorPago = $_POST["valorPagoHospede"];
 	$hospede->precoTotal = $_POST["precoTotal"];
 	$hospede->totalPagar = $_POST["precoTotalPagar"];
@@ -37,13 +43,13 @@
 	if (alteraHospede($conexao, $hospede)) { 
 
 		$_SESSION["success"] = "Hóspede alterado com sucesso!";
-		echo "<script>location.href='listar-hospedes.php';</script>";
+		echo "<script>location.href='ver-mais.php?id=$hospede->id';</script>";
 		die();
 	}
 
 	else {
 		$msg = mysqli_error($conexao);
 		$_SESSION["danger"] = "O hóspede não pôde ser alterado, tente novamente!";
-		echo "<script>location.href='listar-hospedes.php';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
+		echo "<script>location.href='ver-mais.php?id=$hospede->id';</script>"; //<script>location.href='listar-hospedes.php?cadastrado=false';</script>
 		die();
 	}

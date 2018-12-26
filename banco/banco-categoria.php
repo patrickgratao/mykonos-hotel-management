@@ -17,18 +17,20 @@ function alteraCategoria ($conexao, Categoria $categoria) {
 	return mysqli_query($conexao, $query);
 }
 
-function buscaCategoria ($conexao, Categoria $categoria) {
-	//impossibilita ataque sqlinjection
-	$categoria->nome = mysqli_real_escape_string($conexao, $categoria->nome);
-	
-	$categorias = array();
-	$query = "SELECT * FROM categorias WHERE id = {$categoria->id}";
+function buscaCategoria ($conexao, $id) {
+	$query = "SELECT * FROM categorias WHERE id = {$id}";
 	$resultado = mysqli_query($conexao, $query);
+	$categoria_buscada = mysqli_fetch_assoc($resultado); //é um array
 	
-	array_push($categorias, $resultado);
-	$categorias = mysqli_fetch_assoc($resultado);
-	
-	return $categorias;
+	//Instanciação do Objeto
+	$categoria = new Categoria();
+
+	//Atribuição
+	$categoria->id = $categoria_buscada['id'];
+	$categoria->nome = $categoria_buscada['nome'];
+
+
+	return $categoria;
 
 }
 
@@ -38,8 +40,10 @@ function listaCategorias ($conexao) {
 	$resultado = mysqli_query($conexao, $query);
 
 	while ($categoria_array = mysqli_fetch_assoc($resultado)) {
+		//Instanciação do objeto
 		$categoria = new Categoria(); 
 
+		//Atribuição dos atributos
 		$categoria->id = $categoria_array['id'];
 		$categoria->nome = $categoria_array['nome'];
 

@@ -14,7 +14,7 @@
 						<div class="card text-white bg-dark mb-3">
 							<h4 class="card-header text-center card-title">Cadastrar Hóspedes</h4>
 							<div class="card-body">
-								<p class="card-text text-center"><img src="assets/img/guest.png"></p>
+								<p class="card-text text-center"><img src="assets/img/mykonos/guest.png"></p>
 							</div>
 						</div>
 					</div>
@@ -26,7 +26,7 @@
 						<div class="card text-white bg-dark mb-3">
 							<h4 class="card-header text-center card-title">Próximos Aniversários</h4>
 							<div class="card-body">
-								<p class="card-text text-center"><img src="assets/img/birthday.png"></p>
+								<p class="card-text text-center"><img src="assets/img/mykonos/birthday.png"></p>
 							</div>
 						</div>
 					</div>
@@ -38,7 +38,7 @@
 						<div class="card text-white bg-dark mb-3">
 							<h4 class="card-header text-center card-title">Hóspedes Cadastrados</h4>
 							<div class="card-body">
-								<p class="card-text text-center"><img src="assets/img/logout.png"></p>
+								<p class="card-text text-center"><img src="assets/img/mykonos/procurar.png"></p>
 							</div>
 						</div>
 					</div>
