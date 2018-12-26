@@ -48,8 +48,29 @@
                                             <h2>Painel de Controle</h2>
                                         </div>
                                         <div class="hd-message-info hd-task-info">
-                                            <a href="cadastrar-usuario.php">Cadastrar Usuário</a><br>
-                                            <a href="logout.php">Sair do Sistema</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="meu-perfil.php">Meu Perfil</a><br>
+                                                </li>
+                                                <li>
+                                                    <a href="logout.php">Sair do Sistema</a>
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                </li> 
+
+                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
+                                    <div role="menu" class="dropdown-menu message-dd task-dd">
+                                        <div class="hd-mg-tt">
+                                            <h2>Administrador do Sistema</h2>
+                                        </div>
+                                        <div class="hd-message-info hd-task-info">
+                                            <ul>
+                                                <li><a href="listar-usuarios.php">Ver Usuários Cadastrados</a><br></li>
+                                                <li><a href="cadastrar-usuario.php">Cadastrar Usuário</a><br></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </li> 

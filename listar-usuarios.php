@@ -52,6 +52,7 @@
 									<th>Nome</th>
 									<th>E-mail</th>
 									<th>Nível de Acesso</th>
+									<th>Senha</th>
 									<th class="text-center">Mais Ações</th>
 								</tr>
 							</thead>
@@ -59,18 +60,19 @@
 								<?php  
 								foreach ($usuarios as $usuario) : ?>
 									<tr>
-										<td><?= $usuario['nome'] ?></td>
-										<td><?= $usuario['email'] ?></td>
-										<td><?= $usuario['permissao'] ?></td>
+										<td><?= $usuario->nome ?></td>
+										<td><?= $usuario->email ?></td>
+										<td><?= $usuario->permissao ?></td>
+										<td><?= $usuario->senha ?></td>
 										<td class="mais-acoes text-center">
 											<div class="btn-group notika-group-btn">
 												<form class="mais-opcoes" action="editar-usuario.php" method="post">
-													<input type="hidden" name="id" value="<?=$usuario['id'] ?>">
+													<input type="hidden" name="id" value="<?=$usuario->id ?>">
 													<button class="btn btn-primary notika-gp-primary">Editar</button>
 												</form>
 												
 												<form class="mais-opcoes" action="remover.php" method="post">
-													<input type="hidden" name="id" value="<?= $usuario['id'] ?>">
+													<input type="hidden" name="id" value="<?= $usuario->id ?>">
 													<input type="hidden" name="recurso" value="usuarios">
 
 													<button class="btn btn-danger notika-gp-danger">Excluir</button>

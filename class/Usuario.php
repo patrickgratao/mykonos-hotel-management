@@ -1,9 +1,9 @@
 <?php 
 
 	class Usuario {
-		public id;
-		public nome;
-		public email;
-		public senha;
-		public permissao;
+		public $id;
+		public $nome;
+		public $email;
+		public $senha;
+		public $permissao;
 	}

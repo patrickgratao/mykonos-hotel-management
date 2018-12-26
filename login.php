@@ -1,9 +1,9 @@
 <?php 
-include("logica-usuario.php");
-include("banco/conecta.php"); 
-include("banco/banco-usuario.php"); 
+require_once("logica-usuario.php");
+require_once("banco/conecta.php"); 
+require_once("banco/banco-usuario.php"); 
 
-$usuario =  buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
+$usuario =  possoLogar($conexao, $_POST["email"], $_POST["senha"]);
 
 if ($usuario == null) {
     $_SESSION["danger"] = "Usuário ou senha inválidos!";

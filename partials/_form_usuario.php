@@ -7,8 +7,8 @@
                         <i class="notika-icon notika-support"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
-                        <input type="text" class="form-control" placeholder="Nome do Usuário *" name="nomeUsuario"  value="<?= $usuario['nome'] ?>" autofocus required>
+                        <input type="hidden" name="id" value="<?= $usuario->id ?>">
+                        <input type="text" class="form-control" placeholder="Nome Completo *" name="nomeUsuario"  value="<?= $usuario->nome ?>" autofocus required>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                         <i class="notika-icon notika-mail"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input type="email" class="form-control" placeholder="email@email.com" name="emailUsuario"  value="<?= $usuario['email'] ?>" required>
+                        <input type="email" class="form-control" placeholder="email@email.com" name="emailUsuario"  value="<?= $usuario->email?>" required>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <i class="notika-icon notika-dollar"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Senha" name="senhaUsuario"  value="<?= $usuario['senha'] ?>" required>
+                        <input type="password" class="form-control" placeholder="Senha" name="senhaUsuario"  value="<?= $usuario->senha ?>" required>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                     <div class="nk-int-st">
                       <select class="form-control" name="permissaoUsuario" id="permissaoUsuario" required>
                           <option value="">Nível de Acesso...</option>  
-                          <option value="admin"<?=$usuario['permissao'] == 'Administrador' ? ' selected="selected"' : '';?>>Administrador</option>
-                          <option value="comum"<?=$usuario['permissao'] == 'Comum' ? ' selected="selected"' : '';?>>Usuário Comum</option>
+                          <option value="admin"<?=$usuario->permissao == 'admin' ? ' selected="selected"' : '';?>>Administrador</option>
+                          <option value="comum"<?=$usuario->permissao == 'comum' ? ' selected="selected"' : '';?>>Usuário Comum</option>
                           
                       </select>
                   </div>

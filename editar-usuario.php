@@ -4,20 +4,13 @@
 	verificaUsuario(); //verifica se o usuário está logado
 	require_once("class/Usuario.php");	
 	require_once("partials/_header.php");
-		
-	//Instanciação de Objeto
-	$usuario = new Usuario();
 
-	//Atribuição inicial
-	$usuario->id = "";
-	$usuario->nome = "";
-	$usuario->email = "";
-	$usuario->senha = "";
-	$usuario->permissao = "";
+	$id=$_POST['id'];
 
-	
-?>
-	<div class="breadcomb-area">
+	$usuario = buscaUsuario($conexao, $id);
+
+ ?>
+ <div class="breadcomb-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -29,8 +22,8 @@
 										<i class="notika-icon notika-windows"></i>
 									</div>
 									<div class="breadcomb-ctn">
-										<h2>Cadastrar novo Usuário do Sistema</h2>
-										<p>Fique atento as informações cadastradas.</p>
+										<h2>Editar Usuário</h2>
+										<p>Fique atento à edição de informações. Estes usuários controlam o sistema</p>
 									</div>
 								</div>
 							</div>
@@ -42,12 +35,12 @@
 	</div>
 	<!-- Breadcomb area End-->
 
-	<form method="POST" action="adiciona-usuario.php">
+<form method="POST" action="altera-usuario.php">
 		<?php require_once('partials/_form_usuario.php'); ?>
 		</div>
 		</div>
 		<br>	
-		<button class="btn btn-primary notika-btn-primary btn-lg" type="submit">Cadastrar Usuário</button>
+		<button class="btn btn-danger notika-btn-danger btn-lg" type="submit">Alterar Usuário</button>
 
 	</div>
 </form>

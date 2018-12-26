@@ -20,7 +20,9 @@ require_once("partials/_header.php");
 	}
 
 	else {
+		$msg = mysqli_error($conexao);
+		echo $msg;
 		$_SESSION["danger"] = "O usuário não foi cadastrado. Tente novamente!";
-		echo "<script>location.href='listar-usuarios.php';</script>";
+		//echo "<script>location.href='listar-usuarios.php';</script>";
 		die();
 	}
