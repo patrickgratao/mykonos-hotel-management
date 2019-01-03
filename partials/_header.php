@@ -89,9 +89,7 @@
                         <div class="mobile-menu">
                             <nav id="dropdown">
                                 <ul class="mobile-menu-nav">
-                                    <li><a data-toggle="collapse" data-target="#Home" href="index.php">Início</a>
-
-                                    </li>
+                                    <li><a href="index.php">Início</a></li>
                                     <li><a data-toggle="collapse" data-target="#demoevent" href="#">Hóspedes</a>
                                         <ul id="demoevent" class="collapse dropdown-header-top">
                                             <li><a href="listar-hospedes.php">Hóspedes Cadastrados</a></li>
@@ -104,6 +102,7 @@
                                             <li><a href="cadastrar-categoria.php">Cadastrar nova categoria</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="logout.php">Sair</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -123,6 +122,8 @@
                             <li><a data-toggle="tab" href="#menuHospedes"><i class="notika-icon notika-support"></i> Hóspedes</a>
                             </li>
                             <li><a data-toggle="tab" href="#menuCategorias"><i class="notika-icon notika-edit"></i> Categorias</a>
+                            </li>
+                            <li><a href="logout.php"><i class="notika-icon notika-close"></i> Sair</a>
                             </li>
                         </ul>
                         <div class="tab-content custom-menu-content">

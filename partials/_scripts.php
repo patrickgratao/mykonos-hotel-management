@@ -76,5 +76,8 @@
       ============================================ -->
       <script src="assets/js/plugins.js"></script>
 	<!-- main JS
-		============================================ -->
+    ============================================ -->
         <script src="assets/js/main.js"></script>
+  <!-- MANIPULACAO DE DATAS JS
+    ============================================ -->
+        <script src="assets/js/moment.js"></script>

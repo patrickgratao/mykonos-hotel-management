@@ -19,6 +19,10 @@ function usuarioLogado () {
 	return $_SESSION["usuario_logado"];
 }
 
+function permissaoUsuario() {
+	return $_SESSION["permissao_usuario"] = $permissao;
+}
+
 function logaUsuario ($email) {
 	$_SESSION["usuario_logado"] = $email;	
 	$_SESSION["permissao_usuario"] = $permissao;
