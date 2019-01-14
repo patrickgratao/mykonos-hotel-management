@@ -9,7 +9,7 @@ require_once("banco/banco-hospede.php");
   $id = $_GET['id'];
   $dadosHospede = buscaHospede($conexao, $id);
 
-  ?>
+?>
 
   <div class="breadcomb-area">
     <div class="container">
@@ -53,9 +53,9 @@ require_once("banco/banco-hospede.php");
               <div class="contact-ad-hd">
                 <h2>Dados Pessoais</h2><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">CPF: </span><?=$dadosHospede->cpf?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Sexo: </span><?=$dadosHospede->sexo?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Sexo: </span><span class="sexo-hospede"><?=$dadosHospede->sexo?></span></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Data Nascimento: </span><?=$dadosHospede->dataNascimento?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><?=$dadosHospede->estadoCivil?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><span class="dados-estado-civil"><?=$dadosHospede->estadoCivil?></span></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Categoria do Hóspede: </span><?=$dadosHospede->categoria->nome?></p>
               </div>
             </div>
@@ -67,7 +67,7 @@ require_once("banco/banco-hospede.php");
               <div class="contact-ad-hd">
                 <h2>Dados de Contato</h2><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Telefone:</span> <?=$dadosHospede->telefone?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Celular / Whatsapp:</span> <a href="https://api.whatsapp.com/send?phone=55<?=$dadosHospede->celular?>&text=Oii <?=$dadosHospede->nome ?>, tudo bem? Aqui é o Patryck da Pousada Ágape, foi um prazer receber você no dia <?=$dadosHospede->dataCheckin?>. Obrigada por nos escolher e volte sempre. Grande abraço!" target="_blank"><?=$dadosHospede->celular?></a></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Celular / Whatsapp:</span> <?=$dadosHospede->celular?><a href="https://api.whatsapp.com/send?phone=55<?=$dadosHospede->celular?>&text=Oii <?=$dadosHospede->nome ?>, tudo bem? Aqui é o Patryck da Pousada Ágape, foi um prazer receber você no dia <?=$dadosHospede->dataCheckin?>. Obrigada por nos escolher e volte sempre. Grande abraço!" target="_blank"><img src="assets\img\mykonos\whatsapp.png" class="whatsapp-hospede"></a></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">E-mail:</span> <?=$dadosHospede->email?></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Endereço: </span><?=$dadosHospede->rua?> <?=$dadosHospede->bairro?> <?=$dadosHospede->cidade?> - <?=$dadosHospede->estado?> <?=$dadosHospede->cep?></p>
               </div>
@@ -84,7 +84,7 @@ require_once("banco/banco-hospede.php");
               <div class="contact-ad-hd">
                 <h2>Dados de Hospedagem</h2><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Último Check-In:</span> <?=$dadosHospede->dataCheckin?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Dias Hospedados:</span> <?=$dadosHospede->qtdDiarias?> dias</p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Dias Hospedados:</span> <?= $dadosHospede->qtdDiarias ?> <?= ($dadosHospede->qtdDiarias > 1) ? "dias" : "dia"  ?></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Preço da Diária:</span> R$ <?=$dadosHospede->precoDiaria?></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Acompanhantes: </span><?=$dadosHospede->qtdAcompanhantes?></p>
               </div>
@@ -113,4 +113,14 @@ require_once("banco/banco-hospede.php");
   </div>
 </div>   	
 
+<script>
+   //Este código faz uma mudança visual no sexo do hóspede
+    var sexo = document.querySelector('.sexo-hospede');
+    if (sexo.innerHTML == "m") {
+      sexo.textContent = "Masculino";
+    }
+    else {
+      sexo.textContent = "Feminino";
+    }
+</script>
 <?php require_once("partials/_footer.php"); ?>

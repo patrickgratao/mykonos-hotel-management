@@ -59,3 +59,12 @@ body {
 	font-size: 2.8em;
 	padding: 5px;
 }
+
+.dados-estado-civil {
+	text-transform: capitalize;
+}
+
+.whatsapp-hospede {
+	width: 4%;
+    margin: 0 1.4em;
+}
