@@ -195,7 +195,7 @@
                 <i class="notika-icon notika-calendar"></i>
             </div>
             <div class="nk-int-st">
-                <input type="text" class="form-control" name="dataCheckoutHospede" id="dataCheckoutHospede" placeholder="Data de Check-Out" value="<?= $hospede->dataCheckout ?>" data-mask="99/99/9999" >
+                <input type="text" class="form-control" name="dataCheckoutHospede" id="dataCheckoutHospede" placeholder="Data de Check-Out" value="<?= $hospede->dataCheckout ?>" data-mask="99/99/9999" onblur="calculaDiarias(dataEntrada(),dataSaida());">
             </div>
         </div>
     </div>
@@ -225,7 +225,7 @@
                 <i class="notika-icon notika-dollar"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control" name="precoDiariaHospede" id="precoDiariaHospede" placeholder="Preço da Diária" value="<?= $hospede->precoDiaria?>">
+                <input type="number" class="form-control" name="precoDiariaHospede" id="precoDiariaHospede" placeholder="Preço da Diária por Pessoa" value="<?= $hospede->precoDiaria?>">
             </div>
         </div>
     </div>
@@ -235,7 +235,7 @@
                 <i class="notika-icon notika-dollar"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control" name="valorPagoHospede" id="valorPagoHospede" placeholder="Valor Pago" min="0" value="<?= $hospede->valorPago?>">
+                <input type="number" class="form-control" name="valorPagoHospede" id="valorPagoHospede" placeholder="Valor Pago" min="0" value="<?= $hospede->valorPago?>" onblur="calculaTotalPagar(document.querySelector('#quantidadeDiariasHospede').value, document.querySelector('#acompanhantesHospede').value, document.querySelector('#precoDiariaHospede').value, document.querySelector('#valorPagoHospede').value)">
             </div>
         </div>
     </div>
@@ -245,7 +245,7 @@
                 <i class="notika-icon notika-tax"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control"  name="precoTotal" id="precoTotal" placeholder="Preço Total" required min="0" value="<?= $hospede->precoTotal?>">
+                <input type="number" class="form-control"  name="precoTotal" id="precoTotal" placeholder="Preço Total à Pagar" required min="0" value="<?= $hospede->precoTotal?>">
             </div>
         </div>
     </div>
@@ -275,3 +275,43 @@
     </div>
 </div>
 </div><br>
+
+<script>
+
+    function dataEntrada () {
+        var dataCheckIn = document.querySelector('#dataCheckinHospede').value;
+        return dataCheckIn;
+    }
+
+    function dataSaida () {
+        var dataCheckOut = document.querySelector('#dataCheckoutHospede').value;
+        return dataCheckOut;
+    }
+
+    function calculaDiarias(date1, date2){
+        //formato do brasil 'pt-br'
+        moment.locale('pt-br');
+        //setando data1
+        var data1 = moment(date1,'DD/MM/YYYY');
+        //setando data2
+        var data2 = moment(date2,'DD/MM/YYYY');
+        //tirando a diferenca da data2 - data1 em dias
+        var diff  = data2.diff(data1, 'days');
+
+        var qtdDiarias = document.querySelector('#quantidadeDiariasHospede');
+        qtdDiarias.value = diff;
+        console.log("Total de Diarias: "+diff);
+}
+    
+    function calculaTotalPagar(qtdDiarias, acompanhantes, precoDiaria, valorPago) {
+        var acompanhantes = parseInt(acompanhantes)+1;
+        var valorTotal = (precoDiaria*qtdDiarias)*(acompanhantes)-valorPago;
+
+        var insereValorTotal = document.querySelector('#precoTotal');
+        insereValorTotal.value = valorTotal.toFixed(2);
+
+        console.log("Total a Pagar éh: "+valorTotal);
+
+    }
+
+</script>
