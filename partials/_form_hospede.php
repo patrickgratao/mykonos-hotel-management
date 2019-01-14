@@ -249,16 +249,6 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="form-group ic-cmp-int float-lb form-elet-mg">
-            <div class="form-ic-cmp">
-                <i class="notika-icon notika-dollar"></i>
-            </div>
-            <div class="nk-int-st">
-                <input type="number" class="form-control" readonly class="form-control text-danger" name="precoTotalPagar" id="precoTotalPagar" placeholder="" value="<?= $hospede->totalPagar?>"  min="1">
-            </div>
-        </div>
-    </div>
 </div><br><br>
 
 <div class="cmp-tb-hd">
