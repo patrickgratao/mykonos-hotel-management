@@ -41,7 +41,7 @@
                                         </form>
                                     </div>
                                 </li>
-
+<!-- 
                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-menus"></i></span></a>
                                     <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
                                         <div class="hd-mg-tt">
@@ -52,15 +52,13 @@
                                                 <li>
                                                     <a href="meu-perfil.php">Meu Perfil</a><br>
                                                 </li>
-                                                <li>
-                                                    <a href="logout.php">Sair do Sistema</a>
-                                                </li>
+                                                
                                             </ul>
                                             
                                         </div>
                                     </div>
                                 </li> 
-
+-->
                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
                                     <div role="menu" class="dropdown-menu message-dd task-dd">
                                         <div class="hd-mg-tt">
@@ -70,6 +68,9 @@
                                             <ul>
                                                 <li><a href="listar-usuarios.php">Ver Usuários Cadastrados</a><br></li>
                                                 <li><a href="cadastrar-usuario.php">Cadastrar Usuário</a><br></li>
+                                                <li>
+                                                    <a href="logout.php">Sair do Sistema</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
