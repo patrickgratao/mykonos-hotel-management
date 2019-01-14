@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Mykonos | Sistema de Cadastro de Hóspedes</title>
-        <meta name="description" content="">
+        <meta name="description" content="Cadastre seus hóspedes e tenha acesso a informações importantíssimas para seu Hotel Pousada. O Mykonos é Gratuito! Aproveite">
         <?php include('partials/_estilos.php'); ?>
     </head>
 

@@ -6,9 +6,7 @@ require_once("banco/banco.php");
 
 	$tabela = $_POST['recurso'];
 	$id = $_POST['id'];
-
-	echo "<script>confirm('Você tem certeza disso?');</script>";
-
+	
 	removeDado($conexao, $tabela, $id);
 
 
