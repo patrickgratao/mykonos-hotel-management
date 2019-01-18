@@ -78,6 +78,10 @@
 	<!-- main JS
     ============================================ -->
         <script src="assets/js/main.js"></script>
-  <!-- MANIPULACAO DE DATAS JS
-    ============================================ -->
+
+        <!-- MANIPULACAO DE DATAS JS
+        ============================================ -->
         <script src="assets/js/moment.js"></script>
+
+        <!-- Customização do Sistema -->
+        <script src="assets/js/mykonos.js"></script>

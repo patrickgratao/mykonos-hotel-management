@@ -54,7 +54,7 @@ require_once("banco/banco-hospede.php");
                 <h2>Dados Pessoais</h2><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">CPF: </span><?=$dadosHospede->cpf?></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Sexo: </span><span class="sexo-hospede"><?=$dadosHospede->sexo?></span></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Data Nascimento: </span><?=$dadosHospede->dataNascimento?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo" >Data Nascimento: </span><span class="data-nascimento"><?=$dadosHospede->dataNascimento?></span></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><span class="dados-estado-civil"><?=$dadosHospede->estadoCivil?></span></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">Categoria do Hóspede: </span><?=$dadosHospede->categoria->nome?></p>
               </div>
@@ -113,14 +113,4 @@ require_once("banco/banco-hospede.php");
   </div>
 </div>   	
 
-<script>
-   //Este código faz uma mudança visual no sexo do hóspede
-    var sexo = document.querySelector('.sexo-hospede');
-    if (sexo.innerHTML == "m") {
-      sexo.textContent = "Masculino";
-    }
-    else {
-      sexo.textContent = "Feminino";
-    }
-</script>
 <?php require_once("partials/_footer.php"); ?>
