@@ -30,7 +30,7 @@
                         <i class="notika-icon notika-calendar"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input type="text" name="nascimentoHospede" id="nascimentoHospede" placeholder="Data de Nascimento" required class="form-control" value="<?= $hospede->dataNascimento?>" data-mask="99/99/9999">
+                        <input type="text" name="nascimentoHospede" id="nascimentoHospede" placeholder="Data de Nascimento" required class="form-control" value="<?= $hospede->dataNascimento?>" data-mask="99/99/9999" required>
                     </div>
                 </div>
             </div>
@@ -205,7 +205,7 @@
                 <i class="notika-icon notika-tax"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control" name="quantidadeDiariasHospede" id="quantidadeDiariasHospede" placeholder="Quantidade de Diárias" min="1" value="<?= $hospede->qtdDiarias?>">
+                <input type="number" class="form-control" name="quantidadeDiariasHospede" id="quantidadeDiariasHospede" placeholder="Quantidade de Diárias" min="1" value="<?= $hospede->qtdDiarias?>" required>
             </div>
         </div>
     </div>
@@ -215,7 +215,7 @@
                 <i class="notika-icon notika-support"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control"name="acompanhantesHospede" id="acompanhantesHospede" placeholder="N° de Acompanhantes Pagantes" min="0" value="<?= $hospede->qtdAcompanhantes?>">
+                <input type="number" class="form-control"name="acompanhantesHospede" id="acompanhantesHospede" placeholder="N° de Acompanhantes Pagantes" min="0" value="<?= $hospede->qtdAcompanhantes?>" required>
             </div>
         </div>
     </div>
@@ -225,7 +225,7 @@
                 <i class="notika-icon notika-dollar"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control" name="precoDiariaHospede" id="precoDiariaHospede" placeholder="Preço da Diária por Pessoa" value="<?= $hospede->precoDiaria?>">
+                <input type="number" class="form-control" name="precoDiariaHospede" id="precoDiariaHospede" placeholder="Preço da Diária por Pessoa" value="<?= $hospede->precoDiaria?>" required>
             </div>
         </div>
     </div>
@@ -235,7 +235,7 @@
                 <i class="notika-icon notika-dollar"></i>
             </div>
             <div class="nk-int-st">
-                <input type="number" class="form-control" name="valorPagoHospede" id="valorPagoHospede" placeholder="Valor Pago" min="0" value="<?= $hospede->valorPago?>" onblur="calculaTotalPagar(document.querySelector('#quantidadeDiariasHospede').value, document.querySelector('#acompanhantesHospede').value, document.querySelector('#precoDiariaHospede').value, document.querySelector('#valorPagoHospede').value)">
+                <input type="number" class="form-control" name="valorPagoHospede" id="valorPagoHospede" placeholder="Valor Pago" min="0" value="<?= $hospede->valorPago?>" onblur="calculaTotalPagar(document.querySelector('#quantidadeDiariasHospede').value, document.querySelector('#acompanhantesHospede').value, document.querySelector('#precoDiariaHospede').value, document.querySelector('#valorPagoHospede').value)" required>
             </div>
         </div>
     </div>

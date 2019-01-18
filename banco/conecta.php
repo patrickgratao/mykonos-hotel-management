@@ -1,7 +1,7 @@
 <?php 
 $servername = "localhost";
-$database = "mykonos";
+$database = "sistemahospedes";
 $username = "root";
-$password = "root";
+$password = "";
 
 $conexao = mysqli_connect($servername, $username, $password, $database);
