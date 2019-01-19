@@ -3,6 +3,7 @@ require_once("logica-usuario.php");
 require_once("banco/banco.php");
 require_once("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
+	verificaPermissao();
 	require_once("partials/_header.php");
 	require_once("class/Categoria.php"); 
 
@@ -51,7 +52,7 @@ require_once("banco/banco-categoria.php");
 							<thead>
 								<tr>
 									<th>Nome da Categoria</th>
-									<th class="text-center">Mais Ações</th>
+									<th class="text-center <?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?>">Mais Ações</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -59,7 +60,7 @@ require_once("banco/banco-categoria.php");
 								foreach ($categorias as $categoria) : ?>
 									<tr>
 										<td><?= $categoria->nome ?></td>
-										<td class="mais-acoes text-center">
+										<td class="mais-acoes text-center <?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?>" >
 											<div class="btn-group notika-group-btn">
 												<form class="mais-opcoes" action="editar-categoria.php" method="post">
 													<input type="hidden" name="id" value="<?=$categoria->id ?>">
@@ -81,7 +82,7 @@ require_once("banco/banco-categoria.php");
 						</table>
 					</div>
 				</div><br>
-				<a class="maisopcoes btn btn-primary btn-md" href="cadastrar-categoria.php">Cadastrar Categoria</a>
+				<a class="maisopcoes btn btn-primary btn-md <?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?>" href="cadastrar-categoria.php">Cadastrar Categoria</a>
 			</div>
 		</div>
 	</div>

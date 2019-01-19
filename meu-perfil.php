@@ -21,7 +21,7 @@
                     <i class="notika-icon notika-windows"></i>
                   </div>
                   <div class="breadcomb-ctn hospede-dados">
-                    <h2>Informações do Usuário: <span class="hospede-titulo"><?=$dadosUsuario->nome?></span></h2>
+                    <h2>Informações do Usuário: <span class="hospede-titulo"><?=$_SESSION['nome_usuario']?></span></h2>
                   </div>
                 </div>
               </div>

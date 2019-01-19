@@ -3,7 +3,8 @@ require_once("logica-usuario.php");
 require_once("banco/banco.php");
 
 	verificaUsuario(); //verifica se o usuário está logado
-
+	verificaPermissao(); //verifica nível de permissão do usuário logado
+	
 	$tabela = $_POST['recurso'];
 	$id = $_POST['id'];
 	

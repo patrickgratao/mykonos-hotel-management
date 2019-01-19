@@ -2,6 +2,7 @@
 	require_once("logica-usuario.php"); //a sessão tem que ser a primeira a inicializar, antes de qualquer html 
 	require_once("banco/banco-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
+	verificaPermissao(); //verifica nível de permissão do usuário logado
 	require_once("class/Usuario.php"); 
 	
 	//Instancia de um objeto

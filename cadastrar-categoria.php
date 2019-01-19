@@ -1,6 +1,7 @@
 <?php 
 require_once("logica-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
+	verificaPermissao(); 
 	require_once("partials/_header.php");
 
 	$categoria = array("nome" => ""); //inicializa o campo nome com valor vazio

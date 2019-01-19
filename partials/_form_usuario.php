@@ -41,7 +41,7 @@
                       <select class="form-control" name="permissaoUsuario" id="permissaoUsuario" required>
                           <option value="">Nível de Acesso...</option>  
                           <option value="admin"<?=$usuario->permissao == 'admin' ? ' selected="selected"' : '';?>>Administrador</option>
-                          <option value="comum"<?=$usuario->permissao == 'comum' ? ' selected="selected"' : '';?>>Usuário Comum</option>
+                          <option value="comum"<?=$usuario->permissao == 'comum' ? ' selected="selected"' : '';?>>Usuário Padrão</option>
                           
                       </select>
                   </div>

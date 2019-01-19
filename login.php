@@ -11,8 +11,9 @@ if ($usuario == null) {
     
 }
 else {
-    $_SESSION["success"] = "Bem vindo de volta!";
-    logaUsuario($usuario['email']);
+    $_SESSION["success"] = "{$usuario['nome']}, bem vindo de volta!";
+    logaUsuario($usuario['email'], $usuario['nome'], $usuario['permissao'], $usuario['id']);
+
     header("Location: index.php");
 }
 

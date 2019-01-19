@@ -4,6 +4,8 @@ require_once("banco/banco-usuario.php");
 require_once("class/Usuario.php");
 
 verificaUsuario(); //verifica se o usuário está logado
+verificaPermissao(); //verifica nível de permissão do usuário logado
+
 require_once("partials/_header.php"); 
 
 	$usuario = new Usuario(); //instanciação de um objeto usuário

@@ -3,6 +3,7 @@
 	require_once("banco/banco.php");
 	require_once("banco/banco-usuario.php");
 	verificaUsuario(); //verifica se o usuário está logado
+	verificaPermissao(); //verifica nível de permissão do usuário logado
 	require_once("partials/_header.php"); 
 
 	$usuarios = listaUsuarios($conexao);

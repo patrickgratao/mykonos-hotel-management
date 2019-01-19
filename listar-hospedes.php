@@ -52,7 +52,7 @@ require_once("banco/banco-hospede.php");
 										<th scope="col" class="text-center">Celular com DDD</th>
 										<th scope="col" class="text-center">Categoria</th>
 										<th scope="col" class="text-center">E-mail</th>
-										<th scope="col" class="text-center">Mais Ações</th>
+										<th scope="col" class="text-center ">Mais Ações</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -78,7 +78,7 @@ require_once("banco/banco-hospede.php");
 													<form class="mais-opcoes" action="remover.php" method="post">
 														<input type="hidden" name="id" value="<?=$hospede->id ?>" >
 														<input type="hidden" name="recurso" value="hospedes">
-														<button class="btn btn-sm btn-danger notika-gp-danger">Excluir</button>
+														<button class=" <?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?> btn btn-sm btn-danger notika-gp-danger">Excluir</button>
 													</form>
 													
 												</div>

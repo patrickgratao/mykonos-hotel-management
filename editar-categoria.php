@@ -2,6 +2,8 @@
 	require_once("logica-usuario.php");
 	require_once ("banco/banco-categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
+	verificaPermissao(); 
+	
 	require_once ("partials/_header.php");
 
 	$id = $_POST['id'];

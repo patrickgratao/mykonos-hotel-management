@@ -58,8 +58,6 @@
     console.log(idade);
 
 //Função para setar a data atual no checkin
-
-
 function dataAtual () {
     var dtCheckIn = document.querySelector('#dataCheckinHospede');
     moment.locale('pt-br');

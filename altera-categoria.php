@@ -3,6 +3,8 @@
 	require_once("banco/banco-categoria.php");
 	require_once("class/Categoria.php");
 	verificaUsuario(); //verifica se o usuário está logado
+	verificaPermissao(); 
+	
 	require_once("partials/_header.php");
 
 	//Instanciação do Objeto
