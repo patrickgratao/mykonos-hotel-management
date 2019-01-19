@@ -56,3 +56,15 @@
 
     dataNascimento.textContent = dataNascimento.textContent + " - "+idade+" anos";
     console.log(idade);
+
+//Função para setar a data atual no checkin
+
+
+function dataAtual () {
+    var dtCheckIn = document.querySelector('#dataCheckinHospede');
+    moment.locale('pt-br');
+    //setando data de nascimento 
+    var dataHoje = moment().format('DD/MM/YYYY');
+    dtCheckIn.value = dataHoje;
+
+}

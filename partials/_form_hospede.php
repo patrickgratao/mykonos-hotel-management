@@ -187,6 +187,9 @@
             <div class="nk-int-st">
                 <input type="text" class="form-control" name="dataCheckinHospede" id="dataCheckinHospede" placeholder="Data de Check-In" value="<?= $hospede->dataCheckin ?>" data-mask="99/99/9999" >
             </div>
+            <div class="form-ic-cmp data-hoje" onclick="dataAtual();">
+                <i class="notika-icon icone-hoje notika-down-arrow"></i>
+            </div>
         </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

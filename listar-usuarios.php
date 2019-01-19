@@ -52,7 +52,6 @@
 									<th>Nome</th>
 									<th>E-mail</th>
 									<th>Nível de Acesso</th>
-									<th>Senha</th>
 									<th class="text-center">Mais Ações</th>
 								</tr>
 							</thead>
@@ -62,8 +61,7 @@
 									<tr>
 										<td><?= $usuario->nome ?></td>
 										<td><?= $usuario->email ?></td>
-										<td><?= $usuario->permissao ?></td>
-										<td><?= $usuario->senha ?></td>
+										<td><?= $usuario->permissao == 'admin' ? 'Administrador' : "Usuário Padrão"; ?></td>
 										<td class="mais-acoes text-center">
 											<div class="btn-group notika-group-btn">
 												<form class="mais-opcoes" action="editar-usuario.php" method="post">

@@ -68,3 +68,12 @@ body {
 	width: 4%;
     margin: 0 1.4em;
 }
+
+.data-hoje {
+	cursor: pointer;
+}
+
+.icone-hoje {
+	color: #ff0000 !important;
+	font-weight: bold !important;
+}
