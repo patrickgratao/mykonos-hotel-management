@@ -2,11 +2,14 @@
 	require_once("logica-usuario.php");
 	require_once("banco/banco-usuario.php");
 
-  	verificaUsuario(); //verifica se o usuário está logado
-  	require_once("partials/_header.php"); 
-
-	$id = $_GET['id'];
-	$dadosUsuario = buscaUsuario($conexao, $id);
+  verificaUsuario(); //verifica se o usuário está logado
+  require_once("partials/_header.php"); 
+  
+  $id = $_GET['id'];
+  verificaPermissaoId($id); //verifica se o id passado na url é o mesmo id da sessão
+	
+  $dadosUsuario = buscaUsuario($conexao, $id);
+  
 ?>
 <div class="breadcomb-area">
     <div class="container">

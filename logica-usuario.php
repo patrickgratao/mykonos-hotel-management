@@ -19,10 +19,6 @@ function usuarioLogado () {
 	return $_SESSION["usuario_logado"];
 }
 
-function permissaoUsuario() {
-	return $_SESSION["permissao_usuario"] = $permissao;
-}
-
 function logaUsuario ($email, $nome, $permissao, $id) {
 	//Armazenando dados vitais do usuário em sessões 
 	$_SESSION["usuario_logado"] = $email; 
@@ -40,5 +36,12 @@ function verificaPermissao () {
 		$_SESSION["danger"] = "Você não possui permissão para realizar esta ação!";
 		echo "<script>location.href='index.php';</script>";
 		die();
+	}
+}
+
+function verificaPermissaoId ($id) {
+	if ($_SESSION['id_usuario'] != $id) {
+		$_SESSION["danger"] = "Você não pode fazer isto! O Administrador do sistema foi comunicado.";
+		echo "<script>location.href='index.php';</script>";
 	}
 }

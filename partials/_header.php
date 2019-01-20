@@ -4,8 +4,7 @@
        $id_usuario = $_SESSION['id_usuario'];
        $nivel_usuario = $_SESSION['nivel_usuario'];
        $nome_usuario = $_SESSION['nome_usuario'];
-
-       ?> 
+?> 
 
        <!doctype html>
        <html class="no-js" lang="pt_BR">
@@ -45,24 +44,6 @@
                                         </form>
                                     </div>
                                 </li>
-<!-- 
-                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-menus"></i></span></a>
-                                    <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
-                                        <div class="hd-mg-tt">
-                                            <h2>Painel de Controle</h2>
-                                        </div>
-                                        <div class="hd-message-info hd-task-info">
-                                            <ul>
-                                                <li>
-                                                    <a href="meu-perfil.php">Meu Perfil</a><br>
-                                                </li>
-                                                
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
-                                </li> 
--->
                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
                                     <div role="menu" class="dropdown-menu message-dd task-dd">
                                         <div class="hd-mg-tt">
@@ -72,7 +53,7 @@
                                         <div class="hd-message-info hd-task-info">
                                             <ul>
                                                 <li>
-                                                    <a href="meu-perfil.php?id='<?= $id_usuario ?>'">Meu Perfil</a>
+                                                    <a href="meu-perfil.php?id=<?=$id_usuario?>">Meu Perfil</a>
                                                 </li> <br>
                                             </ul>
 
