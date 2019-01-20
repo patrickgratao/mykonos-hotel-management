@@ -97,6 +97,7 @@ require_once("banco/banco-hospede.php");
               <div class="contact-ad-hd">
                 <h2>Informações Adicionais</h2><br>
                 <p class="ctn-ads"><?=$dadosHospede->infoExtras?></p><br>
+                <p>Última edição feita por: <?=$dadosHospede->cadastradoPor?></p>
               </div>
             </div>
           </div>

@@ -1,6 +1,10 @@
 <?php 
        error_reporting(E_ALL ^ E_NOTICE); //Ignora os erros do tipo notice
        include ("helpers/mensagens.php"); //Inclusão das mensagens de erro ou sucesso
+       $id_usuario = $_SESSION['id_usuario'];
+       $nivel_usuario = $_SESSION['nivel_usuario'];
+       $nome_usuario = $_SESSION['nome_usuario'];
+
        ?> 
 
        <!doctype html>
@@ -62,12 +66,17 @@
                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
                                     <div role="menu" class="dropdown-menu message-dd task-dd">
                                         <div class="hd-mg-tt">
-                                            <h2><?= $_SESSION["nome_usuario"] ?></h2>
-                                            <p class="text-center"><?= $_SESSION["nivel_usuario"] == 'admin' ? 'Administrador' : "Usuário Padrão"; ?></p>
+                                            <h2><?= $nome_usuario ?></h2>
+                                            <p class="text-center"><?= $nivel_usuario == 'admin' ? 'Administrador' : "Usuário Padrão"; ?></p>
                                         </div>
                                         <div class="hd-message-info hd-task-info">
+                                            <ul>
+                                                <li>
+                                                    <a href="meu-perfil.php?id='<?= $id_usuario ?>'">Meu Perfil</a>
+                                                </li> <br>
+                                            </ul>
 
-                                            <ul class="<?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?>">
+                                            <ul class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>">
                                                 <li><a href="listar-usuarios.php">Ver Usuários Cadastrados</a><br></li>
                                                 <li><a href="cadastrar-usuario.php">Cadastrar Usuário</a><br></li>
                                             </ul>
@@ -102,7 +111,7 @@
                                             <li><a href="cadastrar-hospede.php">Cadastrar Hóspede</a></li>
                                         </ul>
                                     </li>
-                                    <li class="<?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?>"><a data-toggle="collapse" data-target="#democrou" href="#">Categorias</a>
+                                    <li class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>"><a data-toggle="collapse" data-target="#democrou" href="#">Categorias</a>
                                         <ul id="democrou" class="collapse dropdown-header-top">
                                             <li><a href="listar-categorias.php">Listar categorias</a></li>
                                             <li><a href="cadastrar-categoria.php">Cadastrar nova categoria</a></li>
@@ -127,7 +136,7 @@
                             </li>
                             <li><a data-toggle="tab" href="#menuHospedes"><i class="notika-icon notika-support"></i> Hóspedes</a>
                             </li>
-                            <li class="<?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?>"><a data-toggle="tab" href="#menuCategorias"><i class="notika-icon notika-edit"></i> Categorias</a>
+                            <li class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>"><a data-toggle="tab" href="#menuCategorias"><i class="notika-icon notika-edit"></i> Categorias</a>
                             </li>
                             <li><a href="logout.php"><i class="notika-icon notika-close"></i> Sair</a>
                             </li>
@@ -141,7 +150,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div id="menuCategorias" class="<?= $_SESSION['nivel_usuario'] == 'admin' ? '' : 'acesso-restrito';  ?> tab-pane notika-tab-menu-bg animated flipInX">
+                            <div id="menuCategorias" class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?> tab-pane notika-tab-menu-bg animated flipInX">
                                 <ul class="notika-main-menu-dropdown">
                                     <li><a href="listar-categorias.php">Ver todas categorias</a>
                                     </li>

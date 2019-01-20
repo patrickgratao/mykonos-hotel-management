@@ -25,4 +25,5 @@
 		public $totalPagar;
 		public $infoExtras;
 		public $categoria;
+		public $cadastradoPor;
 	}

@@ -11,6 +11,8 @@
                     </div>
                     <div class="nk-int-st">
                         <input type="text" class="form-control" placeholder="Nome completo *"  id="nomeHospede" name="nomeHospede" autofocus required value="<?= $hospede->nome?>">
+                        <!-- campo para informar quem registrou ou editou o hóspde -->
+                        <input type="hidden" name="cadastradoPor" value="<?= $_SESSION['nome_usuario']?>">
                     </div>
                 </div>
             </div>

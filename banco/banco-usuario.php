@@ -55,7 +55,7 @@ function listaUsuarios ($conexao) {
 }
 
 function buscaUsuario ($conexao, $id) {
-	$query = "select * from usuarios where id={$id}";
+	$query = "SELECT * FROM usuarios WHERE id={$id}";
 	$resultado = mysqli_query($conexao, $query);
 	$usuario_buscado = mysqli_fetch_assoc($resultado); //é um array
 	
@@ -77,10 +77,35 @@ function alteraUsuario ($conexao, Usuario $usuario) {
 	$usuario->email = mysqli_real_escape_string($conexao, $usuario->email);
 	$usuario->senha = mysqli_real_escape_string($conexao, $usuario->senha);
 
-	$usuario->senha = md5($usuario->senha);
-	
-	$query = "UPDATE usuarios SET nome = '{$usuario->nome}', email = '{$usuario->email}', senha = '{$usuario->senha}', permissao = '{$usuario->permissao}' WHERE id={$usuario->id}";
 
+	if (strlen($usuario->senha) == 32) {
+		$query = "UPDATE usuarios SET nome = '{$usuario->nome}', email = '{$usuario->email}', senha = '{$usuario->senha}', permissao = '{$usuario->permissao}' WHERE id={$usuario->id}";
+	}
+
+	else {
+		$usuario->senha = md5($usuario->senha);
+		$query = "UPDATE usuarios SET nome = '{$usuario->nome}', email = '{$usuario->email}', senha = '{$usuario->senha}', permissao = '{$usuario->permissao}' WHERE id={$usuario->id}";
+	}
+	
+	$resultado = mysqli_query($conexao, $query);
+	return $resultado;
+}
+
+function alteraPerfil ($conexao, Usuario $usuario) {
+	//Evita ataque de sql injection -> aceita a aspa simples Ex. Joana D'arc
+	$usuario->nome = mysqli_real_escape_string($conexao, $usuario->nome);
+	$usuario->email = mysqli_real_escape_string($conexao, $usuario->email);
+	$usuario->senha = mysqli_real_escape_string($conexao, $usuario->senha);
+
+	if (strlen($usuario->senha) == 32) {
+		$query = "UPDATE usuarios SET nome = '{$usuario->nome}', senha = '{$usuario->senha}' WHERE id={$usuario->id}";
+	}
+
+	else {
+		$usuario->senha = md5($usuario->senha);
+		$query = "UPDATE usuarios SET nome = '{$usuario->nome}', senha = '{$usuario->senha}' WHERE id={$usuario->id}";
+	}
+	
 	$resultado = mysqli_query($conexao, $query);
 	return $resultado;
 }

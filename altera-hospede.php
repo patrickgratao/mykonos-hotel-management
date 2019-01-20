@@ -39,6 +39,8 @@
 	$hospede->precoTotal = $_POST["precoTotal"];
 	$hospede->totalPagar = $_POST["precoTotalPagar"];
 	$hospede->infoExtras = $_POST["informacoesAdicionais"];
+	$hospede->cadastradoPor = $_POST["cadastradoPor"];
+
 
 	if (alteraHospede($conexao, $hospede)) { 
 
