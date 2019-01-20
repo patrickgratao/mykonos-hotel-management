@@ -37,7 +37,7 @@ function alteraHospede ($conexao, Hospede $hospede) {
 
 function listaHospedes ($conexao){
 	$hospedes = array(); 
-	$query = "select p.*, c.nome as categoria_nome from hospedes as p join categorias as c on p.categoria_id = c.id";
+	$query = "select h.*, c.nome as categoria_nome from hospedes as h join categorias as c on h.categoria_id = c.id";
 	$resultado = mysqli_query($conexao, $query);
 
 	while($hospede_array = mysqli_fetch_assoc($resultado)) {
@@ -84,7 +84,7 @@ function listaHospedes ($conexao){
 
 
 	function buscaHospede ($conexao, $id){
-		$query = "select p.*, c.nome as categoria_nome from hospedes as p join categorias as c on p.categoria_id = c.id WHERE p.id={$id}";
+		$query = "select h.*, c.nome as categoria_nome from hospedes as h join categorias as c on h.categoria_id = c.id WHERE h.id={$id}";
 		$resultado = mysqli_query($conexao, $query);
 		$hospede_buscado = mysqli_fetch_assoc($resultado);	//é um array com o primeiro resultado da busca	
 	
