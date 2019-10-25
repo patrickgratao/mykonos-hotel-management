@@ -88,6 +88,8 @@
 
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
+        <link rel="stylesheet" href="assets/css/print.css">
+
 
         <!-- Código que verifica e preenche o CEP automaticamente -->
         <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>

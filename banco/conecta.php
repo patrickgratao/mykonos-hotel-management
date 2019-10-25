@@ -2,6 +2,6 @@
 $servername = "localhost";
 $database = "sistemahospedes";
 $username = "root";
-$password = "";
+$password = "root";
 
 $conexao = mysqli_connect($servername, $username, $password, $database);

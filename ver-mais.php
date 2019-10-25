@@ -10,11 +10,19 @@ require_once("banco/banco-hospede.php");
   $dadosHospede = buscaHospede($conexao, $id);
 
 ?>
+  
 
+  
   <div class="breadcomb-area">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          
+          <form method="POST" action="ficha-hospede.php">
+            <input type="hidden" name="id" value="<?=$dadosHospede->id?>">
+            <button title="Ficha do Hóspede" class="btn btn-success notika-btn-danger btn-lg waves-effect right float-right">Acessar Ficha do Hóspede</button>
+          </form>
+          <br>
           <div class="breadcomb-list">
             <div class="row">
               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -108,8 +116,7 @@ require_once("banco/banco-hospede.php");
         <input type="hidden" name="id" value="<?=$dadosHospede->id?>">
         <button title="Editar Hóspede" class="btn btn-danger notika-btn-danger btn-lg waves-effect">Editar Hóspede</button>
         <a class="btn btn-success notika-btn-primary btn-lg waves-effect" href="listar-hospedes.php">Ver todos os Hóspedes</a>
-        <a class="btn btn-primary notika-btn-primary btn-lg waves-effect" href="ficha-hospede.php?id=<?=$dadosHospede->id?>">Ficha do Hóspede</a>
-      </form>  
+      </form>
       
     </div>
   </div>

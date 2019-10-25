@@ -81,3 +81,7 @@ body {
 .acesso-restrito {
 	display: none !important;
 }
+
+.botao-imprimir {
+	/*/margin: 5px 0 5px 0;*/
+}

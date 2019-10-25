@@ -21,7 +21,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Start Header Top Area -->
-        <div class="header-top-area">
+        <div class="header-top-area naoImprimir">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -81,7 +81,7 @@
         <div class="mobile-menu-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-principal">
                         <div class="mobile-menu">
                             <nav id="dropdown">
                                 <ul class="mobile-menu-nav">
@@ -111,7 +111,7 @@
         <div class="main-menu-area mg-tb-40">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu-principal">
                         <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                             <li class=""><a href="index.php"><i class="notika-icon notika-house"></i> Início</a>
                             </li>

@@ -1,0 +1,18 @@
+@media print {
+
+    body * {
+        padding: 5px;;
+    }
+    p {
+        font-size: 1.3em;
+    }
+
+    .naoImprimir, .menu-principal 
+    {
+        display: none;
+    }
+ 
+    @page {
+        size: auto;
+        }
+    }
