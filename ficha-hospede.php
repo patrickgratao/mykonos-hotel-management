@@ -23,7 +23,7 @@ require_once("banco/banco-hospede.php");
                     <i class="notika-icon notika-windows"></i>
                   </div>
                   <div class="breadcomb-ctn hospede-dados">
-                    <h2>Informações do Hóspede: <span class="hospede-titulo"><?=$dadosHospede->nome?></span></h2>
+                    <h2>Ficha do Hóspede: <span class="hospede-titulo"><?=$dadosHospede->nome?></span></h2>
                   </div>
                 </div>
               </div>
@@ -47,70 +47,29 @@ require_once("banco/banco-hospede.php");
   <div class="contact-area">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="contact-list">
-            <div class="contact-ctn">
-              <div class="contact-ad-hd">
-                <h2>Dados Pessoais</h2><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">CPF: </span><?=$dadosHospede->cpf?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Sexo: </span><span class="sexo-hospede"><?=$dadosHospede->sexo?></span></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo" >Data Nascimento: </span><span class="data-nascimento"><?=$dadosHospede->dataNascimento?></span></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Estado Civil: </span><span class="dados-estado-civil"><?=$dadosHospede->estadoCivil?></span></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Categoria do Hóspede: </span><?=$dadosHospede->categoria->nome?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="contact-list">
-            <div class="contact-ctn">
-              <div class="contact-ad-hd">
-                <h2>Dados de Contato</h2><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Telefone:</span> <?=$dadosHospede->telefone?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Celular / Whatsapp:</span> <?=$dadosHospede->celular?><!--<a href="https://api.whatsapp.com/send?phone=55<?=$dadosHospede->celular?>&text=Oii <?=$dadosHospede->nome ?>, tudo bem? Aqui é o Patryck da Pousada Ágape, foi um prazer receber você no dia <?=$dadosHospede->dataCheckin?>. Obrigada por nos escolher e volte sempre. Grande abraço!" target="_blank"><img src="assets\img\mykonos\whatsapp.png" class="whatsapp-hospede"></a>--></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">E-mail:</span> <?=$dadosHospede->email?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Endereço: </span><?=$dadosHospede->rua?> <?=$dadosHospede->bairro?> <?=$dadosHospede->cidade?> - <?=$dadosHospede->estado?> <?=$dadosHospede->cep?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="contact-list">
-            <div class="contact-ctn">
-              <div class="contact-ad-hd">
-                <h2>Dados de Hospedagem</h2><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Último Check-In:</span> <?=$dadosHospede->dataCheckin?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Dias Hospedados:</span> <?= $dadosHospede->qtdDiarias ?> <?= ($dadosHospede->qtdDiarias > 1) ? "dias" : "dia"  ?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Preço da Diária:</span> R$ <?=$dadosHospede->precoDiaria?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Quantidade de Acompanhantes: </span><?=$dadosHospede->qtdAcompanhantes?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-          <div class="contact-list">
-            <div class="contact-ctn">
-              <div class="contact-ad-hd">
-                <h2>Informações Adicionais</h2><br>
-                <p class="ctn-ads"><?=$dadosHospede->infoExtras?></p><br>
-                <p>Última edição feita por: <?=$dadosHospede->cadastradoPor?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <form method="POST" action="editar-hospede.php">
-        <input type="hidden" name="id" value="<?=$dadosHospede->id?>">
-        <button title="Editar Hóspede" class="btn btn-danger notika-btn-danger btn-lg waves-effect">Editar Hóspede</button>
-        <a class="btn btn-success notika-btn-primary btn-lg waves-effect" href="listar-hospedes.php">Ver todos os Hóspedes</a>
-        <a class="btn btn-primary notika-btn-primary btn-lg waves-effect" href="ficha-hospede.php?id=<?=$dadosHospede->id?>">Ficha do Hóspede</a>
-      </form>  
-      
+        <table>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td><strong>Nome:</strong><?=$dadosHospede->nome?></td>
+                <td><strong>Data de Nascimento:</strong> <?=$dadosHospede->dataNascimento?></td>
+                <td><strong>Sexo: </strong><?=$dadosHospede->sexo?></td>
+                <td><strong>Email: </strong><?=$dadosHospede->email?></td>
+              </tr>
+              <tr>
+                <td>Telefone</td>
+                <td>CPF</td>
+                <td>CE</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+        </table>
     </div>
   </div>
 </div>   	
