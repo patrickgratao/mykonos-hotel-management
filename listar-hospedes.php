@@ -51,7 +51,7 @@ require_once("banco/banco-hospede.php");
 										<th scope="col" class="text-center">CPF</th>
 										<th scope="col" class="text-center">Celular com DDD</th>
 										<th scope="col" class="text-center">Categoria</th>
-										<th scope="col" class="text-center">E-mail</th>
+										<th scope="col" class="text-center">Último Check-in</th>
 										<th scope="col" class="text-center ">Mais Ações</th>
 									</tr>
 								</thead>
@@ -63,7 +63,7 @@ require_once("banco/banco-hospede.php");
 											<td><?= $hospede->cpf ?></td>
 											<td><?= $hospede->celular ?></td>
 											<td class="text-center"><?= $hospede->categoria->nome ?></td>
-											<td><?= $hospede->email ?></td>
+											<td><?= $hospede->dataCheckin ?></td>
 											<td class="mais-acoes text-center" >
 												<div class="btn-group notika-group-btn material-design-btn">
 													<form class="mais-opcoes" action="ver-mais.php" >
