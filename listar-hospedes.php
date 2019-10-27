@@ -66,6 +66,10 @@ require_once("banco/banco-hospede.php");
 											<td><?= $hospede->dataCheckin ?></td>
 											<td class="mais-acoes text-center" >
 												<div class="btn-group notika-group-btn material-design-btn">
+													<form class="mais-opcoes" method="POST" action="ficha-hospede.php">
+											            <input type="hidden" name="id" value="<?=$hospede->id?>">
+											            <button class="btn btn-success btn-sm notika-gp-success">F.N.R.H</button>
+											        </form>
 													<form class="mais-opcoes" action="ver-mais.php" >
 														<input type="hidden" name="id" value="<?= $hospede->id ?>">
 														<button class="btn btn-primary btn-sm notika-gp-primary">Ver Mais</button>
