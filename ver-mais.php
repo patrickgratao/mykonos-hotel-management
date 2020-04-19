@@ -18,10 +18,6 @@ require_once("banco/banco-hospede.php");
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           
-          <form method="POST" action="ficha-hospede.php">
-            <input type="hidden" name="id" value="<?=$dadosHospede->id?>">
-            <button title="Ficha do Hóspede" class="btn btn-success notika-btn-danger btn-lg waves-effect right float-right">Acessar Ficha do Hóspede</button>
-          </form>
           <br>
           <div class="breadcomb-list">
             <div class="row">
@@ -36,11 +32,17 @@ require_once("banco/banco-hospede.php");
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
-                <div class="breadcomb-report">
+                <div class="breadcomb-report btn-group-mykonos">
+                  
+                  <form method="POST" action="ficha-hospede.php">
+                    <input type="hidden" name="id" value="<?=$dadosHospede->id?>">
+                    <button title="Ficha do Hóspede" class="btn">F.N.R.H</button>
+                  </form>
                   <form action="editar-hospede.php" method="POST">
                     <input type="hidden" name="id" value="<?=$dadosHospede->id?>">
                     <button href="editar-hospede.php" data-toggle="tooltip" data-placement="left" title="Editar Hóspede" class="btn"><i class="notika-icon notika-edit"></i></button>
                   </form>
+                  
                 </div>
               </div>
             </div>

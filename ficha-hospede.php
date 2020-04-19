@@ -2,12 +2,17 @@
 require_once("logica-usuario.php");
 require_once("banco/banco.php");
 require_once("banco/banco-hospede.php");
+require_once("banco/banco-empresa.php");
 
   verificaUsuario(); //verifica se o usuário está logado
   require_once("partials/_header.php"); 
 
   $id = $_POST['id'];
+  $idEmpresa = 1;
+
   $dadosHospede = buscaHospede($conexao, $id);
+
+  $empresa = buscaEmpresa($conexao, $idEmpresa);
 
 ?>
 
@@ -21,8 +26,6 @@ require_once("banco/banco-hospede.php");
       <div class="row">
         <center>
           <h2 class="fnrh">Ficha Nacional de Registro de Hóspedes</h2><br>
-          <h4>Hotel Pousada Ágape -  13.578.776/0001-35 - Trindade / GO</h4><br>
-          <a class="btn btn-danger notika-btn-primary naoImprimir btn-lg " onclick="window.print()">Imprimir</a>
           <br><br>
         </center>
        
@@ -56,11 +59,24 @@ require_once("banco/banco-hospede.php");
               <tr>
                 <td colspan="3"><strong>Categoria: </strong><?=$dadosHospede->categoria->nome?></td>
               </tr>  
-              <tr>
-                <td colspan="3"><strong>Observações: </strong> <?=$dadosHospede->infoExtras?></td>
-              </tr>
             </tbody>
         </table>
+        
+        
+        <div class="info-empresa">
+        <hr>
+          <p>
+            <?=$empresa->nomeFantasia?> -  <?=$empresa->cnpj?>
+            <br>
+            <?=$empresa->endereco?>
+            <br>
+            <?=$empresa->email?> | <?=$empresa->telefone?>
+          </p>
+        </div>
+          
+          <br>
+        <a class="btn btn-success notika-btn-primary naoImprimir btn-lg " onclick="window.print()">Imprimir</a>
+
         <a class="btn btn-primary notika-btn-primary btn-lg  naoImprimir" href="ver-mais.php?id=<?=$dadosHospede->id?>">Ver Hóspede</a>
     </div>
   </div>

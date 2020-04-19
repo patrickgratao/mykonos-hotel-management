@@ -22,15 +22,15 @@
                     <i class="notika-icon notika-windows"></i>
                   </div>
                   <div class="breadcomb-ctn hospede-dados">
-                    <h2>Dados da Empresa</span></h2>
+                    <h2>Dados da Empresa - <?=$dadosEmpresa->nomeFantasia?></span></h2>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
                 <div class="breadcomb-report">
-                  <form action="editar-perfil.php" method="POST">
+                  <form action="editar-empresa.php" method="POST">
                     <input type="hidden" name="id" value="<?=$dadosEmpresa->id?>">
-                    <button data-toggle="tooltip" data-placement="left" title="Editar Perfil" class="btn"><i class="notika-icon notika-edit"></i></button>
+                    <button data-toggle="tooltip" data-placement="left" title="Editar Empresa" class="btn"><i class="notika-icon notika-edit"></i></button>
                   </form>
                 </div>
               </div>
@@ -50,10 +50,14 @@
           <div class="contact-list">
             <div class="contact-ctn">
               <div class="contact-ad-hd">
-                <h2>Informações</h2><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Nome: </span><?=$dadosEmpresa->nome?></p><br>
-                <p class="ctn-ads"><span class="dados-contato-titulo">Nível de Acesso: </span><?= $dadosEmpresa->CNPJ == 'admin' ? 'Administrador' : "Usuário Padrão"; ?></p><br>
+                <h2>Informações Gerais</h2><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">CNPJ: </span><?=$dadosEmpresa->cnpj?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Nome Fantasia: </span><?=$dadosEmpresa->nomeFantasia?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Razão Social: </span><?=$dadosEmpresa->razaoSocial?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Endereço: </span><?=$dadosEmpresa->endereco?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Telefone: </span><?=$dadosEmpresa->telefone?></p><br>
                 <p class="ctn-ads"><span class="dados-contato-titulo">E-mail: </span><?=$dadosEmpresa->email?></p><br>
+                <p class="ctn-ads"><span class="dados-contato-titulo">Site: </span><a target="_blank" href="<?=$dadosEmpresa->site?>"><?=$dadosEmpresa->site?></a></p><br>
                 <p></p>
               </div>
             </div>
@@ -63,12 +67,12 @@
       <br>
      <!--  <?php 
         if ($usuario->email == $current_user_email) {
-          //executa o editar perfil
+          //executa o editar empresa
         }
        ?> -->
-      <form method="POST" action="editar-perfil.php">
+      <form method="POST" action="editar-empresa.php">
         <input type="hidden" name="id" value="<?=$dadosEmpresa->id?>">
-        <button title="Editar Perfil" class="btn btn-danger notika-btn-danger btn-lg waves-effect">Editar Perfil</button>
+        <button title="Editar Empresa" class="btn btn-danger notika-btn-danger btn-lg waves-effect">Editar Empresa</button>
       </form>  
       
     </div>

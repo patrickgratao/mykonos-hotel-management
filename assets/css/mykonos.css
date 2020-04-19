@@ -82,6 +82,25 @@ body {
 	display: none !important;
 }
 
-.botao-imprimir {
-	/*/margin: 5px 0 5px 0;*/
+div.info-empresa {
+	text-align: center;
+	font-size: 0.95em;
+	padding: 10px 0;
+	margin: 20px 0;
+}
+
+.info-empresa hr {
+	width: 460px;
+	margin: 60px auto 60px auto;
+}
+
+.btn-group-mykonos form{
+	display: inline;
+	float: left;
+	margin: 0 50px;
+
+}
+
+.btn-group-mykonos .btn {
+	background-color: #3d73b9;
 }

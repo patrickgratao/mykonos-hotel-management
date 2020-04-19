@@ -1,6 +1,6 @@
 <?php 
 $servername = "localhost";
-$database = "sistemahospedes";
+$database = "mykonos";
 $username = "root";
 $password = "";
 

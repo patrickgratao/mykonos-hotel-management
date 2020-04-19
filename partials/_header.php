@@ -51,22 +51,23 @@
                                             <p class="text-center"><?= $nivel_usuario == 'admin' ? 'Administrador' : "Usuário Padrão"; ?></p>
                                         </div>
                                         <div class="hd-message-info hd-task-info">
-                                            <ul>
-                                                <li>
-                                                    <a href="meu-perfil.php?id=<?=$id_usuario?>">Meu Perfil</a>
-                                                </li> <br>
-                                            </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="meu-perfil.php?id=<?=$id_usuario?>">Meu Perfil</a>
+                                            </li> 
+                                            <br>
+                                        </ul>
+                                        <ul class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>">
+                                            <li><a href="listar-usuarios.php">Ver Usuários Cadastrados</a><br></li>
+                                            <li><a href="dados-empresa.php?id=1">Alterar Dados da Empresa</a><br></li>
+                                            <li><a href="cadastrar-usuario.php">Cadastrar Usuário</a><br></li>
+                                        </ul>
 
-                                            <ul class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>">
-                                                <li><a href="listar-usuarios.php">Ver Usuários Cadastrados</a><br></li>
-                                                <li><a href="cadastrar-usuario.php">Cadastrar Usuário</a><br></li>
-                                            </ul>
-
-                                            <ul>
-                                                <li>
-                                                    <a href="logout.php">Sair do Sistema</a>
-                                                </li>
-                                            </ul>
+                                        <ul>
+                                            <li>
+                                                <a href="logout.php">Sair do Sistema</a>
+                                            </li>
+                                        </ul>
                                         </div>
                                     </div>
                                 </li> 
