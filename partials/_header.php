@@ -4,6 +4,9 @@
        $id_usuario = $_SESSION['id_usuario'];
        $nivel_usuario = $_SESSION['nivel_usuario'];
        $nome_usuario = $_SESSION['nome_usuario'];
+       
+        require_once("banco/banco-empresa.php");
+        $dadosEmpresa = buscaEmpresa($conexao, 1);
 ?> 
 
        <!doctype html>
@@ -44,6 +47,17 @@
                                         </form>
                                     </div>
                                 </li>
+
+                                <li class="nav-item dropdown <?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>"">
+                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-house"></i></span></a>
+                                    <div role="menu" class="dropdown-menu message-dd task-dd">
+                                        <div class="hd-mg-tt">
+                                            <h2><?= $dadosEmpresa->nomeFantasia ?></h2>
+                                            <p class="text-center"><?= $dadosEmpresa->cnpj ?></p>
+                                            <center><a href="dados-empresa.php?id=1">🡢 Alterar dados da Empresa</a><br></center>
+                                        </div>
+                                </li>
+
                                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
                                     <div role="menu" class="dropdown-menu message-dd task-dd">
                                         <div class="hd-mg-tt">
@@ -59,7 +73,6 @@
                                         </ul>
                                         <ul class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>">
                                             <li><a href="listar-usuarios.php">Ver Usuários Cadastrados</a><br></li>
-                                            <li><a href="dados-empresa.php?id=1">Alterar Dados da Empresa</a><br></li>
                                             <li><a href="cadastrar-usuario.php">Cadastrar Usuário</a><br></li>
                                         </ul>
 
@@ -97,6 +110,12 @@
                                         <ul id="democrou" class="collapse dropdown-header-top">
                                             <li><a href="listar-categorias.php">Listar categorias</a></li>
                                             <li><a href="cadastrar-categoria.php">Cadastrar nova categoria</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>"><a data-toggle="collapse" data-target="#democrou" href="#">Empresa</a>
+                                        <ul id="democrou" class="collapse dropdown-header-top">
+                                            <li><a href="dados-empresa.php?id=1">Editar Empresa</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="logout.php">Sair</a></li>

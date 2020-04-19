@@ -67,9 +67,11 @@ require_once("banco/banco-empresa.php");
         <hr>
           <p>
             <?=$empresa->nomeFantasia?> -  <?=$empresa->cnpj?>
-            <br>
+          </p> 
+          <p> 
             <?=$empresa->endereco?>
-            <br>
+          </p>
+          <p>
             <?=$empresa->email?> | <?=$empresa->telefone?>
           </p>
         </div>
