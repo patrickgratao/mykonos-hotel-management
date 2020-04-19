@@ -1,6 +1,6 @@
 <?php 
     error_reporting(E_ALL ^ E_NOTICE); //Ignora os erros do tipo notice
-    require_once("inicia-sessao.php");
+    require_once("controllers/inicia-sessao.php");
     require_once("helpers/mensagens.php"); 
     ?>
 <!doctype html>
@@ -13,7 +13,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
       ============================================ -->
-      <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.jpg">
     <!-- Google Fonts
       ============================================ -->
       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -72,7 +72,7 @@
               mostraAlerta('success');
               mostraAlerta('danger');
               ?>
-              <form class="nk-form" action="login.php" method="POST">
+              <form class="nk-form" action="controllers/login.php" method="POST">
                 <div class="input-group">
                   <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
                   <div class="nk-int-st">

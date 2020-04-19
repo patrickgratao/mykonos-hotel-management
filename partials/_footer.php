@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <?php include('partials/_scripts.php'); ?>
+        <?php include('../partials/_scripts.php'); ?>
     </body>
 
     </html>

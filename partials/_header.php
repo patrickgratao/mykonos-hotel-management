@@ -1,11 +1,11 @@
 <?php 
        error_reporting(E_ALL ^ E_NOTICE); //Ignora os erros do tipo notice
-       include ("helpers/mensagens.php"); //Inclusão das mensagens de erro ou sucesso
+       include ("../helpers/mensagens.php"); //Inclusão das mensagens de erro ou sucesso
        $id_usuario = $_SESSION['id_usuario'];
        $nivel_usuario = $_SESSION['nivel_usuario'];
        $nome_usuario = $_SESSION['nome_usuario'];
        
-        require_once("banco/banco-empresa.php");
+        require_once("../models/banco-empresa.php");
         $dadosEmpresa = buscaEmpresa($conexao, 1);
 ?> 
 
@@ -16,7 +16,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Mykonos | Sistema de Cadastro de Hóspedes</title>
         <meta name="description" content="Cadastre seus hóspedes e tenha acesso a informações importantíssimas para seu Hotel Pousada. O Mykonos é Gratuito! Aproveite">
-        <?php include('partials/_estilos.php'); ?>
+        <?php include('_estilos.php'); ?>
     </head>
 
     <body>
@@ -78,7 +78,7 @@
 
                                         <ul>
                                             <li>
-                                                <a href="logout.php">Sair do Sistema</a>
+                                                <a href="../controllers/logout.php">Sair do Sistema</a>
                                             </li>
                                         </ul>
                                         </div>
@@ -118,7 +118,7 @@
                                             <li><a href="dados-empresa.php?id=1">Editar Empresa</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="logout.php">Sair</a></li>
+                                    <li><a href="../controllers/logout.php">Sair</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -139,7 +139,7 @@
                             </li>
                             <li class="<?= $nivel_usuario == 'admin' ? '' : 'acesso-restrito';  ?>"><a data-toggle="tab" href="#menuCategorias"><i class="notika-icon notika-edit"></i> Categorias</a>
                             </li>
-                            <li><a href="logout.php"><i class="notika-icon notika-close"></i> Sair</a>
+                            <li><a href="../controllers/logout.php"><i class="notika-icon notika-close"></i> Sair</a>
                             </li>
                         </ul>
                         <div class="tab-content custom-menu-content">
