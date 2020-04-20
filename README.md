@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Mykonos - System Hotel Management" src=".github/mykonos.png" width="300px" />
+    <img alt="Mykonos - System Hotel Management" src=".github/mykonos.png?style=centerme" width="300px" />
 </h1>
 
 <h2 align="center">
@@ -11,8 +11,9 @@
   <a href="#two_hearts-o-projeto">O Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#iphone-demonstração-online">Demonstração Online</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#key-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#key-como-utilizar">Como Utilizar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#white_check_mark-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -22,37 +23,36 @@
 O **Mykonos** existe para com a missão de propiciar ao gestor hoteleiro o cadastro e conversão de dados dos hóspedes em ações de marketing e pós-venda com intuito de criar uma experiência incrível para seus clientes. 
 
 ## :computer: Layout
+<div style="text-align:center">
 
-<div style="text-align:center;">
-
-![Tela de Login](.github/telas/login.png)
+![Tela de Login](.github/telas/login.png?style=centerme)
 Tela de Login com validação.
 
-![Página inicial do Sistema Hoteleiro](.github/telas/index.png)
+![Página inicial do Sistema Hoteleiro](.github/telas/index.png?style=centerme)
 Página inicial quando o usuário já está autenticado.
 
-![Listagem de todos os hóspedes](.github/telas/hospedes/lista-hospedes.png)
+![Listagem de todos os hóspedes](.github/telas/hospedes/lista-hospedes.png?style=centerme)
 Listagem de todos os hóspedes cadastrados.
 
-![Cadastro de novo hóspede](.github/telas/hospedes/cadastro-hospede.png)
+![Cadastro de novo hóspede](.github/telas/hospedes/cadastro-hospede.png?style=centerme)
 Cadastro de um novo hóspede.
 
-![Ficha Nacional de Registro de Hóspedes](.github/telas/hospedes/fnrh.png)
+![Ficha Nacional de Registro de Hóspedes](.github/telas/hospedes/fnrh.png?style=centerme)
 Ficha Nacional de Registro de Hóspedes.
 
-![Categorias](.github/telas/categorias/listar-categorias.png)
+![Categorias](.github/telas/categorias/listar-categorias.png?style=centerme)
 Listagem das categorias de hóspedes.
 
-![Hotel Management System Multi Users](.github/telas/multi-usuarios.png)
+![Hotel Management System Multi Users](.github/telas/multi-usuarios.png?style=centerme)
 Possibilidade de cadastrar quantos usuários você quiser com permissões diferentes.
 
-![Alterar perfil de usuário](.github/telas/usuarios.png)
+![Alterar perfil de usuário](.github/telas/usuarios.png?style=centerme)
 Alterar perfil de usuário
 
-![Alterar dados da empresa](.github/telas/dados-empresa.png)
+![Alterar dados da empresa](.github/telas/dados-empresa.png?style=centerme)
 Alterar dados da empresa
 
-![Sistema responsivo e adaptável para celulares e tablets](.github/telas/mobile.png)
+![Sistema responsivo e adaptável para celulares e tablets](.github/telas/mobile.png?style=centerme)
 <br>Sistema responsivo e adaptável para celulares e tablets.
 
 </div>
@@ -132,8 +132,15 @@ O Mykonos foi desenvolvido com as seguintes tecnologias:
 
 ---
 
-## Licença
+## :white_check_mark: Licença
 
 Distribuído sob a licença MIT.
 
 Feito com ❤️ por **Patryck Gratão**
+
+<style> 
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
+</style>
