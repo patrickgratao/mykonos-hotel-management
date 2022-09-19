@@ -61,7 +61,7 @@ Alterar dados da empresa
 
 Acesse o sistema Mykonos e veja como ele funciona:
 
-Acesse: https://pgratao.com.br/mykonos
+Acesse: https://patryckgratao.com/mykonos
 
 
     Administrador do Sistema
