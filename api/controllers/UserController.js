@@ -1,9 +1,12 @@
-module.exports = {
-  async index (request, response) {
-    console.log(request.query)
+const usersData = require("../services/users");
 
-    return response.json({
-      login: "admin@admin.com"
-    })
-  }
-}
+module.exports = {
+  async index(request, response, next) {
+    try {
+      response.json(await usersData.getMultiple(request.query.page));
+    } catch (error) {
+      console.error(`Error while getting programming languages `, err.message);
+      next(err);
+    }
+  },
+};
