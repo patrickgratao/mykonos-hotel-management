@@ -1,12 +1,21 @@
 const usersData = require("../services/users");
 
 module.exports = {
-  async index(request, response, next) {
+  async index(req, res, next) {
     try {
-      response.json(await usersData.getMultiple(request.query.page));
+      res.json(await usersData.getMultiple(req.query.page));
     } catch (error) {
-      console.error(`Error while getting programming languages `, err.message);
-      next(err);
+      console.error(`Error while getting users `, error.message);
+      next(error);
+    }
+  },
+
+  async create(req, res, next) {
+    try {
+      res.json(await usersData.create(req.body));
+    } catch (error) {
+      console.error(`Error while creating users `, error.message);
+      next(error);
     }
   },
 };

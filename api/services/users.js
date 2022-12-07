@@ -18,6 +18,26 @@ async function getMultiple(page = 1) {
   };
 }
 
+async function create(user) {
+  const result = await db.query(
+    `INSERT INTO users (name, email, password, isActive, isAdmin) VALUES ("${user.name}", "${user.email}", "${user.password}", "${user.isActive}", "${user.isAdmin}")`
+  );
+
+  let message = "Error in creating user";
+  let statusCode = 400;
+
+  if (result.affectedRows) {
+    message = "User created successfully";
+    statusCode = 200;
+  }
+
+  return {
+    message,
+    statusCode,
+  };
+}
+
 module.exports = {
   getMultiple,
+  create,
 };

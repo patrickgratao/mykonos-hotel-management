@@ -10,9 +10,9 @@ Responsible for the administrative part of the system and user management.
   - name: string
   - email: string
   - password: string
-  - timestamps: datetime
   - isAdmin: boolean
   - isActive: boolean
+  - timestamps: datetime
 
 ## Methods
 
